@@ -4979,12 +4979,20 @@ public class Vtas extends javax.swing.JFrame
 
             /*Crea la ruta completa para el PDF*/                       
             String sRutTmp              = "";
-            if(sTipDoc.compareTo("FAC")==0)                        
+            String sRutCarpEmp          = Star.sGetRutCarp(con);
+            if(sTipDoc.compareTo("FAC")==0){
                 sRutTmp                 =  sRut + "\\CFDI-" + sRFCLoc + "-" + sNoSer + "-" + sFol + ".pdf";
-            else if(sTipDoc.compareTo("TIK")==0 || sTipDoc.compareTo("REM")==0)                        
-                sRutTmp                 =  sRut + "\\" + sNoSer + "-" + sFol + ".pdf";            
-            else if(sTipDoc.compareTo("NOTC")==0)                        
+                sRutCarpEmp             += "\\Facturas\\" + Login.sCodEmpBD + "\\CFDI-" + sRFCLoc + "-" + sNoSer + "-" + sFol + ".pdf";
+            }else if(sTipDoc.compareTo("TIK")==0){                        
+                sRutTmp                 =  sRut + "\\" + sNoSer + "-" + sFol + ".pdf";
+                sRutCarpEmp             += "\\Tickets\\" + Login.sCodEmpBD + "\\CFDI-" + sRFCLoc + "-" + sNoSer + "-" + sFol + ".pdf";
+            }else if(sTipDoc.compareTo("REM")==0){
+                sRutTmp                 =  sRut + "\\" + sNoSer + "-" + sFol + ".pdf";
+                sRutCarpEmp             += "\\Remisiones\\" + Login.sCodEmpBD + "\\CFDI-" + sRFCLoc + "-" + sNoSer + "-" + sFol + ".pdf";
+            }else if(sTipDoc.compareTo("NOTC")==0){                        
                 sRutTmp                 =  sRut + "\\CFDI-" + sRFCLoc + "-" + sNoSer + "-" + sFol + ".pdf";
+                sRutCarpEmp             += "\\Notas credito\\" + Login.sCodEmpBD + "\\CFDI-" + sRFCLoc + "-" + sNoSer + "-" + sFol + ".pdf";
+            }
             
             /*Determina el nombre del reporte*/
             String sTipRep    = "/jasreport/rptFac.jrxml";    
@@ -5051,6 +5059,7 @@ public class Vtas extends javax.swing.JFrame
             final String sTipRepFi  = sTipRep;
             final String sCatGralFi = sCatGral;
             final String sWebFi     = sWeb;
+            final String sRutCarpEmpFi = sRutCarpEmp; 
             
             /*Genera el PDF si es factura, remisión o nota de crédito*/
             if(sTipDoc.compareTo("FAC")==0 || sTipDoc.compareTo("REM")==0 || sTipDoc.compareTo("NOTC")==0)
@@ -5061,7 +5070,9 @@ public class Vtas extends javax.swing.JFrame
                     @Override
                     public void run()
                     {                                                                                          
-                        Star.vPDF("", sMonFi, sFolFi, sCatGralFi, sVtaFi, sSerFi, sFechFi, sNomFi, sPaiFi, sTelFi, sCallFi, sColFi, sCPFi, sNoExtFi, sNoIntFi, sCiuFi, sEstadFi, sRFCFi, sCo1Fi, Star.sObLet(sTotFi, sMonFi, sSimbFi, true), sSubTotFi, sImpueFi, sTotFi, sMetPagFi, sCtaFi, sCondsFi, sNomLocFi, sTelLocFi, sColLocFi, sCallLocFi, sCPLocFi, sCiuLocFi, sEstLocFi, sPaiLocFi, sRFCLocFi, sRutLogFi, true, false, false, getClass().getResourceAsStream(sTipRepFi), null, "", sRutFi, 1, true, false, 0, true, "", sFolFiscFi, sSellFi, sSellSATFi, sCadOriFi, sNoIntLocFi, sNoExtLocFi, sNoCertSATFi, sLugExpFi, sRegFiscFi, sCtaPredFi, "");                                        
+                        Star.vPDF("", sMonFi, sFolFi, sCatGralFi, sVtaFi, sSerFi, sFechFi, sNomFi, sPaiFi, sTelFi, sCallFi, sColFi, sCPFi, sNoExtFi, sNoIntFi, sCiuFi, sEstadFi, sRFCFi, sCo1Fi, Star.sObLet(sTotFi, sMonFi, sSimbFi, true), sSubTotFi, sImpueFi, sTotFi, sMetPagFi, sCtaFi, sCondsFi, sNomLocFi, sTelLocFi, sColLocFi, sCallLocFi, sCPLocFi, sCiuLocFi, sEstLocFi, sPaiLocFi, sRFCLocFi, sRutLogFi, true, false, false, getClass().getResourceAsStream(sTipRepFi), null, "", sRutFi, 1, true, false, 0, true, "", sFolFiscFi, sSellFi, sSellSATFi, sCadOriFi, sNoIntLocFi, sNoExtLocFi, sNoCertSATFi, sLugExpFi, sRegFiscFi, sCtaPredFi, "");
+                        
+                        Star.vPDF("", sMonFi, sFolFi, sCatGralFi, sVtaFi, sSerFi, sFechFi, sNomFi, sPaiFi, sTelFi, sCallFi, sColFi, sCPFi, sNoExtFi, sNoIntFi, sCiuFi, sEstadFi, sRFCFi, sCo1Fi, Star.sObLet(sTotFi, sMonFi, sSimbFi, true), sSubTotFi, sImpueFi, sTotFi, sMetPagFi, sCtaFi, sCondsFi, sNomLocFi, sTelLocFi, sColLocFi, sCallLocFi, sCPLocFi, sCiuLocFi, sEstLocFi, sPaiLocFi, sRFCLocFi, sRutLogFi, true, false, false, getClass().getResourceAsStream(sTipRepFi), null, "", sRutCarpEmpFi, 1, true, false, 0, true, "", sFolFiscFi, sSellFi, sSellSATFi, sCadOriFi, sNoIntLocFi, sNoExtLocFi, sNoCertSATFi, sLugExpFi, sRegFiscFi, sCtaPredFi, "");
                     }
                 }).start();
                 
@@ -5160,7 +5171,8 @@ public class Vtas extends javax.swing.JFrame
                             return;
 
                         /*Genera el PDF*/
-                        Star.vPDF("", sMonFi, sFolFi, "", sVtaFi, sSerFi, sFechFi, sNomFi, sPaiFi, sTelFi, sCallFi, sColFi, sCPFi, sNoExtFi, sNoIntFi, sCiuFi, sEstadFi, sRFCFi, sCo1Fi, Star.sObLet(sTotFi, sMonFi, sSimb, true), sSubTotFi, sImpueFi, sTotFi, "", "", "", sNomLocFi, sTelLocFi, sColLocFi, sCallLocFi, sCPLocFi, sCiuLocFi, sEstLocFi, sPaiLocFi, sRFCLocFi, sRutLogFi, true, false, false, in, null, "", sRutFi, 2, true, false, i52, true, "", "", "", "", "", "", "", "", "", "", "", sWebFi);                                                                                                                                                                           
+                        Star.vPDF("", sMonFi, sFolFi, "", sVtaFi, sSerFi, sFechFi, sNomFi, sPaiFi, sTelFi, sCallFi, sColFi, sCPFi, sNoExtFi, sNoIntFi, sCiuFi, sEstadFi, sRFCFi, sCo1Fi, Star.sObLet(sTotFi, sMonFi, sSimb, true), sSubTotFi, sImpueFi, sTotFi, "", "", "", sNomLocFi, sTelLocFi, sColLocFi, sCallLocFi, sCPLocFi, sCiuLocFi, sEstLocFi, sPaiLocFi, sRFCLocFi, sRutLogFi, true, false, false, in, null, "", sRutFi, 2, true, false, i52, true, "", "", "", "", "", "", "", "", "", "", "", sWebFi);
+                        Star.vPDF("", sMonFi, sFolFi, "", sVtaFi, sSerFi, sFechFi, sNomFi, sPaiFi, sTelFi, sCallFi, sColFi, sCPFi, sNoExtFi, sNoIntFi, sCiuFi, sEstadFi, sRFCFi, sCo1Fi, Star.sObLet(sTotFi, sMonFi, sSimb, true), sSubTotFi, sImpueFi, sTotFi, "", "", "", sNomLocFi, sTelLocFi, sColLocFi, sCallLocFi, sCPLocFi, sCiuLocFi, sEstLocFi, sPaiLocFi, sRFCLocFi, sRutLogFi, true, false, false, in, null, "", sRutCarpEmpFi, 2, true, false, i52, true, "", "", "", "", "", "", "", "", "", "", "", sWebFi);
                     }
                 }).start();
                 
