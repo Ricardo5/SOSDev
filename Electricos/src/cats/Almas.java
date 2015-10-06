@@ -1,6 +1,9 @@
 //Paquete
 package cats;
 
+/*holaaaaaaaaaaaaaaaaa
+
+*/
 /*Importaciones*/
 import java.awt.Color;
 import java.awt.Toolkit;
