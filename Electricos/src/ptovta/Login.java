@@ -31,6 +31,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Enumeration;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Matcher;
@@ -709,7 +710,7 @@ public class Login extends javax.swing.JFrame
         /*Contiene la MAC del equipo*/
         String sMAC = "";
 
-        /*Obtiene la MAC del equipo*/
+        /*Obtiene la sMACMAC del equipo*/
         InetAddress ip;
         try 
         {
@@ -732,7 +733,8 @@ public class Login extends javax.swing.JFrame
         }
         
         catch(NullPointerException e){
-            
+             JOptionPane.showMessageDialog(null, e.getMessage(), "Validación", JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource(Star.sRutIconAd)));
+                    
         }        
         catch(UnknownHostException  expnUnknowHos ) 
         {
@@ -903,15 +905,41 @@ public class Login extends javax.swing.JFrame
         }   
         /*Si la MAC del equipo no es la misma que la del archivo de validación entonces*/
         
-        /*29 06 2015 Heriberto Daniel Sanchez Peña*/
+        //09 10 2015 Heriberto Daniel Sanchez Peña
+        try{
+            boolean hayMac=false;
+            Enumeration<NetworkInterface> nets = NetworkInterface.getNetworkInterfaces(); //Obtengo todas las interfaces de red del dispositivo
+            while(nets.hasMoreElements()){         //Hacer mientras aun existan elementos en la enumeración
+                NetworkInterface net=nets.nextElement();   //Se obtienen uno por uno las interfaces de red
+                byte [] tmpMac = net.getHardwareAddress(); //Se obtiene la mac addres de cada interfaz
+                if(tmpMac!=null){ //Si existe alguna mac entrar al if
+                    StringBuilder sb= new StringBuilder(); //Declarar un StringBuilder ya que se trabajara sobre la cadena
+                    for(int i=0;i<tmpMac.length;i++) //recorer el tamaño de la mac
+                        sb.append(String.format("%02X%s", tmpMac[i],"")); //asigarle un formato a la mac
+                    if(sb.toString().compareTo(Star.sDecryp(ser.sMac).replace("-", ""))==0){ //Comparar si la mac coincide con la mac en el archivo
+                        hayMac=true;//Se asigna una bandera para señalar que se encotro la mac adecuada
+                        break;// Sal del bucle si se encotro la Mac adecuada
+                    }
+                    
+                }
+            }
+            if(!hayMac){
+                JOptionPane.showMessageDialog(null,"No esta correctamente validado del sistema", "Validación", JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource(Star.sRutIconAd)));
+                return;
+            }
+        }catch(SocketException expnSock ){
+            JOptionPane.showMessageDialog(null, expnSock.getMessage(), "Validación", JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource(Star.sRutIconAd)));
+            return;
+        }
+         /*29 06 2015 Heriberto Daniel Sanchez Peña*/
         
-        /*Si la version es del tipo servidor o estacion de trabajo on-line se requerira internet*/
-        /*Si la version es del tipo de estacion de trabajo off-line no se pedira dicho requerimiento*/
-
-        if(sMAC.replace("-", "").compareTo(Star.sDecryp(ser.sMac).replace("-", ""))!=0&&(Star.tTipoDeEsta == 0||bActiv))
+        /*Si la version es del tipo  estacion de trabajo on-line se requerira internet*/
+        /*Si la version es del tipo de estacion de trabajo off-line o servidor no se pedira dicho requerimiento*/
+      
+        if((Star.tTipoDeEsta == 0&&Star.bEstacTrab==1)||bActiv)
         {
             /*Mensajea y regresa*/
-            JOptionPane.showMessageDialog(null, "El sistema esta incorrectamente validado y no puede continuar.", "Validación", JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource(Star.sRutIconAd)));
+            JOptionPane.showMessageDialog(null, "Se necesita conexion a internet para poder continuar", "Validación", JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource(Star.sRutIconAd)));
             return;            
         }
         

@@ -28,8 +28,8 @@ public interface Cancelaciones {
      * @param parameters
      * @return
      *     returns pRuebasEcodexCancelacionTimbre.RespuestaCancelaMultiple
-     * @throws CancelacionesCancelaMultipleFallaSesionFaultFaultMessage
      * @throws CancelacionesCancelaMultipleFallaServicioFaultFaultMessage
+     * @throws CancelacionesCancelaMultipleFallaSesionFaultFaultMessage
      */
     @WebMethod(operationName = "CancelaMultiple", action = "http://Ecodex.WS.Model/2011/CFDI/Cancelaciones/CancelaMultiple")
     @WebResult(name = "RespuestaCancelaMultiple", targetNamespace = "http://Ecodex.WS.Model/2011/CFDI", partName = "parameters")
@@ -45,8 +45,8 @@ public interface Cancelaciones {
      * @return
      *     returns pRuebasEcodexCancelacionTimbre.RespuestaRecuperarAcuse
      * @throws CancelacionesRecuperarAcusesFallaSesionFaultFaultMessage
-     * @throws CancelacionesRecuperarAcusesFallaServicioFaultFaultMessage
      * @throws CancelacionesRecuperarAcusesFallaValidacionFaultFaultMessage
+     * @throws CancelacionesRecuperarAcusesFallaServicioFaultFaultMessage
      */
     @WebMethod(operationName = "RecuperarAcuses", action = "http://Ecodex.WS.Model/2011/CFDI/Cancelaciones/RecuperarAcuses")
     @WebResult(name = "RespuestaRecuperarAcuse", targetNamespace = "http://Ecodex.WS.Model/2011/CFDI", partName = "parameters")
@@ -61,9 +61,9 @@ public interface Cancelaciones {
      * @param parameters
      * @return
      *     returns pRuebasEcodexCancelacionTimbre.RespuestaCancelaOtros
-     * @throws CancelacionesCancelaOtrosFallaValidacionFaultFaultMessage
-     * @throws CancelacionesCancelaOtrosFallaServicioFaultFaultMessage
      * @throws CancelacionesCancelaOtrosFallaSesionFaultFaultMessage
+     * @throws CancelacionesCancelaOtrosFallaServicioFaultFaultMessage
+     * @throws CancelacionesCancelaOtrosFallaValidacionFaultFaultMessage
      */
     @WebMethod(operationName = "CancelaOtros", action = "http://Ecodex.WS.Model/2011/CFDI/Cancelaciones/CancelaOtros")
     @WebResult(name = "RespuestaCancelaOtros", targetNamespace = "http://Ecodex.WS.Model/2011/CFDI", partName = "parameters")

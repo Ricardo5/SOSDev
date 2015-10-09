@@ -28,8 +28,8 @@ public interface Seguridad {
      * @param parameters
      * @return
      *     returns wsseg.RespuestaObtenerToken
-     * @throws SeguridadObtenerTokenFallaServicioFaultFaultMessage
      * @throws SeguridadObtenerTokenFallaSesionFaultFaultMessage
+     * @throws SeguridadObtenerTokenFallaServicioFaultFaultMessage
      */
     @WebMethod(operationName = "ObtenerToken", action = "http://Ecodex.WS.Model/2011/CFDI/Seguridad/ObtenerToken")
     @WebResult(name = "RespuestaObtenerToken", targetNamespace = "http://Ecodex.WS.Model/2011/CFDI", partName = "parameters")
