@@ -1004,7 +1004,7 @@ public class Login extends javax.swing.JFrame
             return;                        
         }   
         
-        /*Resetea el contador de intentos*/
+        /*Resetea el contador de intento*/
         iCont   = 0;
         
         /*Si la diferencia desde que se instalo hasta el día de hoy es mayor a 30 entonces o menor a 30 y si la llave es cadena vacia entonces*/
