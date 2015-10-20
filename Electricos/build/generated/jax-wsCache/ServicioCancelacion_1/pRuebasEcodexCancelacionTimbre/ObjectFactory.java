@@ -55,16 +55,16 @@ public class ObjectFactory {
     private final static QName _Byte_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "byte");
     private final static QName _Double_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "double");
     private final static QName _QName_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "QName");
-    private final static QName _ResultadoCancelacionEstatus_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Estatus");
-    private final static QName _RespuestaCancelaOtrosResultado_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Resultado");
+    private final static QName _FallaSesionDescripcion_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Descripcion");
     private final static QName _SolicitudCancelaOtrosRFCReceptor_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "RFCReceptor");
     private final static QName _SolicitudCancelaOtrosToken_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Token");
     private final static QName _SolicitudCancelaOtrosRFCEmisor_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "RFCEmisor");
     private final static QName _FallaServicioEvento_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Evento");
-    private final static QName _FallaServicioDescripcion_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Descripcion");
-    private final static QName _RespuestaRecuperarAcuseAcuseXML_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "AcuseXML");
-    private final static QName _RespuestaCancelaMultipleTransaccionID_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "TransaccionID");
     private final static QName _SolicitudAcuseRFC_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "RFC");
+    private final static QName _RespuestaCancelaMultipleResultado_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Resultado");
+    private final static QName _RespuestaCancelaMultipleTransaccionID_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "TransaccionID");
+    private final static QName _ResultadoCancelacionEstatus_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Estatus");
+    private final static QName _RespuestaRecuperarAcuseAcuseXML_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "AcuseXML");
     private final static QName _FallaValidacionSugerencia_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Sugerencia");
     private final static QName _FallaValidacionAntecedente_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Antecedente");
     private final static QName _FallaValidacionNodo_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Nodo");
@@ -419,18 +419,9 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Estatus", scope = ResultadoCancelacion.class)
-    public JAXBElement<String> createResultadoCancelacionEstatus(String value) {
-        return new JAXBElement<String>(_ResultadoCancelacionEstatus_QNAME, String.class, ResultadoCancelacion.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ListaResultadoCancelacion }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Resultado", scope = RespuestaCancelaOtros.class)
-    public JAXBElement<ListaResultadoCancelacion> createRespuestaCancelaOtrosResultado(ListaResultadoCancelacion value) {
-        return new JAXBElement<ListaResultadoCancelacion>(_RespuestaCancelaOtrosResultado_QNAME, ListaResultadoCancelacion.class, RespuestaCancelaOtros.class, value);
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Descripcion", scope = FallaSesion.class)
+    public JAXBElement<String> createFallaSesionDescripcion(String value) {
+        return new JAXBElement<String>(_FallaSesionDescripcion_QNAME, String.class, FallaSesion.class, value);
     }
 
     /**
@@ -475,43 +466,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Descripcion", scope = FallaServicio.class)
     public JAXBElement<String> createFallaServicioDescripcion(String value) {
-        return new JAXBElement<String>(_FallaServicioDescripcion_QNAME, String.class, FallaServicio.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "AcuseXML", scope = RespuestaRecuperarAcuse.class)
-    public JAXBElement<String> createRespuestaRecuperarAcuseAcuseXML(String value) {
-        return new JAXBElement<String>(_RespuestaRecuperarAcuseAcuseXML_QNAME, String.class, RespuestaRecuperarAcuse.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Estatus", scope = RespuestaRecuperarAcuse.class)
-    public JAXBElement<String> createRespuestaRecuperarAcuseEstatus(String value) {
-        return new JAXBElement<String>(_ResultadoCancelacionEstatus_QNAME, String.class, RespuestaRecuperarAcuse.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ListaResultadoCancelacion }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Resultado", scope = RespuestaCancelaMultiple.class)
-    public JAXBElement<ListaResultadoCancelacion> createRespuestaCancelaMultipleResultado(ListaResultadoCancelacion value) {
-        return new JAXBElement<ListaResultadoCancelacion>(_RespuestaCancelaOtrosResultado_QNAME, ListaResultadoCancelacion.class, RespuestaCancelaMultiple.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "TransaccionID", scope = RespuestaCancelaMultiple.class)
-    public JAXBElement<String> createRespuestaCancelaMultipleTransaccionID(String value) {
-        return new JAXBElement<String>(_RespuestaCancelaMultipleTransaccionID_QNAME, String.class, RespuestaCancelaMultiple.class, value);
+        return new JAXBElement<String>(_FallaSesionDescripcion_QNAME, String.class, FallaServicio.class, value);
     }
 
     /**
@@ -533,12 +488,30 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListaResultadoCancelacion }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Resultado", scope = RespuestaCancelaMultiple.class)
+    public JAXBElement<ListaResultadoCancelacion> createRespuestaCancelaMultipleResultado(ListaResultadoCancelacion value) {
+        return new JAXBElement<ListaResultadoCancelacion>(_RespuestaCancelaMultipleResultado_QNAME, ListaResultadoCancelacion.class, RespuestaCancelaMultiple.class, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Descripcion", scope = FallaSesion.class)
-    public JAXBElement<String> createFallaSesionDescripcion(String value) {
-        return new JAXBElement<String>(_FallaServicioDescripcion_QNAME, String.class, FallaSesion.class, value);
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "TransaccionID", scope = RespuestaCancelaMultiple.class)
+    public JAXBElement<String> createRespuestaCancelaMultipleTransaccionID(String value) {
+        return new JAXBElement<String>(_RespuestaCancelaMultipleTransaccionID_QNAME, String.class, RespuestaCancelaMultiple.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Estatus", scope = ResultadoCancelacion.class)
+    public JAXBElement<String> createResultadoCancelacionEstatus(String value) {
+        return new JAXBElement<String>(_ResultadoCancelacionEstatus_QNAME, String.class, ResultadoCancelacion.class, value);
     }
 
     /**
@@ -566,6 +539,24 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "RFC", scope = SolicitudCancelaMultiple.class)
     public JAXBElement<String> createSolicitudCancelaMultipleRFC(String value) {
         return new JAXBElement<String>(_SolicitudAcuseRFC_QNAME, String.class, SolicitudCancelaMultiple.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "AcuseXML", scope = RespuestaRecuperarAcuse.class)
+    public JAXBElement<String> createRespuestaRecuperarAcuseAcuseXML(String value) {
+        return new JAXBElement<String>(_RespuestaRecuperarAcuseAcuseXML_QNAME, String.class, RespuestaRecuperarAcuse.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Estatus", scope = RespuestaRecuperarAcuse.class)
+    public JAXBElement<String> createRespuestaRecuperarAcuseEstatus(String value) {
+        return new JAXBElement<String>(_ResultadoCancelacionEstatus_QNAME, String.class, RespuestaRecuperarAcuse.class, value);
     }
 
     /**
@@ -610,7 +601,16 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Descripcion", scope = FallaValidacion.class)
     public JAXBElement<String> createFallaValidacionDescripcion(String value) {
-        return new JAXBElement<String>(_FallaServicioDescripcion_QNAME, String.class, FallaValidacion.class, value);
+        return new JAXBElement<String>(_FallaSesionDescripcion_QNAME, String.class, FallaValidacion.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListaResultadoCancelacion }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Resultado", scope = RespuestaCancelaOtros.class)
+    public JAXBElement<ListaResultadoCancelacion> createRespuestaCancelaOtrosResultado(ListaResultadoCancelacion value) {
+        return new JAXBElement<ListaResultadoCancelacion>(_RespuestaCancelaMultipleResultado_QNAME, ListaResultadoCancelacion.class, RespuestaCancelaOtros.class, value);
     }
 
 }

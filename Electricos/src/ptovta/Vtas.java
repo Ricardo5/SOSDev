@@ -4357,6 +4357,9 @@ public class Vtas extends javax.swing.JFrame
             //Procesa el error
             Star.iErrProc(this.getClass().getName() + " " + expnIO.getMessage(), Star.sErrIO, expnIO.getStackTrace());
         }        
+        
+        //TESTING GIT FUNCTIONS
+        
                 
     }//GEN-LAST:event_jBDirCanActionPerformed
 
@@ -8215,7 +8218,7 @@ public class Vtas extends javax.swing.JFrame
         }                                       
         
         //Inserta en la base de datos la nueva factura
-        if(Star.iInsVtas(con, sSerFac.replace("'", "''"), sConsFac.replace("'", "''"), sCli, sSer, sSubTot, sImpue, sTot, "now()", "now()", "now()", "'CO'", "0", "", "FAC", "0", "EFE", "0000", "FAC VTAS", "0", sTotDescu, "0", "1", sTotCost, Login.sUsrG, sMon, "1", "C", "", "", "", "", "", "", "", "", "", "", "", "", "0", "", "1", "0", "0", "0","", "")==-1)
+        if(Star.iInsVtas(con, sSerFac.replace("'", "''"), sConsFac.replace("'", "''"), sCli, sSer, sSubTot, sImpue, sTot, "now()", "now()", "now()", "'CO'", "0", "", "FAC", "0", "EFECTIVO", "0000", "FAC VTAS", "0", sTotDescu, "0", "1", sTotCost, Login.sUsrG, sMon, "1", "C", "", "", "", "", "", "", "", "", "", "", "", "", "0", "", "1", "0", "0", "0","", "")==-1)
             return;
             
         /*Declara variables*/

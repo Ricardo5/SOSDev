@@ -28,8 +28,8 @@ public interface Timbrado {
      * @param parameters
      * @return
      *     returns pRuebasEcodexTimbrado.RespuestaTimbraXML
-     * @throws TimbradoTimbraXMLFallaSesionFaultFaultMessage
      * @throws TimbradoTimbraXMLFallaServicioFaultFaultMessage
+     * @throws TimbradoTimbraXMLFallaSesionFaultFaultMessage
      * @throws TimbradoTimbraXMLFallaValidacionFaultFaultMessage
      */
     @WebMethod(operationName = "TimbraXML", action = "http://Ecodex.WS.Model/2011/CFDI/Timbrado/TimbraXML")

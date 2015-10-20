@@ -28,8 +28,8 @@ public interface Cancelaciones {
      * @param parameters
      * @return
      *     returns wscance.RespuestaCancelaMultiple
-     * @throws CancelacionesCancelaMultipleFallaServicioFaultFaultMessage
      * @throws CancelacionesCancelaMultipleFallaSesionFaultFaultMessage
+     * @throws CancelacionesCancelaMultipleFallaServicioFaultFaultMessage
      */
     @WebMethod(operationName = "CancelaMultiple", action = "http://Ecodex.WS.Model/2011/CFDI/Cancelaciones/CancelaMultiple")
     @WebResult(name = "RespuestaCancelaMultiple", targetNamespace = "http://Ecodex.WS.Model/2011/CFDI", partName = "parameters")
@@ -61,9 +61,9 @@ public interface Cancelaciones {
      * @param parameters
      * @return
      *     returns wscance.RespuestaCancelaOtros
-     * @throws CancelacionesCancelaOtrosFallaServicioFaultFaultMessage
      * @throws CancelacionesCancelaOtrosFallaSesionFaultFaultMessage
      * @throws CancelacionesCancelaOtrosFallaValidacionFaultFaultMessage
+     * @throws CancelacionesCancelaOtrosFallaServicioFaultFaultMessage
      */
     @WebMethod(operationName = "CancelaOtros", action = "http://Ecodex.WS.Model/2011/CFDI/Cancelaciones/CancelaOtros")
     @WebResult(name = "RespuestaCancelaOtros", targetNamespace = "http://Ecodex.WS.Model/2011/CFDI", partName = "parameters")

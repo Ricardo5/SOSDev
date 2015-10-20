@@ -1,18 +1,18 @@
-2015/09/30 19:19:09
-ptovta.Star http://easyretail.com.mx/wsn/xslt/ventavehiculos.xslt
+2015/10/20 16:26:28
+ptovta.Star 302 Sello del emisor no valido 
 StackTrace:
 
-2015/09/30 19:20:22
+2015/10/20 16:27:02
 <?xml version="1.0" encoding="UTF-8"?>
 <cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd http://www.sat.gob.mx/nomina http://www.sat.gob.mx/sitio_internet/cfd/nomina/nomina11.xsd" 
-version="3.2" fecha="2015-09-30T15:24:37.0" 
+version="3.2" fecha="2015-10-20T16:04:53.0" 
  
-formaDePago="Pago en parcialidades" noCertificado="00001000000400154983" 
-certificado="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" 
-subTotal="395.690000" descuento="0.000000" total="459.000000" 
-tipoDeComprobante="ingreso" metodoDePago="Contado" LugarExpedicion="Lugar expedicion" Moneda="PESOS" TipoCambio="1"> 
-<cfdi:Emisor nombre="SOS SOFTWARE SA DE CV" rfc="VACS710106NV7">
+formaDePago="Pago en parcialidades" noCertificado="20001000000100005867" 
+certificado="MIIEdDCCA1ygAwIBAgIUMjAwMDEwMDAwMDAxMDAwMDU4NjcwDQYJKoZIhvcNAQEFBQAwggFvMRgwFgYDVQQDDA9BLkMuIGRlIHBydWViYXMxLzAtBgNVBAoMJlNlcnZpY2lvIGRlIEFkbWluaXN0cmFjacOzbiBUcmlidXRhcmlhMTgwNgYDVQQLDC9BZG1pbmlzdHJhY2nDs24gZGUgU2VndXJpZGFkIGRlIGxhIEluZm9ybWFjacOzbjEpMCcGCSqGSIb3DQEJARYaYXNpc25ldEBwcnVlYmFzLnNhdC5nb2IubXgxJjAkBgNVBAkMHUF2LiBIaWRhbGdvIDc3LCBDb2wuIEd1ZXJyZXJvMQ4wDAYDVQQRDAUwNjMwMDELMAkGA1UEBhMCTVgxGTAXBgNVBAgMEERpc3RyaXRvIEZlZGVyYWwxEjAQBgNVBAcMCUNveW9hY8OhbjEVMBMGA1UELRMMU0FUOTcwNzAxTk4zMTIwMAYJKoZIhvcNAQkCDCNSZXNwb25zYWJsZTogSMOpY3RvciBPcm5lbGFzIEFyY2lnYTAeFw0xMjA3MjcxNzAyMDBaFw0xNjA3MjcxNzAyMDBaMIHbMSkwJwYDVQQDEyBBQ0NFTSBTRVJWSUNJT1MgRU1QUkVTQVJJQUxFUyBTQzEpMCcGA1UEKRMgQUNDRU0gU0VSVklDSU9TIEVNUFJFU0FSSUFMRVMgU0MxKTAnBgNVBAoTIEFDQ0VNIFNFUlZJQ0lPUyBFTVBSRVNBUklBTEVTIFNDMSUwIwYDVQQtExxBQUEwMTAxMDFBQUEgLyBIRUdUNzYxMDAzNFMyMR4wHAYDVQQFExUgLyBIRUdUNzYxMDAzTURGUk5OMDkxETAPBgNVBAsTCFVuaWRhZCAxMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC2TTQSPONBOVxpXv9wLYo8jezBrb34i/tLx8jGdtyy27BcesOav2c1NS/Gdv10u9SkWtwdy34uRAVe7H0a3VMRLHAkvp2qMCHaZc4T8k47Jtb9wrOEh/XFS8LgT4y5OQYo6civfXXdlvxWU/gdM/e6I2lg6FGorP8H4GPAJ/qCNwIDAQABox0wGzAMBgNVHRMBAf8EAjAAMAsGA1UdDwQEAwIGwDANBgkqhkiG9w0BAQUFAAOCAQEATxMecTpMbdhSHo6KVUg4QVF4Op2IBhiMaOrtrXBdJgzGotUFcJgdBCMjtTZXSlq1S4DG1jr8p4NzQlzxsdTxaB8nSKJ4KEMgIT7E62xRUj15jI49qFz7f2uMttZLNThipunsN/NF1XtvESMTDwQFvas/Ugig6qwEfSZc0MDxMpKLEkEePmQwtZD+zXFSMVa6hmOu4M+FzGiRXbj4YJXn9Myjd8xbL/c+9UIcrYoZskxDvMxc6/6M3rNNDY3OFhBK+V/sPMzWWGt8S1yjmtPfXgFs1t65AZ2hcTwTAuHrKwDatJ1ZPfa482ZBROAAX1waz7WwXp0gso7sDCm2/yUVww==" 
+subTotal="207.000000" descuento="0.000000" total="240.120000" 
+tipoDeComprobante="ingreso" metodoDePago="EFECTIVO" LugarExpedicion="Lugar expedicion" Moneda="PESOS" TipoCambio="1"> 
+<cfdi:Emisor nombre="SOS SOFTWARE SA DE CV" rfc="AAA010101AAA">
 
 <cfdi:DomicilioFiscal codigoPostal="00000" pais="PAIS" estado="ESTADO" municipio="CIUDAD" colonia="COLONIA" noExterior="111" calle="CALLE"/>
 
@@ -20,24 +20,22 @@ tipoDeComprobante="ingreso" metodoDePago="Contado" LugarExpedicion="Lugar expedi
 
 </cfdi:Emisor>
 
-<cfdi:Receptor nombre="VARI DISEÑOS S.A DE C.V." rfc="VDI911011HE3">
+<cfdi:Receptor nombre=" JALMEX EMPRESARIAL S.A. DE C.V." rfc="JEM981109GZ0">
 
-<cfdi:Domicilio pais="MEXICO" estado="JALISCO" municipio="ZAPOPAN " colonia="RESIDENCIAL VICTORIA" calle="ACERINA" localidad="ZAPOPAN "/>
+<cfdi:Domicilio codigoPostal="45685" pais="MEXICO" estado="JALISCO" municipio="EL SALTO" colonia="EL CASTILLO" noExterior="S/N" calle="CARRETERRA EL CASTILLO KM 13.5" localidad="EL SALTO"/>
 
 </cfdi:Receptor>
 
 <cfdi:Conceptos>
 
-<cfdi:Concepto importe="370.690000" valorUnitario="370.690000" descripcion="HL2130,2132,2135,DCP7055,HL-2135W" unidad="PZA" cantidad="1.000000"/>
-
-<cfdi:Concepto importe="25.000000" valorUnitario="25.000000" descripcion="ENVIO DE MERCANCIA" unidad="PZA" cantidad="1.000000"/>
+<cfdi:Concepto importe="207.000000" valorUnitario="207.000000" descripcion="TINTA STYLUS CX3900,CX4900,CX5900,C79,CX8300,CX7300,TX200, CX5600,TX210,TX-100,TX110" unidad="PZA" cantidad="1.000000"/>
 
 </cfdi:Conceptos>
-<cfdi:Impuestos totalImpuestosTrasladados="63.310000">
+<cfdi:Impuestos totalImpuestosTrasladados="33.120000">
 
 <cfdi:Traslados>
 
-<cfdi:Traslado importe="63.31" tasa="16" impuesto="IVA"/>
+<cfdi:Traslado importe="33.12" tasa="16" impuesto="IVA"/>
 </cfdi:Traslados>
 
 </cfdi:Impuestos>
@@ -47,44 +45,17 @@ tipoDeComprobante="ingreso" metodoDePago="Contado" LugarExpedicion="Lugar expedi
 </cfdi:Comprobante>
 
 
-2015/09/30 19:20:27
-crea servio de timbrando
-
-2015/09/30 19:20:27
-crea puerto de timbrando
-
-2015/09/30 19:20:31
-timbro
-
-2015/09/30 19:20:31
-id de transacion:1443658825317
-
-2015/09/30 19:20:31
-UUID=UUID="9C6C0C9C-F69D-4A09-95A1-2A015148801B"
-
-2015/09/30 19:20:31
-selloSAT=selloSAT="oBMr/drrPMjTZx+9KhCxBhXvAkFmW8fEHZr5wVwe6uVnKVffpksnoF75ETWf+HxMc88P7A5Jzk9jsQZLC0QwmgFcSnJQzLraJmCqDSRfMXuMyxSURMPVN3AgE4TrdhIYCONDVkJIXFebirQAU2XcBmJSQVGT8l0qX9FfFeHC/8o="
-
-2015/09/30 19:20:31
-FechaTimbrado=FechaTimbrado="2015-09-30T19:20:32"
-
-2015/09/30 19:20:31
-version=version="1.0"
-
-2015/09/30 19:20:31
-noCertificadoSAT=noCertificadoSAT="00001000000300250292"
-
-2015/10/05 16:33:52
+2015/10/20 16:36:28
 <?xml version="1.0" encoding="UTF-8"?>
 <cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd http://www.sat.gob.mx/nomina http://www.sat.gob.mx/sitio_internet/cfd/nomina/nomina11.xsd" 
-version="3.2" fecha="2015-10-05T04:33:21" 
+version="3.2" fecha="2015-10-20T16:04:53.0" 
  
-formaDePago="Pago en una sola exhibición" noCertificado="00001000000400154983" 
-certificado="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" 
-subTotal="0" descuento="0" total="287.00" 
-tipoDeComprobante="egreso" metodoDePago="Contado" LugarExpedicion="Lugar expedicion" Moneda="PESOS" TipoCambio="1"> 
-<cfdi:Emisor nombre="SOS SOFTWARE SA DE CV" rfc="VACS710106NV7">
+formaDePago="Pago en parcialidades" noCertificado="20001000000100005867" 
+certificado="MIIEdDCCA1ygAwIBAgIUMjAwMDEwMDAwMDAxMDAwMDU4NjcwDQYJKoZIhvcNAQEFBQAwggFvMRgwFgYDVQQDDA9BLkMuIGRlIHBydWViYXMxLzAtBgNVBAoMJlNlcnZpY2lvIGRlIEFkbWluaXN0cmFjacOzbiBUcmlidXRhcmlhMTgwNgYDVQQLDC9BZG1pbmlzdHJhY2nDs24gZGUgU2VndXJpZGFkIGRlIGxhIEluZm9ybWFjacOzbjEpMCcGCSqGSIb3DQEJARYaYXNpc25ldEBwcnVlYmFzLnNhdC5nb2IubXgxJjAkBgNVBAkMHUF2LiBIaWRhbGdvIDc3LCBDb2wuIEd1ZXJyZXJvMQ4wDAYDVQQRDAUwNjMwMDELMAkGA1UEBhMCTVgxGTAXBgNVBAgMEERpc3RyaXRvIEZlZGVyYWwxEjAQBgNVBAcMCUNveW9hY8OhbjEVMBMGA1UELRMMU0FUOTcwNzAxTk4zMTIwMAYJKoZIhvcNAQkCDCNSZXNwb25zYWJsZTogSMOpY3RvciBPcm5lbGFzIEFyY2lnYTAeFw0xMjA3MjcxNzAyMDBaFw0xNjA3MjcxNzAyMDBaMIHbMSkwJwYDVQQDEyBBQ0NFTSBTRVJWSUNJT1MgRU1QUkVTQVJJQUxFUyBTQzEpMCcGA1UEKRMgQUNDRU0gU0VSVklDSU9TIEVNUFJFU0FSSUFMRVMgU0MxKTAnBgNVBAoTIEFDQ0VNIFNFUlZJQ0lPUyBFTVBSRVNBUklBTEVTIFNDMSUwIwYDVQQtExxBQUEwMTAxMDFBQUEgLyBIRUdUNzYxMDAzNFMyMR4wHAYDVQQFExUgLyBIRUdUNzYxMDAzTURGUk5OMDkxETAPBgNVBAsTCFVuaWRhZCAxMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC2TTQSPONBOVxpXv9wLYo8jezBrb34i/tLx8jGdtyy27BcesOav2c1NS/Gdv10u9SkWtwdy34uRAVe7H0a3VMRLHAkvp2qMCHaZc4T8k47Jtb9wrOEh/XFS8LgT4y5OQYo6civfXXdlvxWU/gdM/e6I2lg6FGorP8H4GPAJ/qCNwIDAQABox0wGzAMBgNVHRMBAf8EAjAAMAsGA1UdDwQEAwIGwDANBgkqhkiG9w0BAQUFAAOCAQEATxMecTpMbdhSHo6KVUg4QVF4Op2IBhiMaOrtrXBdJgzGotUFcJgdBCMjtTZXSlq1S4DG1jr8p4NzQlzxsdTxaB8nSKJ4KEMgIT7E62xRUj15jI49qFz7f2uMttZLNThipunsN/NF1XtvESMTDwQFvas/Ugig6qwEfSZc0MDxMpKLEkEePmQwtZD+zXFSMVa6hmOu4M+FzGiRXbj4YJXn9Myjd8xbL/c+9UIcrYoZskxDvMxc6/6M3rNNDY3OFhBK+V/sPMzWWGt8S1yjmtPfXgFs1t65AZ2hcTwTAuHrKwDatJ1ZPfa482ZBROAAX1waz7WwXp0gso7sDCm2/yUVww==" 
+subTotal="207.000000" descuento="0.000000" total="240.120000" 
+tipoDeComprobante="ingreso" metodoDePago="EFECTIVO" LugarExpedicion="Lugar expedicion" Moneda="PESOS" TipoCambio="1"> 
+<cfdi:Emisor nombre="SOS SOFTWARE SA DE CV" rfc="AAA010101AAA">
 
 <cfdi:DomicilioFiscal codigoPostal="00000" pais="PAIS" estado="ESTADO" municipio="CIUDAD" colonia="COLONIA" noExterior="111" calle="CALLE"/>
 
@@ -92,18 +63,24 @@ tipoDeComprobante="egreso" metodoDePago="Contado" LugarExpedicion="Lugar expedic
 
 </cfdi:Emisor>
 
-<cfdi:Receptor nombre="UMBRAL EDITORIAL, S.A DE C.V." rfc="UED040123AC3">
+<cfdi:Receptor nombre=" JALMEX EMPRESARIAL S.A. DE C.V." rfc="JEM981109GZ0">
 
-<cfdi:Domicilio pais="MEXICO" estado="JALISCO" municipio="TLAQUEPAQUE" colonia="PARQUE INDUSTRIAL DEL BOSQUE" calle="PRIV. PORFIRIO DIAZ" localidad="TLAQUEPAQUE"/>
+<cfdi:Domicilio codigoPostal="45685" pais="MEXICO" estado="JALISCO" municipio="EL SALTO" colonia="EL CASTILLO" noExterior="S/N" calle="CARRETERRA EL CASTILLO KM 13.5" localidad="EL SALTO"/>
 
 </cfdi:Receptor>
 
 <cfdi:Conceptos>
 
-<cfdi:Concepto importe="247.410000" valorUnitario="0.000000" descripcion="Pago de factura: FAC12 de serie: FAC" unidad="EMP5" cantidad="1.000000"/>
+<cfdi:Concepto importe="207.000000" valorUnitario="207.000000" descripcion="TINTA STYLUS CX3900,CX4900,CX5900,C79,CX8300,CX7300,TX200, CX5600,TX210,TX-100,TX110" unidad="PZA" cantidad="1.000000"/>
 
 </cfdi:Conceptos>
-<cfdi:Impuestos totalImpuestosTrasladados="0">
+<cfdi:Impuestos totalImpuestosTrasladados="33.120000">
+
+<cfdi:Traslados>
+
+<cfdi:Traslado importe="33.12" tasa="16" impuesto="IVA"/>
+</cfdi:Traslados>
+
 </cfdi:Impuestos>
 
 <cfdi:Complemento> </cfdi:Complemento>
@@ -111,30 +88,127 @@ tipoDeComprobante="egreso" metodoDePago="Contado" LugarExpedicion="Lugar expedic
 </cfdi:Comprobante>
 
 
-2015/10/05 16:34:02
+2015/10/20 16:37:33
 crea servio de timbrando
 
-2015/10/05 16:34:02
-crea puerto de timbrando
+2015/10/20 16:37:36
+crea puerto para timbrar
 
-2015/10/05 16:34:07
+2015/10/20 16:41:43
+<?xml version="1.0" encoding="UTF-8"?>
+<cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd http://www.sat.gob.mx/nomina http://www.sat.gob.mx/sitio_internet/cfd/nomina/nomina11.xsd" 
+version="3.2" fecha="2015-10-20T16:04:53.0" 
+ 
+formaDePago="Pago en parcialidades" noCertificado="20001000000100005867" 
+certificado="MIIEdDCCA1ygAwIBAgIUMjAwMDEwMDAwMDAxMDAwMDU4NjcwDQYJKoZIhvcNAQEFBQAwggFvMRgwFgYDVQQDDA9BLkMuIGRlIHBydWViYXMxLzAtBgNVBAoMJlNlcnZpY2lvIGRlIEFkbWluaXN0cmFjacOzbiBUcmlidXRhcmlhMTgwNgYDVQQLDC9BZG1pbmlzdHJhY2nDs24gZGUgU2VndXJpZGFkIGRlIGxhIEluZm9ybWFjacOzbjEpMCcGCSqGSIb3DQEJARYaYXNpc25ldEBwcnVlYmFzLnNhdC5nb2IubXgxJjAkBgNVBAkMHUF2LiBIaWRhbGdvIDc3LCBDb2wuIEd1ZXJyZXJvMQ4wDAYDVQQRDAUwNjMwMDELMAkGA1UEBhMCTVgxGTAXBgNVBAgMEERpc3RyaXRvIEZlZGVyYWwxEjAQBgNVBAcMCUNveW9hY8OhbjEVMBMGA1UELRMMU0FUOTcwNzAxTk4zMTIwMAYJKoZIhvcNAQkCDCNSZXNwb25zYWJsZTogSMOpY3RvciBPcm5lbGFzIEFyY2lnYTAeFw0xMjA3MjcxNzAyMDBaFw0xNjA3MjcxNzAyMDBaMIHbMSkwJwYDVQQDEyBBQ0NFTSBTRVJWSUNJT1MgRU1QUkVTQVJJQUxFUyBTQzEpMCcGA1UEKRMgQUNDRU0gU0VSVklDSU9TIEVNUFJFU0FSSUFMRVMgU0MxKTAnBgNVBAoTIEFDQ0VNIFNFUlZJQ0lPUyBFTVBSRVNBUklBTEVTIFNDMSUwIwYDVQQtExxBQUEwMTAxMDFBQUEgLyBIRUdUNzYxMDAzNFMyMR4wHAYDVQQFExUgLyBIRUdUNzYxMDAzTURGUk5OMDkxETAPBgNVBAsTCFVuaWRhZCAxMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC2TTQSPONBOVxpXv9wLYo8jezBrb34i/tLx8jGdtyy27BcesOav2c1NS/Gdv10u9SkWtwdy34uRAVe7H0a3VMRLHAkvp2qMCHaZc4T8k47Jtb9wrOEh/XFS8LgT4y5OQYo6civfXXdlvxWU/gdM/e6I2lg6FGorP8H4GPAJ/qCNwIDAQABox0wGzAMBgNVHRMBAf8EAjAAMAsGA1UdDwQEAwIGwDANBgkqhkiG9w0BAQUFAAOCAQEATxMecTpMbdhSHo6KVUg4QVF4Op2IBhiMaOrtrXBdJgzGotUFcJgdBCMjtTZXSlq1S4DG1jr8p4NzQlzxsdTxaB8nSKJ4KEMgIT7E62xRUj15jI49qFz7f2uMttZLNThipunsN/NF1XtvESMTDwQFvas/Ugig6qwEfSZc0MDxMpKLEkEePmQwtZD+zXFSMVa6hmOu4M+FzGiRXbj4YJXn9Myjd8xbL/c+9UIcrYoZskxDvMxc6/6M3rNNDY3OFhBK+V/sPMzWWGt8S1yjmtPfXgFs1t65AZ2hcTwTAuHrKwDatJ1ZPfa482ZBROAAX1waz7WwXp0gso7sDCm2/yUVww==" 
+subTotal="207.000000" descuento="0.000000" total="240.120000" 
+tipoDeComprobante="ingreso" metodoDePago="EFECTIVO" LugarExpedicion="Lugar expedicion" Moneda="PESOS" TipoCambio="1"> 
+<cfdi:Emisor nombre="SOS SOFTWARE SA DE CV" rfc="AAA010101AAA">
+
+<cfdi:DomicilioFiscal codigoPostal="00000" pais="PAIS" estado="ESTADO" municipio="CIUDAD" colonia="COLONIA" noExterior="111" calle="CALLE"/>
+
+<cfdi:RegimenFiscal Regimen="regimen fiscal"/>
+
+</cfdi:Emisor>
+
+<cfdi:Receptor nombre=" JALMEX EMPRESARIAL S.A. DE C.V." rfc="JEM981109GZ0">
+
+<cfdi:Domicilio codigoPostal="45685" pais="MEXICO" estado="JALISCO" municipio="EL SALTO" colonia="EL CASTILLO" noExterior="S/N" calle="CARRETERRA EL CASTILLO KM 13.5" localidad="EL SALTO"/>
+
+</cfdi:Receptor>
+
+<cfdi:Conceptos>
+
+<cfdi:Concepto importe="207.000000" valorUnitario="207.000000" descripcion="TINTA STYLUS CX3900,CX4900,CX5900,C79,CX8300,CX7300,TX200, CX5600,TX210,TX-100,TX110" unidad="PZA" cantidad="1.000000"/>
+
+</cfdi:Conceptos>
+<cfdi:Impuestos totalImpuestosTrasladados="33.120000">
+
+<cfdi:Traslados>
+
+<cfdi:Traslado importe="33.12" tasa="16" impuesto="IVA"/>
+</cfdi:Traslados>
+
+</cfdi:Impuestos>
+
+<cfdi:Complemento> </cfdi:Complemento>
+
+</cfdi:Comprobante>
+
+
+2015/10/20 16:41:46
+crea servio de timbrando
+
+2015/10/20 16:41:46
+crea puerto para timbrar
+
+2015/10/20 16:41:47
 timbro
 
-2015/10/05 16:34:07
-id de transacion:1444080839962
+2015/10/20 16:41:47
+id de transacion:1445377305377
 
-2015/10/05 16:34:07
-UUID=UUID="11B38769-5840-4B08-96F9-4E6513D63F97"
+2015/10/20 16:41:47
+el XML que recibe del sat: 
+<?xml version="1.0" encoding="utf-8"?><cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd http://www.sat.gob.mx/nomina http://www.sat.gob.mx/sitio_internet/cfd/nomina/nomina11.xsd" version="3.2" fecha="2015-10-20T16:04:53.0" sello="K+m/rlzvVdZEDEfnsytZSIgRoRrWAdRxTD2PvKuYaf+ydReIlnQddX+eCA3bDL7iAxfit5awp+1B4jHOBIoWp0B8QSeswFiAxB75g/atgNbqj8z3qusOjaXehEIRteTIZ3RbentXYEeTOSewx8vPKvTj+mL7vX0rrza1mlnV7c8=" formaDePago="Pago en parcialidades" noCertificado="20001000000100005867" certificado="MIIEdDCCA1ygAwIBAgIUMjAwMDEwMDAwMDAxMDAwMDU4NjcwDQYJKoZIhvcNAQEFBQAwggFvMRgwFgYDVQQDDA9BLkMuIGRlIHBydWViYXMxLzAtBgNVBAoMJlNlcnZpY2lvIGRlIEFkbWluaXN0cmFjacOzbiBUcmlidXRhcmlhMTgwNgYDVQQLDC9BZG1pbmlzdHJhY2nDs24gZGUgU2VndXJpZGFkIGRlIGxhIEluZm9ybWFjacOzbjEpMCcGCSqGSIb3DQEJARYaYXNpc25ldEBwcnVlYmFzLnNhdC5nb2IubXgxJjAkBgNVBAkMHUF2LiBIaWRhbGdvIDc3LCBDb2wuIEd1ZXJyZXJvMQ4wDAYDVQQRDAUwNjMwMDELMAkGA1UEBhMCTVgxGTAXBgNVBAgMEERpc3RyaXRvIEZlZGVyYWwxEjAQBgNVBAcMCUNveW9hY8OhbjEVMBMGA1UELRMMU0FUOTcwNzAxTk4zMTIwMAYJKoZIhvcNAQkCDCNSZXNwb25zYWJsZTogSMOpY3RvciBPcm5lbGFzIEFyY2lnYTAeFw0xMjA3MjcxNzAyMDBaFw0xNjA3MjcxNzAyMDBaMIHbMSkwJwYDVQQDEyBBQ0NFTSBTRVJWSUNJT1MgRU1QUkVTQVJJQUxFUyBTQzEpMCcGA1UEKRMgQUNDRU0gU0VSVklDSU9TIEVNUFJFU0FSSUFMRVMgU0MxKTAnBgNVBAoTIEFDQ0VNIFNFUlZJQ0lPUyBFTVBSRVNBUklBTEVTIFNDMSUwIwYDVQQtExxBQUEwMTAxMDFBQUEgLyBIRUdUNzYxMDAzNFMyMR4wHAYDVQQFExUgLyBIRUdUNzYxMDAzTURGUk5OMDkxETAPBgNVBAsTCFVuaWRhZCAxMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC2TTQSPONBOVxpXv9wLYo8jezBrb34i/tLx8jGdtyy27BcesOav2c1NS/Gdv10u9SkWtwdy34uRAVe7H0a3VMRLHAkvp2qMCHaZc4T8k47Jtb9wrOEh/XFS8LgT4y5OQYo6civfXXdlvxWU/gdM/e6I2lg6FGorP8H4GPAJ/qCNwIDAQABox0wGzAMBgNVHRMBAf8EAjAAMAsGA1UdDwQEAwIGwDANBgkqhkiG9w0BAQUFAAOCAQEATxMecTpMbdhSHo6KVUg4QVF4Op2IBhiMaOrtrXBdJgzGotUFcJgdBCMjtTZXSlq1S4DG1jr8p4NzQlzxsdTxaB8nSKJ4KEMgIT7E62xRUj15jI49qFz7f2uMttZLNThipunsN/NF1XtvESMTDwQFvas/Ugig6qwEfSZc0MDxMpKLEkEePmQwtZD+zXFSMVa6hmOu4M+FzGiRXbj4YJXn9Myjd8xbL/c+9UIcrYoZskxDvMxc6/6M3rNNDY3OFhBK+V/sPMzWWGt8S1yjmtPfXgFs1t65AZ2hcTwTAuHrKwDatJ1ZPfa482ZBROAAX1waz7WwXp0gso7sDCm2/yUVww==" subTotal="207.000000" descuento="0.000000" total="240.120000" tipoDeComprobante="ingreso" metodoDePago="EFECTIVO" LugarExpedicion="Lugar expedicion" Moneda="PESOS" TipoCambio="1"><cfdi:Emisor nombre="SOS SOFTWARE SA DE CV" rfc="AAA010101AAA"><cfdi:DomicilioFiscal codigoPostal="00000" pais="PAIS" estado="ESTADO" municipio="CIUDAD" colonia="COLONIA" noExterior="111" calle="CALLE"/><cfdi:RegimenFiscal Regimen="regimen fiscal"/></cfdi:Emisor><cfdi:Receptor nombre=" JALMEX EMPRESARIAL S.A. DE C.V." rfc="JEM981109GZ0"><cfdi:Domicilio codigoPostal="45685" pais="MEXICO" estado="JALISCO" municipio="EL SALTO" colonia="EL CASTILLO" noExterior="S/N" calle="CARRETERRA EL CASTILLO KM 13.5" localidad="EL SALTO"/></cfdi:Receptor><cfdi:Conceptos><cfdi:Concepto importe="207.000000" valorUnitario="207.000000" descripcion="TINTA STYLUS CX3900,CX4900,CX5900,C79,CX8300,CX7300,TX200, CX5600,TX210,TX-100,TX110" unidad="PZA" cantidad="1.000000"/></cfdi:Conceptos><cfdi:Impuestos totalImpuestosTrasladados="33.120000"><cfdi:Traslados><cfdi:Traslado importe="33.12" tasa="16" impuesto="IVA"/></cfdi:Traslados></cfdi:Impuestos><cfdi:Complemento><tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" version="1.0" UUID="6B33E727-E852-4CC8-AD2F-49F6D7AF24CF" FechaTimbrado="2015-10-20T16:41:47" selloCFD="K+m/rlzvVdZEDEfnsytZSIgRoRrWAdRxTD2PvKuYaf+ydReIlnQddX+eCA3bDL7iAxfit5awp+1B4jHOBIoWp0B8QSeswFiAxB75g/atgNbqj8z3qusOjaXehEIRteTIZ3RbentXYEeTOSewx8vPKvTj+mL7vX0rrza1mlnV7c8=" noCertificadoSAT="20001000000100005868" selloSAT="ndhBghB+i22E2xT3kVHgradIYm2+nplp+SzfQxaEgp3siHm0sadlinuHoFljrIDL+7Wc32ye/V0EFIl4720FtKlS7PoVbpJ2kUQ1mhVctB2cTdm6ZPvdJEHulFJkebUZ6rovJwMDp7JU8J/fx9YrU2MEIT9kVaz/clF70di7ViQ=" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/TimbreFiscalDigital/TimbreFiscalDigital.xsd"/></cfdi:Complemento></cfdi:Comprobante>
 
-2015/10/05 16:34:07
-selloSAT=selloSAT="fwTjd+IsC4ReSx7xgloSfkIJ12B7cuAsyP1Cdzvz81uFOyXx/cscRp5j4tCFsU+bVmI/N2endFV70Nnad4k9Y3cxD6Wm+yTaKfKd572wboFDQOIVdr4a7q9czrbDabFfeV16C7FynVOASf0zHOAPXz5xsIEj1NmntJq3zh6tCCI="
+2015/10/20 17:05:02
+<?xml version="1.0" encoding="UTF-8"?>
+<cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd http://www.sat.gob.mx/nomina http://www.sat.gob.mx/sitio_internet/cfd/nomina/nomina11.xsd" 
+version="3.2" fecha="2015-10-20T05:03:50" 
+ 
+formaDePago="PAGO EN UNA SOLA EXHIBICIÓN" noCertificado="20001000000100005867" 
+certificado="MIIEdDCCA1ygAwIBAgIUMjAwMDEwMDAwMDAxMDAwMDU4NjcwDQYJKoZIhvcNAQEFBQAwggFvMRgwFgYDVQQDDA9BLkMuIGRlIHBydWViYXMxLzAtBgNVBAoMJlNlcnZpY2lvIGRlIEFkbWluaXN0cmFjacOzbiBUcmlidXRhcmlhMTgwNgYDVQQLDC9BZG1pbmlzdHJhY2nDs24gZGUgU2VndXJpZGFkIGRlIGxhIEluZm9ybWFjacOzbjEpMCcGCSqGSIb3DQEJARYaYXNpc25ldEBwcnVlYmFzLnNhdC5nb2IubXgxJjAkBgNVBAkMHUF2LiBIaWRhbGdvIDc3LCBDb2wuIEd1ZXJyZXJvMQ4wDAYDVQQRDAUwNjMwMDELMAkGA1UEBhMCTVgxGTAXBgNVBAgMEERpc3RyaXRvIEZlZGVyYWwxEjAQBgNVBAcMCUNveW9hY8OhbjEVMBMGA1UELRMMU0FUOTcwNzAxTk4zMTIwMAYJKoZIhvcNAQkCDCNSZXNwb25zYWJsZTogSMOpY3RvciBPcm5lbGFzIEFyY2lnYTAeFw0xMjA3MjcxNzAyMDBaFw0xNjA3MjcxNzAyMDBaMIHbMSkwJwYDVQQDEyBBQ0NFTSBTRVJWSUNJT1MgRU1QUkVTQVJJQUxFUyBTQzEpMCcGA1UEKRMgQUNDRU0gU0VSVklDSU9TIEVNUFJFU0FSSUFMRVMgU0MxKTAnBgNVBAoTIEFDQ0VNIFNFUlZJQ0lPUyBFTVBSRVNBUklBTEVTIFNDMSUwIwYDVQQtExxBQUEwMTAxMDFBQUEgLyBIRUdUNzYxMDAzNFMyMR4wHAYDVQQFExUgLyBIRUdUNzYxMDAzTURGUk5OMDkxETAPBgNVBAsTCFVuaWRhZCAxMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC2TTQSPONBOVxpXv9wLYo8jezBrb34i/tLx8jGdtyy27BcesOav2c1NS/Gdv10u9SkWtwdy34uRAVe7H0a3VMRLHAkvp2qMCHaZc4T8k47Jtb9wrOEh/XFS8LgT4y5OQYo6civfXXdlvxWU/gdM/e6I2lg6FGorP8H4GPAJ/qCNwIDAQABox0wGzAMBgNVHRMBAf8EAjAAMAsGA1UdDwQEAwIGwDANBgkqhkiG9w0BAQUFAAOCAQEATxMecTpMbdhSHo6KVUg4QVF4Op2IBhiMaOrtrXBdJgzGotUFcJgdBCMjtTZXSlq1S4DG1jr8p4NzQlzxsdTxaB8nSKJ4KEMgIT7E62xRUj15jI49qFz7f2uMttZLNThipunsN/NF1XtvESMTDwQFvas/Ugig6qwEfSZc0MDxMpKLEkEePmQwtZD+zXFSMVa6hmOu4M+FzGiRXbj4YJXn9Myjd8xbL/c+9UIcrYoZskxDvMxc6/6M3rNNDY3OFhBK+V/sPMzWWGt8S1yjmtPfXgFs1t65AZ2hcTwTAuHrKwDatJ1ZPfa482ZBROAAX1waz7WwXp0gso7sDCm2/yUVww==" 
+subTotal="207.00" descuento="0.00" total="240.12" 
+tipoDeComprobante="ingreso" metodoDePago="EFECTIVO" NumCtaPago="0000" LugarExpedicion="Lugar expedicion" Moneda="PESOS" TipoCambio="1"> 
+<cfdi:Emisor nombre="SOS SOFTWARE SA DE CV" rfc="AAA010101AAA">
 
-2015/10/05 16:34:07
-FechaTimbrado=FechaTimbrado="2015-10-05T16:34:06"
+<cfdi:DomicilioFiscal codigoPostal="00000" pais="PAIS" estado="ESTADO" municipio="CIUDAD" colonia="COLONIA" noExterior="111" calle="CALLE"/>
 
-2015/10/05 16:34:07
-version=version="1.0"
+<cfdi:RegimenFiscal Regimen="regimen fiscal"/>
 
-2015/10/05 16:34:07
-noCertificadoSAT=noCertificadoSAT="00001000000300250292"
+</cfdi:Emisor>
+
+<cfdi:Receptor nombre=" JALMEX EMPRESARIAL S.A. DE C.V." rfc="JEM981109GZ0">
+
+<cfdi:Domicilio codigoPostal="45685" pais="MEXICO" estado="JALISCO" municipio="EL SALTO" colonia="EL CASTILLO" noExterior="S/N" calle="CARRETERRA EL CASTILLO KM 13.5" localidad="EL SALTO"/>
+
+</cfdi:Receptor>
+
+<cfdi:Conceptos>
+
+<cfdi:Concepto importe="207.000000" valorUnitario="207.000000" descripcion="TINTA STYLUS CX3900,CX4900,CX5900,C79,CX8300,CX7300,TX200, CX5600,TX210,TX-100,TX110" unidad="PZA" cantidad="1.000000"/>
+
+</cfdi:Conceptos>
+<cfdi:Impuestos totalImpuestosTrasladados="33.12">
+
+<cfdi:Traslados>
+
+<cfdi:Traslado importe="33.12" tasa="16" impuesto="IVA"/>
+</cfdi:Traslados>
+
+</cfdi:Impuestos>
+
+<cfdi:Complemento> </cfdi:Complemento>
+
+</cfdi:Comprobante>
+
+
+2015/10/20 17:05:07
+crea servio de timbrando
+
+2015/10/20 17:05:07
+crea puerto para timbrar
+
+2015/10/20 17:05:11
+timbro
+
+2015/10/20 17:05:11
+id de transacion:1445378705851
+
+2015/10/20 17:05:11
+el XML que recibe del sat: 
+<?xml version="1.0" encoding="utf-8"?><cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd http://www.sat.gob.mx/nomina http://www.sat.gob.mx/sitio_internet/cfd/nomina/nomina11.xsd" version="3.2" fecha="2015-10-20T05:03:50" sello="UvaDfuRECmsBezhf5lpQukk7MMRMXocEB75wEppSCvT83x2uTrDPtXkN5ZR547D7gvUYXs4DUCc8+Jk0iMVhEPF+7GuMBig9/h6WA8oujZ2V/zquLHeq6xqA1Ze49YxWZI9nI8smDTQmLicaO3m9ty+fP3nx1bMZAL9DodFD4zA=" formaDePago="PAGO EN UNA SOLA EXHIBICI&#211;N" noCertificado="20001000000100005867" certificado="MIIEdDCCA1ygAwIBAgIUMjAwMDEwMDAwMDAxMDAwMDU4NjcwDQYJKoZIhvcNAQEFBQAwggFvMRgwFgYDVQQDDA9BLkMuIGRlIHBydWViYXMxLzAtBgNVBAoMJlNlcnZpY2lvIGRlIEFkbWluaXN0cmFjacOzbiBUcmlidXRhcmlhMTgwNgYDVQQLDC9BZG1pbmlzdHJhY2nDs24gZGUgU2VndXJpZGFkIGRlIGxhIEluZm9ybWFjacOzbjEpMCcGCSqGSIb3DQEJARYaYXNpc25ldEBwcnVlYmFzLnNhdC5nb2IubXgxJjAkBgNVBAkMHUF2LiBIaWRhbGdvIDc3LCBDb2wuIEd1ZXJyZXJvMQ4wDAYDVQQRDAUwNjMwMDELMAkGA1UEBhMCTVgxGTAXBgNVBAgMEERpc3RyaXRvIEZlZGVyYWwxEjAQBgNVBAcMCUNveW9hY8OhbjEVMBMGA1UELRMMU0FUOTcwNzAxTk4zMTIwMAYJKoZIhvcNAQkCDCNSZXNwb25zYWJsZTogSMOpY3RvciBPcm5lbGFzIEFyY2lnYTAeFw0xMjA3MjcxNzAyMDBaFw0xNjA3MjcxNzAyMDBaMIHbMSkwJwYDVQQDEyBBQ0NFTSBTRVJWSUNJT1MgRU1QUkVTQVJJQUxFUyBTQzEpMCcGA1UEKRMgQUNDRU0gU0VSVklDSU9TIEVNUFJFU0FSSUFMRVMgU0MxKTAnBgNVBAoTIEFDQ0VNIFNFUlZJQ0lPUyBFTVBSRVNBUklBTEVTIFNDMSUwIwYDVQQtExxBQUEwMTAxMDFBQUEgLyBIRUdUNzYxMDAzNFMyMR4wHAYDVQQFExUgLyBIRUdUNzYxMDAzTURGUk5OMDkxETAPBgNVBAsTCFVuaWRhZCAxMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC2TTQSPONBOVxpXv9wLYo8jezBrb34i/tLx8jGdtyy27BcesOav2c1NS/Gdv10u9SkWtwdy34uRAVe7H0a3VMRLHAkvp2qMCHaZc4T8k47Jtb9wrOEh/XFS8LgT4y5OQYo6civfXXdlvxWU/gdM/e6I2lg6FGorP8H4GPAJ/qCNwIDAQABox0wGzAMBgNVHRMBAf8EAjAAMAsGA1UdDwQEAwIGwDANBgkqhkiG9w0BAQUFAAOCAQEATxMecTpMbdhSHo6KVUg4QVF4Op2IBhiMaOrtrXBdJgzGotUFcJgdBCMjtTZXSlq1S4DG1jr8p4NzQlzxsdTxaB8nSKJ4KEMgIT7E62xRUj15jI49qFz7f2uMttZLNThipunsN/NF1XtvESMTDwQFvas/Ugig6qwEfSZc0MDxMpKLEkEePmQwtZD+zXFSMVa6hmOu4M+FzGiRXbj4YJXn9Myjd8xbL/c+9UIcrYoZskxDvMxc6/6M3rNNDY3OFhBK+V/sPMzWWGt8S1yjmtPfXgFs1t65AZ2hcTwTAuHrKwDatJ1ZPfa482ZBROAAX1waz7WwXp0gso7sDCm2/yUVww==" subTotal="207.00" descuento="0.00" total="240.12" tipoDeComprobante="ingreso" metodoDePago="EFECTIVO" NumCtaPago="0000" LugarExpedicion="Lugar expedicion" Moneda="PESOS" TipoCambio="1"><cfdi:Emisor nombre="SOS SOFTWARE SA DE CV" rfc="AAA010101AAA"><cfdi:DomicilioFiscal codigoPostal="00000" pais="PAIS" estado="ESTADO" municipio="CIUDAD" colonia="COLONIA" noExterior="111" calle="CALLE"/><cfdi:RegimenFiscal Regimen="regimen fiscal"/></cfdi:Emisor><cfdi:Receptor nombre=" JALMEX EMPRESARIAL S.A. DE C.V." rfc="JEM981109GZ0"><cfdi:Domicilio codigoPostal="45685" pais="MEXICO" estado="JALISCO" municipio="EL SALTO" colonia="EL CASTILLO" noExterior="S/N" calle="CARRETERRA EL CASTILLO KM 13.5" localidad="EL SALTO"/></cfdi:Receptor><cfdi:Conceptos><cfdi:Concepto importe="207.000000" valorUnitario="207.000000" descripcion="TINTA STYLUS CX3900,CX4900,CX5900,C79,CX8300,CX7300,TX200, CX5600,TX210,TX-100,TX110" unidad="PZA" cantidad="1.000000"/></cfdi:Conceptos><cfdi:Impuestos totalImpuestosTrasladados="33.12"><cfdi:Traslados><cfdi:Traslado importe="33.12" tasa="16" impuesto="IVA"/></cfdi:Traslados></cfdi:Impuestos><cfdi:Complemento><tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" version="1.0" UUID="1AD4057D-B208-4BC8-AD19-7879C986BE99" FechaTimbrado="2015-10-20T17:05:11" selloCFD="UvaDfuRECmsBezhf5lpQukk7MMRMXocEB75wEppSCvT83x2uTrDPtXkN5ZR547D7gvUYXs4DUCc8+Jk0iMVhEPF+7GuMBig9/h6WA8oujZ2V/zquLHeq6xqA1Ze49YxWZI9nI8smDTQmLicaO3m9ty+fP3nx1bMZAL9DodFD4zA=" noCertificadoSAT="20001000000100005868" selloSAT="L3GVHBN6yJav1To19XXbtEljINPwc6CwHhNxsYjfcivNMo+ewI3lOjDeOOJZFDer9aOOd8E2glorSz/WbticpgaZAdjvgR2vLD2sqyXhvem1sa1+zIKUoYRNJm52rBhWo4zPnYREZY8tUF7nclkmI6TL2r4kRY0dWGa1TljoiLk=" xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/TimbreFiscalDigital/TimbreFiscalDigital.xsd"/></cfdi:Complemento></cfdi:Comprobante>
 
