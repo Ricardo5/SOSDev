@@ -960,6 +960,34 @@ public class LoadinBD extends javax.swing.JDialog {
         /*Crea la table de movientos de inventario*/
         this.crearTablaMovtoInventario(con, sBD, "er_movimientos_inventario");
         
+        jTInf.setText("Creando tabla de activos");
+        
+        vCrearActivos(sBD, con, "activos");//Creando el catalo de activos
+        
+        jTInf.setText("Creando tabla de sucursales");
+        
+        vCrearCatalogosActivos(sBD, con, "sucursal");//creando catalogo de sucursales
+        
+        jTInf.setText("Creando tabla de log de las sucursales");
+        
+        vCreLogActivos(sBD, con, "logsucursal");//creando log de las sucursales
+        
+         jTInf.setText("Creando tabla de clasificaciones");
+        
+        vCrearCatalogosActivos(sBD, con, "clasificacion");//creando catalogo de sucursales
+        
+        jTInf.setText("Creando tabla de log de las clasificaciones");
+        
+        vCreLogActivos(sBD, con, "logclasificacion");//creando log de las sucursales
+        
+         jTInf.setText("Creando tabla de responsables");
+        
+        vCrearCatalogosActivos(sBD, con, "responsable");//creando catalogo de sucursales
+        
+        jTInf.setText("Creando tabla de log de los responsables");
+        
+        vCreLogActivos(sBD, con, "logresponsable");//creando log de las sucursales
+        
         /*Muestra en el campo lo que se esta creando en este momento*/
         jTInf.setText("Creando tabla de ejercicios");
         
@@ -17030,4 +17058,242 @@ public class LoadinBD extends javax.swing.JDialog {
         }
         return 0;
     }
+        /*Crea la tabla de interfaz datapark si no existe*/
+    private void vCrearActivos(String sBD, Connection con, String sTabl) 
+    {        
+        /*Declara variables de la base de datos*/
+        Statement   st;
+        ResultSet   rs;
+        String      sQ = "";
+
+        /*Comprueba si la tabla existe*/
+        boolean bSi = false;
+        try 
+        {
+            sQ = "SELECT * FROM information_schema.tables WHERE table_schema = '" + sBD + "' AND table_name = '" + sTabl + "' LIMIT 1";
+            st = con.createStatement();
+            rs = st.executeQuery(sQ);
+            /*Si hay datos entonces coloca la bandera*/
+            if(rs.next()) 
+                bSi = true;            
+        } 
+        catch(SQLException e) 
+        {
+            /*Agrega en el log*/
+            Login.vLog(e.getMessage());
+
+            /*Borra la base de datos local y servidora*/
+            BDCon.vDelBD(Star.sBD);
+            BDCon.vDelBDLoc(Star.sBD + "_tmp");
+
+            //Mensajea
+            JOptionPane.showMessageDialog(null, "No se creará toda la estructura de las tablas ni esquemas en la base de datos debido al siguiente error:\n" + "private static void vCreMons() Error en " + sQ + " por " + e.getMessage(), "Error BD", JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource(Star.sRutIconAd)));
+
+            //Cierra la base de datos y sal de la aplicación
+            Star.iCierrBas(con);            
+            System.exit(1);
+        }
+
+        /*Si la tabla no existe*/
+        if(!bSi) 
+        {
+            /*Crea la tabla*/
+            try 
+            {
+                sQ = "CREATE TABLE `" + sTabl + "` (\n"
+                        + "`id_id`           INT(11) NOT NULL AUTO_INCREMENT,\n"
+                        + "`referencia`      VARCHAR(30) DEFAULT '',\n"
+                        + "`descrip`         VARCHAR(255) DEFAULT '',\n"
+                        + "`zona`            VARCHAR(30) DEFAULT '',\n"
+                        + "`sucursal`        VARCHAR(30) DEFAULT '',\n"
+                        + "`clasificacion`   VARCHAR(30) DEFAULT '',\n"                        
+                        + "`responsable`     VARCHAR(30) DEFAULT '',\n"
+                        + "`sucu`            VARCHAR(30) NOT NULL,\n"
+                        + "`nocaj`           VARCHAR(30) NOT NULL,\n"                      
+                        + "`estac`           VARCHAR(30) NOT NULL,\n"
+                        + "`falt`            TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,\n"
+                        + "`fmod`            TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,\n"
+                        + "PRIMARY KEY (`id_id`), UNIQUE KEY `id_id_UNIQUE` (`id_id`)\n"                        
+                        + ")";
+                st = con.createStatement();
+                st.executeUpdate(sQ);
+            } 
+            catch(SQLException ex) 
+            {
+                /*Agrega en el log*/
+                Login.vLog(ex.getMessage());
+
+                /*Borra la base de datos local y servidora*/
+                BDCon.vDelBD(Star.sBD);
+                BDCon.vDelBDLoc(Star.sBD + "_tmp");
+
+                //Mensajea
+                JOptionPane.showMessageDialog(null, "No se creará toda la estructura de las tablas ni esquemas en la base de datos debido al siguiente error:\n" + "private static void vCrearActivos() Error en " + sQ + " por " + ex.getMessage(), "Error BD", JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource(Star.sRutIconAd)));
+                
+                //Cierra la base de datos y sal de la aplicación
+                Star.iCierrBas(con);            
+                System.exit(1);
+            }
+                       
+        }
+
+    }
+     /*Crea la tabla de log tipos no existe*/
+    private void vCreLogActivos(String sBD, Connection con, String sTabl) 
+    {
+        /*Declara variables de la base de datos*/
+        Statement   st;
+        ResultSet   rs;
+        String      sQ = "";
+
+        
+        
+        
+        /*Comprueba si la taba existe*/
+        boolean bSi = false;
+        try 
+        {
+            sQ = "SELECT * FROM information_schema.tables WHERE table_schema = '" + sBD + "' AND table_name = '" + sTabl + "' LIMIT 1";
+            st = con.createStatement();
+            rs = st.executeQuery(sQ);
+            /*Si hay datos entonces coloca la bandera*/
+            if(rs.next()) 
+                bSi = true;            
+        } 
+        catch(SQLException e) 
+        {
+            /*Agrega en el log*/
+            Login.vLog(e.getMessage());
+
+            /*Borra la base de datos local y servidora*/
+            BDCon.vDelBD(Star.sBD);
+            BDCon.vDelBDLoc(Star.sBD + "_tmp");
+
+            //Mensajea
+            JOptionPane.showMessageDialog(null, "No se creará toda la estructura de las tablas ni esquemas en la base de datos debido al siguiente error:\n" + "private static void vCreMons() Error en " + sQ + " por " + e.getMessage(), "Error BD", JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource(Star.sRutIconAd)));
+
+            //Cierra la base de datos y sal de la aplicación
+            Star.iCierrBas(con);            
+            System.exit(1);
+        }
+
+        /*Si la tabla no existe entonces*/
+        if(!bSi) 
+        {
+            /*Crea la tabla*/
+            try 
+            {
+                sQ = "CREATE TABLE IF NOT EXISTS `" + sBD + "`.`" + sTabl + "` ("
+                        + "`id_id`       INT(11) NOT NULL AUTO_INCREMENT,\n"
+                        + "`cod`         VARCHAR(30) NOT NULL,\n"
+                        + "`descrip`     VARCHAR(255) NOT NULL,\n"
+                        + "`accio`       VARCHAR(30) NOT NULL,\n"
+                        + "`estac`       VARCHAR(30) NOT NULL,\n"
+                        + "`sucu`        VARCHAR(30) NOT NULL,\n"
+                        + "`nocaj`       VARCHAR(30) NOT NULL,\n"
+                        + "`falt`        TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,\n"
+                        + "PRIMARY KEY (`id_id`), UNIQUE KEY `id_id_UNIQUE` (`id_id`), KEY `accio` (`accio`))";
+                st = con.createStatement();
+                st.executeUpdate(sQ);
+            } 
+            catch(SQLException ex) 
+            {
+                /*Agrega en el log*/
+                Login.vLog(ex.getMessage());
+
+                /*Borra la base de datos local y servidora*/
+                BDCon.vDelBD(Star.sBD);
+                BDCon.vDelBDLoc(Star.sBD + "_tmp");
+
+                //Mensajea
+                JOptionPane.showMessageDialog(null, "No se creará toda la estructura de las tablas ni esquemas en la base de datos debido al siguiente error:\n" + "private static void vCreMons() Error en " + sQ + " por " + ex.getMessage(), "Error BD", JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource(Star.sRutIconAd)));
+                
+                //Cierra la base de datos y sal de la aplicación
+                Star.iCierrBas(con);            
+                System.exit(1);
+            }
+
+        }/*Fin de if(!bSi)*/
+
+    }/*Fin de private void vCreLogTip()*/
+     private void vCrearCatalogosActivos(String sBD, Connection con, String sTabl) 
+    {
+        /*Declara variables de la base de datos*/
+        Statement   st;
+        ResultSet   rs;
+        String      sQ = "";
+
+        
+        
+        /*Comprueba si la tabla de pags existe*/
+        boolean bSi = false;
+        try 
+        {
+            sQ = "SELECT * FROM information_schema.tables WHERE table_schema = '" + sBD + "' AND table_name = '" + sTabl + "' LIMIT 1";
+            st = con.createStatement();
+            rs = st.executeQuery(sQ);
+            /*Si hay datos entonces coloca la bandera*/
+            if(rs.next()) 
+                bSi = true;            
+        } 
+        catch(SQLException e) 
+        {
+            /*Agrega en el log*/
+            Login.vLog(e.getMessage());
+
+            /*Borra la base de datos local y servidora*/
+            BDCon.vDelBD(Star.sBD);
+            BDCon.vDelBDLoc(Star.sBD + "_tmp");
+
+            //Mensajea
+            JOptionPane.showMessageDialog(null, "No se creará toda la estructura de las tablas ni esquemas en la base de datos debido al siguiente error:\n" + "private static void vCreMons() Error en " + sQ + " por " + e.getMessage(), "Error BD", JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource(Star.sRutIconAd)));
+
+            //Cierra la base de datos y sal de la aplicación
+            Star.iCierrBas(con);            
+            System.exit(1);
+        }
+
+        /*Si la tabla de pags no existe*/
+        if(!bSi) 
+        {
+            /*Crea la tabla*/
+            try 
+            {
+                sQ = "CREATE TABLE `" + sTabl + "` (\n"
+                        + "`id_id`          INT(11) NOT NULL AUTO_INCREMENT,\n"
+                        + "`cod`            VARCHAR(30) NOT NULL,\n"
+                        + "`descrip`        VARCHAR(255) NOT NULL,\n"
+                        + "`estac`          VARCHAR(30) NOT NULL,\n"
+                        + "`sucu`           VARCHAR(30) NOT NULL,\n"
+                        + "`export`         BIT DEFAULT 0,\n"
+                        + "`nocaj`          VARCHAR(30) NOT NULL,\n"
+                        + "`falt`           TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,\n"
+                        + "`fmod`           TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,\n";
+                if(sTabl.compareTo("sucursal")==0)
+                        sQ=sQ + "`codZona`      VARCHAR(30) NOT NULL,\n";
+                sQ=sQ   + "PRIMARY KEY (`id_id`), UNIQUE KEY `id_id_UNIQUE` (`id_id`), KEY `cod` (`cod`))";
+                st = con.createStatement();
+                st.executeUpdate(sQ);
+            } 
+            catch(SQLException ex) 
+            {
+                /*Agrega en el log*/
+                Login.vLog(ex.getMessage());
+
+                /*Borra la base de datos local y servidora*/
+                BDCon.vDelBD(Star.sBD);
+                BDCon.vDelBDLoc(Star.sBD + "_tmp");
+
+                //Mensajea
+                JOptionPane.showMessageDialog(null, "No se creará toda la estructura de las tablas ni esquemas en la base de datos debido al siguiente error:\n" + "private static void vCreMons() Error en " + sQ + " por " + ex.getMessage(), "Error BD", JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource(Star.sRutIconAd)));
+                
+                //Cierra la base de datos y sal de la aplicación
+                Star.iCierrBas(con);            
+                System.exit(1);
+            }
+
+           
+        }/*Fin de if(!bSi)*/
+
+    }/*Fin de private void vCrePags()*/
 }
