@@ -2640,6 +2640,12 @@ public class Princip extends javax.swing.JFrame
         jMRepVend = new javax.swing.JMenuItem();
         jMFluj = new javax.swing.JMenuItem();
         jMRepBackO = new javax.swing.JMenuItem();
+        jMActivos = new javax.swing.JMenu();
+        jMZon = new javax.swing.JMenuItem();
+        jMSucursal = new javax.swing.JMenuItem();
+        jMClasificacion = new javax.swing.JMenuItem();
+        jMResponsable = new javax.swing.JMenuItem();
+        jMActivo = new javax.swing.JMenuItem();
         jMConta = new javax.swing.JMenu();
         jMActFij = new javax.swing.JMenuItem();
         jMCatActFij = new javax.swing.JMenuItem();
@@ -2648,7 +2654,6 @@ public class Princip extends javax.swing.JFrame
         jMConcepNot = new javax.swing.JMenuItem();
         jMFlujAct = new javax.swing.JMenuItem();
         jMCatGara = new javax.swing.JMenuItem();
-        jMZon = new javax.swing.JMenuItem();
         jMGir = new javax.swing.JMenuItem();
         jMenItMons = new javax.swing.JMenuItem();
         jMeItImps = new javax.swing.JMenuItem();
@@ -5367,6 +5372,62 @@ public class Princip extends javax.swing.JFrame
 
         jMenInvents.add(jMenVtas);
 
+        jMActivos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/280activos.png"))); // NOI18N
+        jMActivos.setText("Activos");
+
+        jMZon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/zon.png"))); // NOI18N
+        jMZon.setMnemonic('z');
+        jMZon.setText("Zonas");
+        jMZon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMZonActionPerformed(evt);
+            }
+        });
+        jMZon.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jMZonKeyPressed(evt);
+            }
+        });
+        jMActivos.add(jMZon);
+
+        jMSucursal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/281sucursal (1).png"))); // NOI18N
+        jMSucursal.setText("Sucursales");
+        jMSucursal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMSucursalActionPerformed(evt);
+            }
+        });
+        jMActivos.add(jMSucursal);
+
+        jMClasificacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/30clasificaciones.png"))); // NOI18N
+        jMClasificacion.setText("Clasificaciones");
+        jMClasificacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMClasificacionActionPerformed(evt);
+            }
+        });
+        jMActivos.add(jMClasificacion);
+
+        jMResponsable.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/282responsable.png"))); // NOI18N
+        jMResponsable.setText("Responsables");
+        jMResponsable.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMResponsableActionPerformed(evt);
+            }
+        });
+        jMActivos.add(jMResponsable);
+
+        jMActivo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/280activos.png"))); // NOI18N
+        jMActivo.setLabel("Activo");
+        jMActivo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMActivoActionPerformed(evt);
+            }
+        });
+        jMActivos.add(jMActivo);
+
+        jMenInvents.add(jMActivos);
+
         jMConta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/conta.png"))); // NOI18N
         jMConta.setMnemonic('c');
         jMConta.setText("Contabilidad");
@@ -5479,21 +5540,6 @@ public class Princip extends javax.swing.JFrame
             }
         });
         jMenInvents.add(jMCatGara);
-
-        jMZon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/zon.png"))); // NOI18N
-        jMZon.setMnemonic('z');
-        jMZon.setText("Zonas");
-        jMZon.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMZonActionPerformed(evt);
-            }
-        });
-        jMZon.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMZonKeyPressed(evt);
-            }
-        });
-        jMenInvents.add(jMZon);
 
         jMGir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/gir.png"))); // NOI18N
         jMGir.setMnemonic('g');
@@ -13433,7 +13479,27 @@ public class Princip extends javax.swing.JFrame
         Loadin lo = new Loadin(sRut);
         lo.setVisible(true);
     }//GEN-LAST:event_jMInvenImpoActionPerformed
-/**/    
+
+    private void jMClasificacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMClasificacionActionPerformed
+         cats.PlanGralCat l = new cats.PlanGralCat("clasificacion","emps"," ","clasificacion","clasificacion","cod");
+        l.setVisible(true);        
+    }//GEN-LAST:event_jMClasificacionActionPerformed
+
+    private void jMResponsableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMResponsableActionPerformed
+        cats.PlanGralCat l = new cats.PlanGralCat("responsable","emps"," ","responsables","responsable","cod");
+        l.setVisible(true);  
+    }//GEN-LAST:event_jMResponsableActionPerformed
+
+    private void jMSucursalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMSucursalActionPerformed
+         cats.CatalogoDependiente l = new cats.CatalogoDependiente("sucursal","zona"," ","sucursales","sucursal","cod");
+        l.setVisible(true); 
+    }//GEN-LAST:event_jMSucursalActionPerformed
+
+    private void jMActivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMActivoActionPerformed
+          cats.Activos l = new cats.Activos();
+        l.setVisible(true);  
+    }//GEN-LAST:event_jMActivoActionPerformed
+    
         /*Cuando se presiona el botón de intérfaz de contapaqi*/
     private void jMContpaqActionPerformed(java.awt.event.ActionEvent evt) {                                          
      
@@ -14085,6 +14151,8 @@ public static Comment creaComentario(final String comentario, XSSFWorkbook wb, f
     private javax.swing.JMenuItem jMAcerc;
     private javax.swing.JMenuItem jMActFij;
     private javax.swing.JMenuItem jMActSis;
+    private javax.swing.JMenuItem jMActivo;
+    private javax.swing.JMenu jMActivos;
     private javax.swing.JMenuItem jMApFav;
     private javax.swing.JMenuItem jMArchC;
     private javax.swing.JMenuItem jMAsoc;
@@ -14102,6 +14170,7 @@ public static Comment creaComentario(final String comentario, XSSFWorkbook wb, f
     private javax.swing.JMenuItem jMClasJerP;
     private javax.swing.JMenuItem jMClasProd;
     private javax.swing.JMenuItem jMClasProv;
+    private javax.swing.JMenuItem jMClasificacion;
     private javax.swing.JMenuItem jMConcepNot;
     private javax.swing.JMenuItem jMConcepPags;
     private javax.swing.JMenuItem jMConfAd;
@@ -14195,11 +14264,13 @@ public static Comment creaComentario(final String comentario, XSSFWorkbook wb, f
     private javax.swing.JMenuItem jMRepVend;
     private javax.swing.JMenuItem jMRese;
     private javax.swing.JMenuItem jMResp;
+    private javax.swing.JMenuItem jMResponsable;
     private javax.swing.JMenuItem jMRevo;
     private javax.swing.JMenuItem jMRubr;
     private javax.swing.JMenuItem jMSerNot;
     private javax.swing.JMenuItem jMSerO;
     private javax.swing.JMenu jMSist;
+    private javax.swing.JMenuItem jMSucursal;
     private javax.swing.JMenuItem jMTabCompa;
     private javax.swing.JMenuItem jMTallCol;
     private javax.swing.JMenuItem jMTip;

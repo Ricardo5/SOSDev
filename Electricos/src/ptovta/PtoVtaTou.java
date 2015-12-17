@@ -1353,8 +1353,7 @@ public class PtoVtaTou extends javax.swing.JFrame
                 }                
             }
         };
-        th.start();                                
-        
+        th.start(); 
         /*Thread para saber el estado de la conexión con la base de datos*/
         tEstCon     = new Thread()
         {
