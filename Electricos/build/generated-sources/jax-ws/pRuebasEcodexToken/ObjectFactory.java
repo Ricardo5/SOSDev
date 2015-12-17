@@ -53,6 +53,7 @@ public class ObjectFactory {
     private final static QName _String_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "string");
     private final static QName _FallaSesionDescripcion_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Descripcion");
     private final static QName _FallaServicioEvento_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Evento");
+    private final static QName _SolicitudObtenerTokenRFC_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "RFC");
     private final static QName _RespuestaObtenerTokenToken_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Token");
     private final static QName _SolicitudObtenerTokenRFC_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "RFC");
 
@@ -327,6 +328,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Descripcion", scope = FallaServicio.class)
     public JAXBElement<String> createFallaServicioDescripcion(String value) {
         return new JAXBElement<String>(_FallaSesionDescripcion_QNAME, String.class, FallaServicio.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "RFC", scope = SolicitudObtenerToken.class)
+    public JAXBElement<String> createSolicitudObtenerTokenRFC(String value) {
+        return new JAXBElement<String>(_SolicitudObtenerTokenRFC_QNAME, String.class, SolicitudObtenerToken.class, value);
     }
 
     /**

@@ -44,8 +44,8 @@ public interface Cancelaciones {
      * @param parameters
      * @return
      *     returns pRuebasEcodexCancelacionTimbre.RespuestaRecuperarAcuse
-     * @throws CancelacionesRecuperarAcusesFallaValidacionFaultFaultMessage
      * @throws CancelacionesRecuperarAcusesFallaSesionFaultFaultMessage
+     * @throws CancelacionesRecuperarAcusesFallaValidacionFaultFaultMessage
      * @throws CancelacionesRecuperarAcusesFallaServicioFaultFaultMessage
      */
     @WebMethod(operationName = "RecuperarAcuses", action = "http://Ecodex.WS.Model/2011/CFDI/Cancelaciones/RecuperarAcuses")
@@ -61,9 +61,9 @@ public interface Cancelaciones {
      * @param parameters
      * @return
      *     returns pRuebasEcodexCancelacionTimbre.RespuestaCancelaOtros
+     * @throws CancelacionesCancelaOtrosFallaSesionFaultFaultMessage
      * @throws CancelacionesCancelaOtrosFallaServicioFaultFaultMessage
      * @throws CancelacionesCancelaOtrosFallaValidacionFaultFaultMessage
-     * @throws CancelacionesCancelaOtrosFallaSesionFaultFaultMessage
      */
     @WebMethod(operationName = "CancelaOtros", action = "http://Ecodex.WS.Model/2011/CFDI/Cancelaciones/CancelaOtros")
     @WebResult(name = "RespuestaCancelaOtros", targetNamespace = "http://Ecodex.WS.Model/2011/CFDI", partName = "parameters")
