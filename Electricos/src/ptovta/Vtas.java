@@ -2477,7 +2477,7 @@ public class Vtas extends javax.swing.JFrame
             }
 
             //Agrega una partida en cxc para agregarle saldo al cliente de la devolución            
-            if(Star.iInsCXCP(con, "cxc", sFol, sNoSer, sEmp, sSer, sSubTot, sImpue, sTot, "0", sTot, "'" + sFVenc + "'", "'" + sFDoc + "'", "DEV FAC", "", "0", "", "","")==-1)
+            if(Star.iInsCXCP(con, "cxc", sFol, sNoSer, sEmp, sSer, sSubTot, sImpue, sTot, "0", sTot, "'" + sFVenc + "'", "'" + sFDoc + "'", "DEV FAC", "", "0", "", "","","")==-1)
                 return;               
             
             //Termina la transacción
@@ -3101,7 +3101,7 @@ public class Vtas extends javax.swing.JFrame
                 }
 
                 //Agrega una partida en cxc para agregarle saldo al cliente de la cancelación            
-                if(Star.iInsCXCP(con, "cxc", sFol, sNoSer, sEmp, sSer, sSubTot, sImpue, sTot, "0", sTot, "'" + sFVenc + "'", "'" + sFDoc + "'", "CA "+ sTipDoc, "", "0", "", "","")==-1)
+                if(Star.iInsCXCP(con, "cxc", sFol, sNoSer, sEmp, sSer, sSubTot, sImpue, sTot, "0", sTot, "'" + sFVenc + "'", "'" + sFDoc + "'", "CA "+ sTipDoc, "", "0", "", "","","")==-1)
                     return;               
 
                 //Termina la transacción

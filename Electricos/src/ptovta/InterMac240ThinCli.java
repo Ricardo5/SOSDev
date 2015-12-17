@@ -16481,12 +16481,12 @@ public class InterMac240ThinCli extends javax.swing.JFrame
                 //Inserta CXC en la base de datos 
                 if(Double.parseDouble(sTotal.replace("$", "").replace(",", ""))>0)
                     //                          sNoRefer, sNoSer, sEmpre , sSer, sSubTot  , sImpue, sTot  , sCarg , sAbon, sFVenc        , sFDoc  , sConcep, sFormPag, sFol, sComen, sConcepPag)
-                    if(Star.iInsCXCP(con, "cxc", sFolio  , sNoser, sCodCli, sSer, sSubtotal, "0"   , sTotal, sTotal, "0"  , "'"+sFechV+"'","'"+ sFechAlt+"'", sNoser, ""      , "0" , ""    , "" ,""       )==-1)
+                    if(Star.iInsCXCP(con, "cxc", sFolio  , sNoser, sCodCli, sSer, sSubtotal, "0"   , sTotal, sTotal, "0"  , "'"+sFechV+"'","'"+ sFechAlt+"'", sNoser, ""      , "0" , ""    , "" ,"",""       )==-1)
                         return;
                 
                 if(Double.parseDouble(sPago.replace("$", "").replace(",", ""))>0)
                     //                          sNoRefer, sNoSer, sEmpre , sSer, sSubTot  , sImpue, sTot  , sCarg , sAbon, sFVenc , sFDoc, sConcep, sFormPag, sFol, sComen, sConcepPag)
-                    if(Star.iInsCXCP(con, "cxc", sFolio  , sNoser, sCodCli, sSer, sSubtotal, "0"   , sTotal, "0"   , sPago, "'"+sFechV+"'", "'"+sFechV+"'", "ABON "+sNoser   , ""      , "0" , ""    , "" ,""       )==-1)
+                    if(Star.iInsCXCP(con, "cxc", sFolio  , sNoser, sCodCli, sSer, sSubtotal, "0"   , sTotal, "0"   , sPago, "'"+sFechV+"'", "'"+sFechV+"'", "ABON "+sNoser   , ""      , "0" , ""    , "" ,"" ,""      )==-1)
                         return;
                                
                 
@@ -18038,11 +18038,11 @@ public class InterMac240ThinCli extends javax.swing.JFrame
                 //Inserta CXP en la base de datos
                 if(Double.parseDouble(sTotal.replace("$", "").replace(",", ""))>0)
                     //                         sNoRefer,sNoSer, sEmpre , sSer,sSubTot  ,sImpue, sTot  , sCarg , sAbon, sFVenc         , sFDoc   , sConcep,sFormPag,  sFol, sComen,sConcepPag)
-                    if(Star.iInsCXCP(con, "cxp", sFolio,sNoser, sProv  , sSer,sSubtotal, "0"  , sTotal, sTotal, "0"  ,  "'"+sFechV+"'","'"+ sFechAlt+"'", sNoser , ""     ,  "0" ,  ""   , ""  ,""     )==-1)
+                    if(Star.iInsCXCP(con, "cxp", sFolio,sNoser, sProv  , sSer,sSubtotal, "0"  , sTotal, sTotal, "0"  ,  "'"+sFechV+"'","'"+ sFechAlt+"'", sNoser , ""     ,  "0" ,  ""   , ""  ,"" ,""    )==-1)
                         return;
                  if(Double.parseDouble(sPago.replace("$", "").replace(",", ""))>0)
                      //                         sNoRefer,sNoSer, sEmpre , sSer,sSubTot  ,sImpue, sTot  , sCarg , sAbon, sFVenc         , sFDoc   , sConcep          ,sFormPag,  sFol, sComen,sConcepPag)
-                    if(Star.iInsCXCP(con, "cxp", sFolio,sNoser, sProv  , sSer,sSubtotal, "0"  , sTotal, "0"    , sPago  ,  "'"+sFechV+"'" ,"'"+ sFechV+"'"  , "ABON " + sNoser , ""     ,  "0" ,  ""   , ""  ,""     )==-1)
+                    if(Star.iInsCXCP(con, "cxp", sFolio,sNoser, sProv  , sSer,sSubtotal, "0"  , sTotal, "0"    , sPago  ,  "'"+sFechV+"'" ,"'"+ sFechV+"'"  , "ABON " + sNoser , ""     ,  "0" ,  ""   , ""  ,"" ,""   )==-1)
                         return;
                                 
             }/*Fin de while((sLec = read.readLine())!=null) */

@@ -1437,7 +1437,7 @@ public class DevPCom extends javax.swing.JFrame
         }         
         
         //Inserta el abono en CXP de la base de datos     chalo       
-        if(Star.iInsCXCP(con, "cxp", jTNoDoc.getText().trim(), jTNoSer.getText().trim(), sProv, sSerCli, cSubTotal, cImpue, cTotal, "0", cTotal, "'" + sFVenc + "'", "'" + sFDoc + "'", "DEV PARC", "", "0", "", "","")==-1)
+        if(Star.iInsCXCP(con, "cxp", jTNoDoc.getText().trim(), jTNoSer.getText().trim(), sProv, sSerCli, cSubTotal, cImpue, cTotal, "0", cTotal, "'" + sFVenc + "'", "'" + sFDoc + "'", "DEV PARC", "", "0", "", "","","")==-1)
             return;                                   
                 
         //Termina la transacción

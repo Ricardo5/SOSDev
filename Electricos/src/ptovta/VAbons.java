@@ -137,6 +137,7 @@ public class VAbons extends javax.swing.JFrame
         jTab.getColumnModel().getColumn(7).setPreferredWidth(300);        
         jTab.getColumnModel().getColumn(8).setPreferredWidth(120);
         jTab.getColumnModel().getColumn(9).setPreferredWidth(120);
+        jTab.getColumnModel().getColumn(12).setPreferredWidth(130);
         
         /*Para que no se muevan las columnas*/
         jTab.getTableHeader().setReorderingAllowed(false);
@@ -260,9 +261,9 @@ public class VAbons extends javax.swing.JFrame
 
         //Determina la consulta dependiendo si son abonos solamente o abonos de documento
         if(sCli!=null)
-            sQ = "SELECT cxc.COMEN, cxc.ID_ID, cxc.FOL, cxc.NOREFER, abon, cxc.ID_ID, cxc.FALT, cxc.ESTAC, cxc.NOCAJ, cxc.SUCU, cxc.FORMPAG, cxc.CONCEPPAG, cxc.concep FROM cxc WHERE empre = '" + sCli + "' AND concep <> 'ACA ABON' AND abon >0 ";                                                
+            sQ = "SELECT cxc.COMEN,cxc.CUENTABANCO, cxc.ID_ID, cxc.FOL, cxc.NOREFER, abon, cxc.ID_ID, cxc.FALT, cxc.ESTAC, cxc.NOCAJ, cxc.SUCU, cxc.FORMPAG, cxc.CONCEPPAG, cxc.concep FROM cxc WHERE empre = '" + sCli + "' AND concep <> 'ACA ABON' AND abon >0 ";                                                
         else
-            sQ = "SELECT cxc.COMEN, cxc.ID_ID, cxc.FOL, cxc.NOREFER, abon, cxc.ID_ID, cxc.FALT, cxc.ESTAC, cxc.NOCAJ, cxc.SUCU, cxc.FORMPAG, cxc.CONCEPPAG,cxc.concep FROM cxc WHERE norefer = '" + sFolCXC + "' AND noser = '" + sNoSerCXC + "' AND empre = '" + sEmpCXC + "' AND carg = 0 AND concep <> 'ACA ABON'";                                                
+            sQ = "SELECT cxc.COMEN,cxc.CUENTABANCO, cxc.ID_ID, cxc.FOL, cxc.NOREFER, abon, cxc.ID_ID, cxc.FALT, cxc.ESTAC, cxc.NOCAJ, cxc.SUCU, cxc.FORMPAG, cxc.CONCEPPAG,cxc.concep FROM cxc WHERE norefer = '" + sFolCXC + "' AND noser = '" + sNoSerCXC + "' AND empre = '" + sEmpCXC + "' AND carg = 0 AND concep <> 'ACA ABON'";                                                
 
         /*Obtiene todos los abonos de ese CXC*/
         try
@@ -279,7 +280,7 @@ public class VAbons extends javax.swing.JFrame
                 
                 /*Agrega el registro en la tabla*/
                 DefaultTableModel te    = (DefaultTableModel)jTab.getModel();
-                Object nu[]             = {rs.getString("fol"), rs.getString("cxc.NOREFER"), rs.getString("cxc.FALT"), sAbon, rs.getString("sucu"), rs.getString("cxc.NOCAJ"), rs.getString("cxc.ESTAC"), rs.getString("cxc.COMEN"), rs.getString("cxc.FORMPAG"), rs.getString("cxc.CONCEPPAG"), rs.getString("cxc.ID_ID"), rs.getString("cxc.concep")};
+                Object nu[]             = {rs.getString("fol"), rs.getString("cxc.NOREFER"), rs.getString("cxc.FALT"), sAbon, rs.getString("sucu"), rs.getString("cxc.NOCAJ"), rs.getString("cxc.ESTAC"), rs.getString("cxc.COMEN"), rs.getString("cxc.FORMPAG"), rs.getString("cxc.CONCEPPAG"), rs.getString("cxc.ID_ID"), rs.getString("cxc.concep"),rs.getString("cxc.CUENTABANCO")};
                 te.addRow(nu);                                                
             }                        
         }
@@ -339,9 +340,9 @@ public class VAbons extends javax.swing.JFrame
         
         //Determina la consulta si se van a mostrar abonos de concepto o de documento
         if(sProvA!=null)
-            sQ = "SELECT cxp.COMEN, cxp.FOL, cxp.NOREFER, abon, cxp.ID_ID, cxp.FALT, cxp.ESTAC, cxp.NOCAJ, cxp.SUCU, cxp.FORMPAG, cxp.CONCEPPAG, cxp.concep FROM cxp WHERE prov = '" + sProvA + "' AND concep <> 'COMP' AND abon >0";                                    
+            sQ = "SELECT cxp.COMEN, cxp.FOL,cxp.CUENTABANCO, cxp.NOREFER, abon, cxp.ID_ID, cxp.FALT, cxp.ESTAC, cxp.NOCAJ, cxp.SUCU, cxp.FORMPAG, cxp.CONCEPPAG, cxp.concep FROM cxp WHERE prov = '" + sProvA + "' AND concep <> 'COMP' AND abon >0";                                    
         else
-            sQ = "SELECT cxp.COMEN, cxp.FOL, cxp.NOREFER, abon, cxp.ID_ID, cxp.FALT, cxp.ESTAC, cxp.NOCAJ, cxp.SUCU, cxp.FORMPAG, cxp.CONCEPPAG, cxp.concep FROM cxp WHERE norefer = '" + sNoRefer + "' AND noser = '" + sNoSer + "' AND prov = '" + sProv + "' AND carg = 0 AND concep = 'ABON COMP'";                                    
+            sQ = "SELECT cxp.COMEN, cxp.FOL,cxp.CUENTABANCO, cxp.NOREFER, abon, cxp.ID_ID, cxp.FALT, cxp.ESTAC, cxp.NOCAJ, cxp.SUCU, cxp.FORMPAG, cxp.CONCEPPAG, cxp.concep FROM cxp WHERE norefer = '" + sNoRefer + "' AND noser = '" + sNoSer + "' AND prov = '" + sProv + "' AND carg = 0 AND concep = 'ABON COMP'";                                    
         
         /*Obtiene todos los abonos de ese CXP*/
         try
@@ -358,7 +359,7 @@ public class VAbons extends javax.swing.JFrame
                 
                 /*Agrega el registro en la tabla*/
                 DefaultTableModel te    = (DefaultTableModel)jTab.getModel();
-                Object nu[]             = {rs.getString("fol"), rs.getString("cxp.NOREFER"), rs.getString("cxp.FALT"), sAbon, rs.getString("sucu"), rs.getString("cxp.NOCAJ"), rs.getString("cxp.ESTAC"), rs.getString("comen"), rs.getString("cxp.FORMPAG"), rs.getString("cxp.CONCEPPAG"), rs.getString("cxp.ID_ID"), rs.getString("cxp.concep")};
+                Object nu[]             = {rs.getString("fol"), rs.getString("cxp.NOREFER"), rs.getString("cxp.FALT"), sAbon, rs.getString("sucu"), rs.getString("cxp.NOCAJ"), rs.getString("cxp.ESTAC"), rs.getString("comen"), rs.getString("cxp.FORMPAG"), rs.getString("cxp.CONCEPPAG"), rs.getString("cxp.ID_ID"), rs.getString("cxp.concep"),rs.getString("cxp.CUENTABANCO")};
                 te.addRow(nu);                                                
             }                        
         }
@@ -452,11 +453,11 @@ public class VAbons extends javax.swing.JFrame
 
             },
             new String [] {
-                "Folio Consecutivo", "Folio", "Fecha", "Abono", "Sucursal", "Caja", "Usuario", "Comentario", "Forma de pago", "Concepto de pago", "ID", "Concepto"
+                "Folio Consecutivo", "Folio", "Fecha", "Abono", "Sucursal", "Caja", "Usuario", "Comentario", "Forma de pago", "Concepto de pago", "ID", "Concepto", "Cuenta Banco"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                true, true, true, true, true, true, true, true, true, true, false, true
+                true, true, true, true, true, true, true, true, true, true, false, true, true
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {

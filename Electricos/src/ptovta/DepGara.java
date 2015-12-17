@@ -1686,7 +1686,7 @@ public class DepGara extends javax.swing.JFrame
         String sCli = jTab.getValueAt(jTab.getSelectedRow(), 1).toString().trim();
 
         //Inserta en CXC en la base de datos      
-        if(Star.iInsCXCP(con, "cxc", "", "", sCli, "", "0", "0", sDepGar, "0", sDepGar, "now()", "now()", "ABON FAC", "", "0", "", "","")==-1)
+        if(Star.iInsCXCP(con, "cxc", "", "", sCli, "", "0", "0", sDepGar, "0", sDepGar, "now()", "now()", "ABON FAC", "", "0", "", "","","")==-1)
             return;               
         
         //Cierra la base de datos

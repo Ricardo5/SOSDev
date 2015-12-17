@@ -33,7 +33,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jP1" pref="984" max="32767" attributes="0"/>
+              <Component id="jP1" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -102,7 +102,7 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="860" y="200" width="110" height="30"/>
+              <AbsoluteConstraints x="860" y="230" width="110" height="30"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -120,7 +120,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/imgs/transferencia.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Trans."/>
+            <Property name="text" type="java.lang.String" value="Nuevo"/>
             <Property name="toolTipText" type="java.lang.String" value="Traspasar entra Almac&#xe9;n"/>
             <Property name="horizontalAlignment" type="int" value="2"/>
             <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
@@ -135,7 +135,7 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="860" y="170" width="110" height="30"/>
+              <AbsoluteConstraints x="860" y="200" width="110" height="30"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -167,20 +167,24 @@
             <Component class="javax.swing.JTable" name="jTab">
               <Properties>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="13" rowCount="0">
+                  <Table columnCount="17" rowCount="0">
                     <Column editable="false" title="No." type="java.lang.Object"/>
-                    <Column editable="true" title="Cod. Producto" type="java.lang.Object"/>
-                    <Column editable="true" title="Cod. Almac&#xe9;n" type="java.lang.Object"/>
-                    <Column editable="true" title="Unidad" type="java.lang.Object"/>
-                    <Column editable="true" title="Cod. Concepto" type="java.lang.Object"/>
-                    <Column editable="true" title="Cant. Saliente" type="java.lang.Object"/>
-                    <Column editable="true" title="Cod. Almac&#xe9;n" type="java.lang.Object"/>
-                    <Column editable="true" title="Cant. Entrante" type="java.lang.Object"/>
-                    <Column editable="true" title="Fecha Traspaso" type="java.lang.Object"/>
-                    <Column editable="true" title="Sucursal" type="java.lang.Object"/>
-                    <Column editable="true" title="Caja" type="java.lang.Object"/>
-                    <Column editable="true" title="Usuario" type="java.lang.Object"/>
-                    <Column editable="true" title="Nombre Usuario" type="java.lang.Object"/>
+                    <Column editable="false" title="Cod. Producto" type="java.lang.Object"/>
+                    <Column editable="false" title="Cod. Almac&#xe9;n" type="java.lang.Object"/>
+                    <Column editable="false" title="Unidad" type="java.lang.Object"/>
+                    <Column editable="false" title="Cod. Concepto" type="java.lang.Object"/>
+                    <Column editable="false" title="Cant. Saliente" type="java.lang.Object"/>
+                    <Column editable="false" title="Cod. Almac&#xe9;n" type="java.lang.Object"/>
+                    <Column editable="false" title="Cant. Entrante" type="java.lang.Object"/>
+                    <Column editable="false" title="Fecha Traspaso" type="java.lang.Object"/>
+                    <Column editable="false" title="Sucursal" type="java.lang.Object"/>
+                    <Column editable="false" title="Caja" type="java.lang.Object"/>
+                    <Column editable="false" title="Usuario" type="java.lang.Object"/>
+                    <Column editable="false" title="Nombre Usuario" type="java.lang.Object"/>
+                    <Column editable="false" title="Estado" type="java.lang.Object"/>
+                    <Column editable="false" title="Elementos restantes" type="java.lang.Object"/>
+                    <Column editable="false" title="Descripcion" type="java.lang.Object"/>
+                    <Column editable="false" title="ID" type="java.lang.Object"/>
                   </Table>
                 </Property>
                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
@@ -266,6 +270,7 @@
                 </Property>
               </Properties>
               <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jTabMousePressed"/>
                 <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTabKeyPressed"/>
               </Events>
             </Component>
@@ -1179,6 +1184,108 @@
             </Constraint>
           </Constraints>
         </Component>
+        <Component class="javax.swing.JButton" name="jBTransfe1">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="10" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="66" red="0" type="rgb"/>
+            </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/imgs/transferencia.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Trans."/>
+            <Property name="toolTipText" type="java.lang.String" value="Traspasar entra Almac&#xe9;n"/>
+            <Property name="horizontalAlignment" type="int" value="2"/>
+            <Property name="name" type="java.lang.String" value="" noResource="true"/>
+            <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="jBSal"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jBTransfe1MouseEntered"/>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jBTransfe1MouseExited"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBTransfe1ActionPerformed"/>
+            <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jBTransfe1KeyPressed"/>
+          </Events>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="860" y="170" width="110" height="30"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Container class="javax.swing.JPanel" name="jPanel1">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                <TitledBorder title="Confirmar Transferencia"/>
+              </Border>
+            </Property>
+          </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Confirmar transferencia"/>
+          </AccessibilityProperties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="470" y="80" width="330" height="80"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="jLabel3" pref="153" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jBtnConfirmar" min="-2" pref="110" max="-2" attributes="0"/>
+                          <Component id="jSpCantidad" min="-2" pref="100" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jSpCantidad" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="7" max="32767" attributes="0"/>
+                      <Component id="jBtnConfirmar" min="-2" pref="30" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JSpinner" name="jSpCantidad">
+              <Events>
+                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="jSpCantidadStateChanged"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="jBtnConfirmar">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Conf. Trans"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnConfirmarActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel3">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Cantidad deseada a transferir"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
       </SubComponents>
     </Container>
   </SubComponents>

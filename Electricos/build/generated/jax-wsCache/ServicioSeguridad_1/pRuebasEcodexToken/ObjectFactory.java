@@ -51,10 +51,10 @@ public class ObjectFactory {
     private final static QName _QName_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "QName");
     private final static QName _AnyType_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "anyType");
     private final static QName _String_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "string");
-    private final static QName _FallaSesionDescripcion_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Descripcion");
     private final static QName _FallaServicioEvento_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Evento");
-    private final static QName _SolicitudObtenerTokenRFC_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "RFC");
+    private final static QName _FallaServicioDescripcion_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Descripcion");
     private final static QName _RespuestaObtenerTokenToken_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Token");
+    private final static QName _SolicitudObtenerTokenRFC_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "RFC");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: pRuebasEcodexToken
@@ -306,15 +306,6 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Descripcion", scope = FallaSesion.class)
-    public JAXBElement<String> createFallaSesionDescripcion(String value) {
-        return new JAXBElement<String>(_FallaSesionDescripcion_QNAME, String.class, FallaSesion.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
     @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Evento", scope = FallaServicio.class)
     public JAXBElement<String> createFallaServicioEvento(String value) {
         return new JAXBElement<String>(_FallaServicioEvento_QNAME, String.class, FallaServicio.class, value);
@@ -326,7 +317,16 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Descripcion", scope = FallaServicio.class)
     public JAXBElement<String> createFallaServicioDescripcion(String value) {
-        return new JAXBElement<String>(_FallaSesionDescripcion_QNAME, String.class, FallaServicio.class, value);
+        return new JAXBElement<String>(_FallaServicioDescripcion_QNAME, String.class, FallaServicio.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Token", scope = RespuestaObtenerToken.class)
+    public JAXBElement<String> createRespuestaObtenerTokenToken(String value) {
+        return new JAXBElement<String>(_RespuestaObtenerTokenToken_QNAME, String.class, RespuestaObtenerToken.class, value);
     }
 
     /**
@@ -342,9 +342,9 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Token", scope = RespuestaObtenerToken.class)
-    public JAXBElement<String> createRespuestaObtenerTokenToken(String value) {
-        return new JAXBElement<String>(_RespuestaObtenerTokenToken_QNAME, String.class, RespuestaObtenerToken.class, value);
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Descripcion", scope = FallaSesion.class)
+    public JAXBElement<String> createFallaSesionDescripcion(String value) {
+        return new JAXBElement<String>(_FallaServicioDescripcion_QNAME, String.class, FallaSesion.class, value);
     }
 
 }

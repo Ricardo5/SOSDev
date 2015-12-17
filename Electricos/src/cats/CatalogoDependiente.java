@@ -694,6 +694,7 @@ public class CatalogoDependiente extends javax.swing.JFrame
         });
         jP1.add(jCDatosDependientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 140, -1));
 
+        jTDatosDependientes.setEditable(false);
         jTDatosDependientes.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
         jTDatosDependientes.setNextFocusableComponent(jTDescrip);
         jTDatosDependientes.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -775,38 +776,6 @@ public class CatalogoDependiente extends javax.swing.JFrame
         DefaultTableModel tm  = (DefaultTableModel)jTab.getModel();
         for(int x = iSel.length - 1; x >= 0; x--)
         {
-            /*if para saltar la parte de comprobacion para catgral*/
-            if(sTip.compareTo("grals")!=0)
-            {
-                /*Comprueba si existen registros asignados*/ 
-                try
-                {
-                    sQ = "SELECT " + sTipC + " FROM "+ sTip2 +" WHERE " + sTipC + " = '" + jTab.getValueAt(iSel[x], 1).toString() + "'";                        
-                    st = con.createStatement();
-                    rs = st.executeQuery(sQ);
-                    /*Si hay datos, entonces si existe este registro para algúna tabla asihgnada*/
-                    if(rs.next())
-                    {
-                        /*Mensajea y continua*/
-                        JOptionPane.showMessageDialog(null, "Ya esta este "+ sTipM +": " + jTab.getValueAt(iSel[x], 1).toString() + " asignado a algún producto, no se puede eliminar.", ""+ sTipM, JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource(Star.sRutIconAd)));                    
-                        continue;                                 
-                    }
-                }
-                catch(SQLException expnSQL)
-                {
-                    //Procesa el error y regresa
-                    Star.iErrProc(this.getClass().getName() + " " + expnSQL.getMessage(), Star.sErrSQL, expnSQL.getStackTrace(), con);
-                    return;                        
-                }
-            }
-            /*Si la clasificación que quiere borrar es la genérica entonces*/
-            if(jTab.getValueAt(iSel[x], 1).toString().compareTo("SYS")==0 && (sTip.compareTo("clasprov")==0 || sTip.compareTo("concepnot")==0))
-            {
-                /*Mensajea y continua*/
-                JOptionPane.showMessageDialog(null, "No se puede eliminar la clasificación genérica.", "Clasificación", JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource(Star.sRutIconAd)));                                 
-                continue;
-            }
-
             //Inicia la transacción
             if(Star.iIniTransCon(con)==-1)
                 return;
@@ -1002,7 +971,19 @@ public class CatalogoDependiente extends javax.swing.JFrame
     
     /*Cuando se presiona el botón de agregar*/
     private void jBNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNewActionPerformed
-                                                
+         
+         /*Si hay cadena vacia en el campo del código no puede continuar*/
+        if(jTDatosDependientes.getText().replace(" ", "").trim().compareTo("")==0)
+        {
+            /*Mensajea*/
+            JOptionPane.showMessageDialog(null, "No hay una zona asociada a esta sucursal.", "Campo vacio", JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource(Star.sRutIconAd)));
+            
+            /*Pon el foco del teclado en el campo de edición y regresa*/
+            jCDatosDependientes.grabFocus();            
+            return;            
+        }
+        
+        
         /*Si hay cadena vacia en el campo del código no puede continuar*/
         if(jTCod.getText().replace(" ", "").trim().compareTo("")==0)
         {
@@ -1048,7 +1029,7 @@ public class CatalogoDependiente extends javax.swing.JFrame
         Statement   st;
         ResultSet   rs;
         String      sQ;        
-        
+  
         /*Checa si el código del registro ya existe en la base de datos*/        
         try
         {
@@ -1139,7 +1120,7 @@ public class CatalogoDependiente extends javax.swing.JFrame
         /*Resetea los campos*/
         jTCod.setText       ("");
         jTDescrip.setText   ("");
-        
+        jCDatosDependientes.setSelectedIndex(0);
     }//GEN-LAST:event_jBNewActionPerformed
 
     
@@ -1625,7 +1606,12 @@ public class CatalogoDependiente extends javax.swing.JFrame
     }//GEN-LAST:event_jTDatosDependientesFocusGained
 
     private void jTDatosDependientesFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTDatosDependientesFocusLost
-        // TODO add your handling code here:
+        /*Coloca el caret en la posiciòn 0*/
+        jTDatosDependientes.setCaretPosition(0);
+        
+        /*Coloca el borde negro si tiene datos, caso contrario de rojo*/                               
+        if(jTDatosDependientes.getText().compareTo("")!=0)
+            jTDatosDependientes.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204,204,255)));
     }//GEN-LAST:event_jTDatosDependientesFocusLost
 
     private void jTDatosDependientesKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTDatosDependientesKeyPressed

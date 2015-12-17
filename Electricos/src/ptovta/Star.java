@@ -150,6 +150,7 @@ import wstimb.TimbradoObtenerTimbradoFallaValidacionFaultFaultMessage;
 /*Clase que contiene la clase principal*/
 public class Star 
 {
+    
     //sirve para agregar el tipo de producto
     public static String sNomProd       = "|EasyRetail_Admin";
     
@@ -448,6 +449,8 @@ public class Star
     private static final String[] CENTENAS = {"", "ciento ", "doscientos ", "trecientos ", "cuatrocientos ", "quinientos ", "seiscientos ",
         "setecientos ", "ochocientos ", "novecientos "};
 
+    public static String referencia="";//Dato temporal para almacenar la referencia de la venta mientras se identifican en que otros modulos se utiliza esta funcion aparte del modulo de ventas
+    
     /*Variable que contiene la ruta de donde tomar el ícono de duda y advertencia*/
     public static final String  sRutIconDu  = "/imgs/dud.png";
     public static final String  sRutIconAd  = "/imgs/adver.png";
@@ -8751,7 +8754,7 @@ public class Star
             if(Star.iCierrBas(con)==-1)                  
                 return null;                                                         
         }
-        
+        sUltCost     = "1";
         /*Regresa el resultado*/
         return sUltCost;
         
@@ -14918,7 +14921,7 @@ public class Star
     
     
     //Método para insertar en CXC o CXP
-    public static int iInsCXCP(Connection con, String sTbl, String sNoRefer, String sNoSer, String sEmpre, String sSer, String sSubTot, String sImpue, String sTot, String sCarg, String sAbon, String sFVenc, String sFDoc, String sConcep, String sFormPag, String sFol, String sComen, String sConcepPag, String sFolBanc)
+    public static int iInsCXCP(Connection con, String sTbl, String sNoRefer, String sNoSer, String sEmpre, String sSer, String sSubTot, String sImpue, String sTot, String sCarg, String sAbon, String sFVenc, String sFDoc, String sConcep, String sFormPag, String sFol, String sComen, String sConcepPag, String sFolBanc,String cuentabanco)
     {
         /*Declara variables de la base de datos*/
         Statement   st;        
@@ -14931,8 +14934,8 @@ public class Star
         /*Inserta cxc el abono en la base de datos*/
         try 
         {                
-             sQ = "INSERT INTO " + sTbl + "(  norefer,                                            noser,                                          " + sCampo + ",                ser,                                       subtot,                                                          impue,                                                           tot,                                                    carg,                                                   abon,                                                  fvenc,                 fdoc,               falt,  fmod,       estac,                                       sucu,                                    nocaj,                                     concep,            formpag,            comen,            conceppag,           folbanc) " + 
-                                "VALUES('" + sNoRefer.replace("'", "''").trim() + "', '" +       sNoSer.replace("'", "''").trim() + "', '" +         sEmpre.trim() + "', '" +   sSer.trim().replace("'", "''") + "'," +    sSubTot.trim().replace("$", "").replace(",", "") + ", " +        sImpue.trim().replace("$", "").replace(",", "") + ", " +         sTot.trim().replace("$", "").replace(",", "") + "," +   sCarg.trim().replace("$", "").replace(",", "") + ", " + sAbon.replace("$", "").replace(",", "").trim() + "," + sFVenc.trim() + ", " +  sFDoc.trim() + ",  now(), now(), '" + Login.sUsrG.replace("'", "''") +"',  '" +    Star.sSucu.replace("'", "''") + "','" +  Star.sNoCaj.replace("'", "''") + "','" +   sConcep + "', '" + sFormPag + "', '" + sComen + "', '" + sConcepPag + "','" + sFolBanc + "')";                    
+             sQ = "INSERT INTO " + sTbl + "(  norefer,                                            noser,                                          " + sCampo + ",                ser,                                       subtot,                                                          impue,                                                           tot,                                                    carg,                                                   abon,                                                  fvenc,                 fdoc,               falt,  fmod,       estac,                                       sucu,                                    nocaj,                                     concep,            formpag,            comen,            conceppag,           folbanc,cuentabanco) " + 
+                                "VALUES('" + sNoRefer.replace("'", "''").trim() + "', '" +       sNoSer.replace("'", "''").trim() + "', '" +         sEmpre.trim() + "', '" +   sSer.trim().replace("'", "''") + "'," +    sSubTot.trim().replace("$", "").replace(",", "") + ", " +        sImpue.trim().replace("$", "").replace(",", "") + ", " +         sTot.trim().replace("$", "").replace(",", "") + "," +   sCarg.trim().replace("$", "").replace(",", "") + ", " + sAbon.replace("$", "").replace(",", "").trim() + "," + sFVenc.trim() + ", " +  sFDoc.trim() + ",  now(), now(), '" + Login.sUsrG.replace("'", "''") +"',  '" +    Star.sSucu.replace("'", "''") + "','" +  Star.sNoCaj.replace("'", "''") + "','" +   sConcep + "', '" + sFormPag + "', '" + sComen + "', '" + sConcepPag + "','" + sFolBanc + "',' " +cuentabanco +"')";                    
             st = con.createStatement();
             st.executeUpdate(sQ);
          }
@@ -15293,8 +15296,8 @@ public class Star
         {
             if(!vendedor.equals(""))
                 vend=vendedor;
-            sQ  = "INSERT INTO vtas(   norefer,                       codemp,               ser,                     noser,                         estac,                         femi,                     subtot,                     impue,                    tot,                         estad,                 tic,                falt,                   motiv,                  tipdoc,                           nocort,                   metpag,                     cta,                    observ,                     sucu,                  nocaj,                   timbr,              fvenc,                  totdescu,                   ptovta,             factu,          totcost,                  vend,                     mon,                    tipcam,                     formpag,                    autrecibde,                     autmarc,                    autmod,                     autcolo,                    autplacs,                       autnom,                     auttarcirc,                     autnumlic,                      auttel,                     autdirpart,                     autdirofi,                  auttelofi,                   cort,           cierr,          totueps,          totpeps,          totcostprom,   extr1 ) " + 
-                         "VALUES('" +  sNoRefer.trim() + "','" +      sCli.trim() + "','" + sSer.trim() + "','" +    sNoSer.trim() + "','" +        Login.sUsrG.trim() + "'," +   sFEmi.trim() + ", " +     sSubTot.trim() + ", " +     sImpue.trim() + ", " +    sTot.trim() + ",      " +    sEstad + ",     " +    sTic + ",     " +   sFAlt + ",      '" +    sMotiv + "',     '" +   sTipDoc.trim() + "',  " +         sNoCort.trim() + ", '" +  sMetPag.trim() + "', '" +   sCta.trim() + "', '" +  sObserv.trim() + "','" +    Star.sSucu + "','" +   Star.sNoCaj + "',   " +  sTimb + ",      " + sFVenc.trim() + ", " +  sTotDescu.trim() + ", " +   sPtoVta + ", " +    sFactu + ", " + sTotCost.trim() + ", '" + vend + "', '" +    sMon.trim() + "', " +   sTipCam.trim() + ", '" +    sFormPag.trim() + "', '" +  sAutRecibDe.trim() + "', '" +   sAutMarc.trim() + "', '" +  sAutMod.trim() + "', '" +   sAutColo.trim() + "', '" +  sAutPlacs.trim() + "', '" +     sAutNom.trim() + "', '" +   sAutTarCirc.trim() + "', '" +   sAutNumLic.trim() + "', '" +    sAutTel.trim() + "','" +    sAutDirPart.trim() + "','" +    sAutDirOfi.trim() + "','" + sAutTelOfi.trim() + "', '" + sCort + "', " + sCierr + ", " + sTotUeps + ", " + sTotPeps + ", " + sTotCostProm +",'"+Bo+ "')";                    
+            sQ  = "INSERT INTO vtas(   norefer,                       codemp,               ser,                     noser,                         estac,                         femi,                     subtot,                     impue,                    tot,                         estad,                 tic,                falt,                   motiv,                  tipdoc,                           nocort,                   metpag,                     cta,                    observ,                     sucu,                  nocaj,                   timbr,              fvenc,                  totdescu,                   ptovta,             factu,          totcost,                  vend,                     mon,                    tipcam,                     formpag,                    autrecibde,                     autmarc,                    autmod,                     autcolo,                    autplacs,                       autnom,                     auttarcirc,                     autnumlic,                      auttel,                     autdirpart,                     autdirofi,                  auttelofi,                   cort,           cierr,          totueps,          totpeps,          totcostprom,   extr1,referencia ) " + 
+                         "VALUES('" +  sNoRefer.trim() + "','" +      sCli.trim() + "','" + sSer.trim() + "','" +    sNoSer.trim() + "','" +        Login.sUsrG.trim() + "'," +   sFEmi.trim() + ", " +     sSubTot.trim() + ", " +     sImpue.trim() + ", " +    sTot.trim() + ",      " +    sEstad + ",     " +    sTic + ",     " +   sFAlt + ",      '" +    sMotiv + "',     '" +   sTipDoc.trim() + "',  " +         sNoCort.trim() + ", '" +  sMetPag.trim() + "', '" +   sCta.trim() + "', '" +  sObserv.trim() + "','" +    Star.sSucu + "','" +   Star.sNoCaj + "',   " +  sTimb + ",      " + sFVenc.trim() + ", " +  sTotDescu.trim() + ", " +   sPtoVta + ", " +    sFactu + ", " + sTotCost.trim() + ", '" + vend + "', '" +    sMon.trim() + "', " +   sTipCam.trim() + ", '" +    sFormPag.trim() + "', '" +  sAutRecibDe.trim() + "', '" +   sAutMarc.trim() + "', '" +  sAutMod.trim() + "', '" +   sAutColo.trim() + "', '" +  sAutPlacs.trim() + "', '" +     sAutNom.trim() + "', '" +   sAutTarCirc.trim() + "', '" +   sAutNumLic.trim() + "', '" +    sAutTel.trim() + "','" +    sAutDirPart.trim() + "','" +    sAutDirOfi.trim() + "','" + sAutTelOfi.trim() + "', '" + sCort + "', " + sCierr + ", " + sTotUeps + ", " + sTotPeps + ", " + sTotCostProm +",'"+Bo+"','"+referencia +"')";                    
             st = con.createStatement();
             st.executeUpdate(sQ);
          }
@@ -15313,8 +15316,10 @@ public class Star
                 return -1;           
         }
         
+        referencia="";
         //Regresa que todo fue bien
         return 0;
+        
         
     }//Fin de public static int iInsVtas(Connection con, String sNoSer, String sNoRefer, String sCli, String sSer, String sSubTot, String sImpue, String sTot, String sFAlt, String sFEmi, String sFVenc, String sEstad, String sTic, String sMotiv, String sTipDoc, String sNoCort, String sMetPag, String sCta, String sObserv, String sTimb, String sTotDescu, String sPtoVta, String sFactu, String sTotCost, String sVend, String sMon, String sTipCam, String sFormPag, String sAutRecibDe, String sAutMarc, String sAutMod, String sAutColo, String sAutPlacs, String sAutNom, String sAutTarCirc, String sAutNumLic, String sAutTel, String sAutDirPart, String sAutDirOfi, String sAutTelOfi, String sCort, String sCodCot, String sCierr, String sTotUeps, String sTotPeps, String sTotCostProm)
     
@@ -15343,8 +15348,8 @@ public class Star
         //Inserta la compra en la base de datos
         try 
         {                
-            sQ = "INSERT INTO comprs (    codcomp,              noser,                 prov,                ser,              nodoc,                estac,                                     fdoc,                     subtot,             impue,              tot,            estado,            falt,             motiv,              nomprov,              fvenc,               sucu,                                     nocaj,                                        tip,            fent,              metpag,            cta,            mon,             tipcam,           codord,           archpdf,          archxml) " +
-                             "VALUES('" + sCodComp + "','" +    sNoSer + "','" +       sProv + "','" +      sSer + "','" +    sNoDoc + "','" +      Login.sUsrG.replace("'", "''") + "'," +    sFDoc   + ", " +          sSubTot + ", " +    sImpue + ", " +     sTot + ",   " + sEstad  + ", " +   sFAlt + ", '" +   sMotiv + "','" +    sNomProv + "',  " +   sFVenc + ", '" +     Star.sSucu.replace("'", "''") + "','" +   Star.sNoCaj.replace("'", "''") + "',   '" +   sTip + "', " +  sFEnt + ", '" +    sMetPag + "', '" + sCta + "', '" + sMon + "', " +   sTipCam + ", '" + sCodOrd + "', " + sArchPDF + ", " + sArchXML + ")";
+            sQ = "INSERT INTO comprs (    codcomp,              noser,                 prov,                ser,              nodoc,                estac,                                     fdoc,                     subtot,             impue,              tot,            estado,            falt,             motiv,              nomprov,              fvenc,               sucu,                                     nocaj,                                        tip,            fent,              metpag,            cta,            mon,             tipcam,           codord,           archpdf,          archxml,referencia) " +
+                             "VALUES('" + sCodComp + "','" +    sNoSer + "','" +       sProv + "','" +      sSer + "','" +    sNoDoc + "','" +      Login.sUsrG.replace("'", "''") + "'," +    sFDoc   + ", " +          sSubTot + ", " +    sImpue + ", " +     sTot + ",   " + sEstad  + ", " +   sFAlt + ", '" +   sMotiv + "','" +    sNomProv + "',  " +   sFVenc + ", '" +     Star.sSucu.replace("'", "''") + "','" +   Star.sNoCaj.replace("'", "''") + "',   '" +   sTip + "', " +  sFEnt + ", '" +    sMetPag + "', '" + sCta + "', '" + sMon + "', " +   sTipCam + ", '" + sCodOrd + "', " + sArchPDF + ", " + sArchXML + ",'" + referencia +"')";
             st = con.createStatement();
             st.executeUpdate(sQ);
          }
@@ -15362,7 +15367,7 @@ public class Star
             if(Star.iCierrBas(con)==-1)                  
                 return -1;           
         }
-        
+        referencia="";
         //Regresa que todo fue bien
         return 0;
         
@@ -16046,6 +16051,7 @@ public class Star
         try           
         {
             con.commit();
+            
         }
         catch(SQLException expnSQL)
         {
@@ -16078,7 +16084,7 @@ public class Star
             st = con.createStatement();
             rs = st.executeQuery(sQ);
             /*Si hay datos entonces*/
-            if(rs.next())
+            if(rs.next()) 
                 iResul = 1;
         }
         catch(SQLException expnSQL)
@@ -17163,6 +17169,7 @@ public class Star
             /*Borra los archivos bat*/            
             new File("resp.bat").delete();        
     }
+
 }/*Fin de public class Star*/
     
 

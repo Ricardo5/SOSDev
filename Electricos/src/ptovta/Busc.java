@@ -470,7 +470,12 @@ public class Busc extends javax.swing.JDialog
                 //Obtiene todos los registros coincidentes de la base de datos para los conceptos de pagos
                 vCargConcPag(sBus);
                 break;                
-                
+            
+            case 45:
+
+                //Obtiene todos los registros coincidentes de la base de datos para los conceptos de pagos
+                vCargarBancos(sBus);
+                break;                
         }/*Fin de switch(iEn)*/        
         
     }/*Fin de private void vCargReg(String sBus, int iEn)*/
@@ -2685,6 +2690,49 @@ public class Busc extends javax.swing.JDialog
         
     }/*Fin de private void CargMonBD()*/       
     
+    private void vCargarBancos(String sBus)
+    {
+         //Abre la base de datos                             
+        Connection  con = Star.conAbrBas(true, false);
+
+        //Si hubo error entonces regresa
+        if(con==null)
+            return;
+        
+        /*Crea el modelo para cargar cadenas en el*/
+        DefaultTableModel te    = (DefaultTableModel)jTab.getModel();                    
+        
+        /*Remplaza los espacios en blanco por el carácter comodín de mysql*/        
+        sBus                    = sBus.replace(" ", "%");
+        
+        //Declara variables de la base de datos    
+        Statement   st;
+        ResultSet   rs;        
+        String      sQ;
+        
+        /*Trae todos los registros coincidentes de la base de datos de mons*/
+        try
+        {
+            sQ = "SELECT cuentabanco, descrip FROM banco WHERE (CASE WHEN '" + sBus + "' = '' THEN cuentabanco = cuentabanco ELSE cuentabanco LIKE('%" + sBus + "%') END OR CASE WHEN '" + sBus + "' = '' THEN descrip = descrip ELSE descrip LIKE('%" + sBus + "%') END)";                        
+            st = con.createStatement();
+            rs = st.executeQuery(sQ);
+            /*Si hay datos agregalos en la tabla*/
+            while (rs.next())
+            {                
+                Object nu[]     = {rs.getString("cuentabanco"), rs.getString("descrip"), ""};
+                te.addRow(nu);                                
+            }                        
+        }
+        catch(SQLException expnSQL)
+        {
+            //Procesa el error y regresa
+            Star.iErrProc(this.getClass().getName() + " " + expnSQL.getMessage(), Star.sErrSQL, expnSQL.getStackTrace(), con);                                
+            return;                                                            
+        }            
+        
+        //Cierra la base de datos
+        Star.iCierrBas(con);
+    }
     
     /*Cuando se presiona una tecla en el formulario*/
     private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed
@@ -3102,7 +3150,11 @@ public class Busc extends javax.swing.JDialog
             if(jTFCamp!=null)
                 jTFCamp.setText(jTab.getValueAt(jTab.getSelectedRow(), 0).toString());
         }
-        
+         else if(iEn==45)
+        {            
+            if(jTFCamp!=null)
+                jTFCamp.setText(jTab.getValueAt(jTab.getSelectedRow(), 0).toString());
+        }
         /*Si los campos no son nulos entonces coloca el caret al principio del control*/
         if(jTFCamp!=null)
             jTFCamp.setCaretPosition(0);

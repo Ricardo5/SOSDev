@@ -913,7 +913,7 @@ public class CanVtas extends javax.swing.JFrame
             if(sTipDoc.compareTo("FAC")==0 && sCli.compareTo(Star.sCliMostG)!=0)
             {                
                 //Agrega una partida en cxc para agregarle saldo al cliente de la cancelación            
-                if(Star.iInsCXCP(con, "cxc", sFol, sFol, sCli, sSer, sSubTot, sImpue, sTot, "0", sTot, "'" + sFVenc + "'", "'" + sFDoc + "'", "CA FAC", "", "", "", "","")==-1)
+                if(Star.iInsCXCP(con, "cxc", sFol, sFol, sCli, sSer, sSubTot, sImpue, sTot, "0", sTot, "'" + sFVenc + "'", "'" + sFDoc + "'", "CA FAC", "", "", "", "","","")==-1)
                     return;                                
             }
             

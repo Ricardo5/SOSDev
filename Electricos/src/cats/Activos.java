@@ -319,8 +319,7 @@ public class Activos extends javax.swing.JFrame
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Activos");
         jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jP1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, 190, -1));
-        jLabel2.getAccessibleContext().setAccessibleName("Activos");
+        jP1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, 230, -1));
 
         jTab.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -393,7 +392,12 @@ public class Activos extends javax.swing.JFrame
         jLabel14.setText("Sucursal:");
         jP1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 60, -1));
 
-        jCSucursal.setNextFocusableComponent(jBNew);
+        jCSucursal.setNextFocusableComponent(jCClasificacion);
+        jCSucursal.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jCSucursalFocusLost(evt);
+            }
+        });
         jCSucursal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCSucursalActionPerformed(evt);
@@ -506,7 +510,7 @@ public class Activos extends javax.swing.JFrame
         jBDel.setText("Borrar");
         jBDel.setToolTipText("Borrar Almacen(es) (Ctrl+SUPR)");
         jBDel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jBDel.setNextFocusableComponent(jTab);
+        jBDel.setNextFocusableComponent(jBBusc);
         jBDel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jBDelMouseEntered(evt);
@@ -600,7 +604,12 @@ public class Activos extends javax.swing.JFrame
         jLabel15.setText("Responsable:");
         jP1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 70, -1));
 
-        jCResponsable.setNextFocusableComponent(jBNew);
+        jCResponsable.setNextFocusableComponent(jTReferencia);
+        jCResponsable.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jCResponsableFocusLost(evt);
+            }
+        });
         jCResponsable.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCResponsableActionPerformed(evt);
@@ -613,7 +622,7 @@ public class Activos extends javax.swing.JFrame
         });
         jP1.add(jCResponsable, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, 90, 20));
 
-        jCClasificacion.setNextFocusableComponent(jCSucursal);
+        jCClasificacion.setNextFocusableComponent(jCResponsable);
         jCClasificacion.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 jCClasificacionFocusLost(evt);
@@ -680,13 +689,27 @@ public class Activos extends javax.swing.JFrame
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("*#Referencia:");
-        jP1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 80, 140, -1));
-        jP1.add(jTDescripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 60, 350, -1));
+        jP1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 40, 140, -1));
+
+        jTDescripcion.setNextFocusableComponent(jBNew);
+        jTDescripcion.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jTDescripcionFocusLost(evt);
+            }
+        });
+        jP1.add(jTDescripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 100, 350, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setText("*Descripción:");
-        jP1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 40, 140, -1));
-        jP1.add(jTReferencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 100, 170, -1));
+        jP1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 80, 140, -1));
+
+        jTReferencia.setNextFocusableComponent(jTDescripcion);
+        jTReferencia.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jTReferenciaFocusLost(evt);
+            }
+        });
+        jP1.add(jTReferencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 60, 170, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1068,31 +1091,43 @@ public class Activos extends javax.swing.JFrame
     private void jBNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNewActionPerformed
 
         
-        /*Si por lo menos no se selecciono una talla o color entonces*/
-        if(jTZona.getText().compareTo("")==0 || jTSucursal.getText().compareTo("")==0)
+        /*Si por lo menos no se selecciono una zona*/
+        if(jTZona.getText().compareTo("")==0 )
         {
             /*Coloca el borde rojo*/
             jCZona.setBorder(javax.swing.BorderFactory.createLineBorder(java.awt.Color.RED));
             
             /*Mensajea*/
-            JOptionPane.showMessageDialog(null, "Selecciona tanto marca como modelo.", "Marcas y modelos", JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource(Star.sRutIconAd)));
+            JOptionPane.showMessageDialog(null, "Selecciona la zona.", "Activos", JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource(Star.sRutIconAd)));
 
             /*Pon el foco del teclado en el campo de edición y regresa*/
             jCZona.grabFocus();
             return;
         }
-        
+         /*Si por lo menos no se selecciono una talla o color entonces*/
+        if(jTSucursal.getText().compareTo("")==0 )
+        {
+            /*Coloca el borde rojo*/
+            jCSucursal.setBorder(javax.swing.BorderFactory.createLineBorder(java.awt.Color.RED));
+            
+            /*Mensajea*/
+            JOptionPane.showMessageDialog(null, "Selecciona la sucursal", "Activos", JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource(Star.sRutIconAd)));
+
+            /*Pon el foco del teclado en el campo de edición y regresa*/
+            jCSucursal.grabFocus();
+            return;
+        }
         /*Si por lo menos no se selecciono una talla o color entonces*/
         if(jTClasificacion.getText().compareTo("")==0 )
         {
             /*Coloca el borde rojo*/
-            jTClasificacion.setBorder(javax.swing.BorderFactory.createLineBorder(java.awt.Color.RED));
+            jCClasificacion.setBorder(javax.swing.BorderFactory.createLineBorder(java.awt.Color.RED));
             
             /*Mensajea*/
-            JOptionPane.showMessageDialog(null, "Selecciona tanto marca como modelo.", "Marcas y modelos", JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource(Star.sRutIconAd)));
+            JOptionPane.showMessageDialog(null, "Selecciona la clasificacion", "Activos", JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource(Star.sRutIconAd)));
 
             /*Pon el foco del teclado en el campo de edición y regresa*/
-            jTClasificacion.grabFocus();
+            jCClasificacion.grabFocus();
             return;
         }
         
@@ -1100,40 +1135,40 @@ public class Activos extends javax.swing.JFrame
         if(jTResponsable.getText().compareTo("")==0 )
         {
             /*Coloca el borde rojo*/
-            jTResponsable.setBorder(javax.swing.BorderFactory.createLineBorder(java.awt.Color.RED));
+            jCResponsable.setBorder(javax.swing.BorderFactory.createLineBorder(java.awt.Color.RED));
             
             /*Mensajea*/
-            JOptionPane.showMessageDialog(null, "Selecciona tanto marca como modelo.", "Marcas y modelos", JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource(Star.sRutIconAd)));
+            JOptionPane.showMessageDialog(null, "Selecciona al responsable", "Activos", JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource(Star.sRutIconAd)));
 
             /*Pon el foco del teclado en el campo de edición y regresa*/
-            jTResponsable.grabFocus();
+            jCResponsable.grabFocus();
             return;
         }
-          /*Si por lo menos no se selecciono una talla o color entonces*/
+          if(jTReferencia.getText().compareTo("")==0 )
+        {
+            /*Coloca el borde rojo*/
+           jTReferencia.setBorder(javax.swing.BorderFactory.createLineBorder(java.awt.Color.RED));
+            
+            /*Mensajea*/
+            JOptionPane.showMessageDialog(null, "No se a asignado una referencia", "Activos", JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource(Star.sRutIconAd)));
+
+            /*Pon el foco del teclado en el campo de edición y regresa*/
+            jTReferencia.grabFocus();
+            return;
+        }
         if(jTDescripcion.getText().compareTo("")==0 )
         {
             /*Coloca el borde rojo*/
             jTDescripcion.setBorder(javax.swing.BorderFactory.createLineBorder(java.awt.Color.RED));
             
             /*Mensajea*/
-            JOptionPane.showMessageDialog(null, "Selecciona tanto marca como modelo.", "Marcas y modelos", JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource(Star.sRutIconAd)));
+            JOptionPane.showMessageDialog(null, "No se a asigando una descripción", "Activos", JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource(Star.sRutIconAd)));
 
             /*Pon el foco del teclado en el campo de edición y regresa*/
             jTDescripcion.grabFocus();
             return;
         }
-         if(jTReferencia.getText().compareTo("")==0 )
-        {
-            /*Coloca el borde rojo*/
-           jTReferencia.setBorder(javax.swing.BorderFactory.createLineBorder(java.awt.Color.RED));
-            
-            /*Mensajea*/
-            JOptionPane.showMessageDialog(null, "Selecciona tanto marca como modelo.", "Marcas y modelos", JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource(Star.sRutIconAd)));
-
-            /*Pon el foco del teclado en el campo de edición y regresa*/
-            jTReferencia.grabFocus();
-            return;
-        }
+       
         
         //Abre la base de datos        
         Connection  con = Star.conAbrBas(true, false);  
@@ -1219,8 +1254,14 @@ public class Activos extends javax.swing.JFrame
         jCZona.grabFocus();
 
         /*Mensajea de éxito*/
-        JOptionPane.showMessageDialog(null, "Relación agregado con éxito para marca y modelo.", "Exito al agregar", JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource(Star.sRutIconAd)));
+        JOptionPane.showMessageDialog(null, "Activo agregado con exito.", "Exito al agregar", JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource(Star.sRutIconAd)));
 
+        jCZona.setSelectedIndex(0);
+        jCSucursal.setSelectedIndex(0);
+        jCClasificacion.setSelectedIndex(0);
+        jCResponsable.setSelectedIndex(0);
+        jTReferencia.setText("");
+        jTDescripcion.setText("");
     }//GEN-LAST:event_jBNewActionPerformed
 
     
@@ -1343,7 +1384,7 @@ public class Activos extends javax.swing.JFrame
 
         /*Mensajea de éxito si hubo miviminetos*/
         if(bMov)
-            JOptionPane.showMessageDialog(null, "Registro(s) borrado(s) con éxito.", "Marcas y modelos", JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource(Star.sRutIconAd)));
+            JOptionPane.showMessageDialog(null, "Registro(s) borrado(s) con éxito.", "Activos", JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource(Star.sRutIconAd)));
 
     }//GEN-LAST:event_jBDelActionPerformed
 
@@ -1614,7 +1655,8 @@ public class Activos extends javax.swing.JFrame
     }//GEN-LAST:event_jCResponsableKeyPressed
 
     private void jCClasificacionFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jCClasificacionFocusLost
-        // TODO add your handling code here:
+        if(jCClasificacion.getSelectedItem().toString().compareTo("")!=0)
+            jCClasificacion.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204,204,255)));            // TODO add your handling code here:
     }//GEN-LAST:event_jCClasificacionFocusLost
 
     private void jCClasificacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCClasificacionActionPerformed
@@ -1700,6 +1742,28 @@ public class Activos extends javax.swing.JFrame
     private void jTClasificacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTClasificacionActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTClasificacionActionPerformed
+
+    private void jCSucursalFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jCSucursalFocusLost
+        /*Coloca el borde negro si tiene datos*/
+        if(jCSucursal.getSelectedItem().toString().compareTo("")!=0)
+            jCSucursal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204,204,255)));        // TODO add your handling code here:
+    }//GEN-LAST:event_jCSucursalFocusLost
+
+    private void jCResponsableFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jCResponsableFocusLost
+         if(jCResponsable.getSelectedItem().toString().compareTo("")!=0)
+            jCResponsable.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204,204,255)));         // TODO add your handling code here:
+    }//GEN-LAST:event_jCResponsableFocusLost
+
+    private void jTReferenciaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTReferenciaFocusLost
+         if(jTReferencia.getText().compareTo("")!=0)
+            jTReferencia.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204,204,255)));         // TODO add your handling code here:
+    }//GEN-LAST:event_jTReferenciaFocusLost
+
+    private void jTDescripcionFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTDescripcionFocusLost
+
+        if( jTDescripcion.getText().compareTo("")!=0)
+             jTDescripcion.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204,204,255)));       // TODO add your handling code here:
+    }//GEN-LAST:event_jTDescripcionFocusLost
     
     
     /*Función escalable para cuando se presiona una tecla en el módulo*/

@@ -1,4 +1,4 @@
-2015/10/08 10:29:23
-ptovta.Star Access denied for user 'root'@'localhost' (using password: YES)
+2015/12/14 11:54:12
+ptovta.Star 1 (El sistema no puede encontrar el archivo especificado)
 StackTrace:
 
