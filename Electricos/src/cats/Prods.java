@@ -10659,13 +10659,14 @@ public class Prods extends javax.swing.JFrame
         iCont       = 1;
 
         /*Búcle infinito hasta que se encuentre el consecutivo*/
-        while(true)
+        int iRes; 
+        do
         {
             /*Crea el producto con el consecutivo*/
             String sProdC       = sProd + iCont;        
             
             //Comprueba si existe el producto con ese consecutivo en la base de datos                   
-            int iRes        = Star.iExistProd(con, sProdC);
+            iRes        = Star.iExistProd(con, sProdC);
 
             //Si hubo error entonces regresa
             if(iRes==-1)
@@ -10673,16 +10674,13 @@ public class Prods extends javax.swing.JFrame
 
             //Si el producto no existe entonces
             if(iRes==0)
-            {
                 /*El producto será igual al obtenido*/
                 sProd   = sProdC;
-                break;
-            }
                         
             /*Aumenta en uno el contador*/
             ++iCont;
             
-        }/*Fin de while(true)*/
+        }while(iRes!=0); /*Fin del do while*/
                         
         //Cierra la base de datos
         if(Star.iCierrBas(con)==-1)
@@ -10794,7 +10792,8 @@ public class Prods extends javax.swing.JFrame
         iCont       = Long.parseLong(sNum);
         
         /*Búcle infinito hasta que se encuentre el consecutivo*/
-        while(true)
+        int iRes; 
+        do
         {            
             //Se toma el primer cosecutivo
             String sCons =  Long.toString(iCont);
@@ -10807,7 +10806,7 @@ public class Prods extends javax.swing.JFrame
             String sProdC=sProd + sCons;        
             
             //Comprueba si existe el producto con ese consecutivo en la base de datos                    
-            int iRes        = Star.iExistProd(con, sProdC);
+            iRes        = Star.iExistProd(con, sProdC);
 
             //Si hubo error entonces regresa
             if(iRes==-1)
@@ -10815,16 +10814,12 @@ public class Prods extends javax.swing.JFrame
             
             //Si el producto no existe entonces
             if(iRes==0)
-            {
                 /*El producto será igual al obtenido*/
-                sProd   = sProdC;
-                break;  
-            }
-                        
+                sProd   = sProdC;              
             /*Aumenta en uno el contador*/
             ++iCont;
             
-        }/*Fin de while(true)*/
+        }while(iRes!=0);/*Fin del do while*/
                             
         //Cierra la base de datos
         if(Star.iCierrBas(con)==-1)

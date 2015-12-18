@@ -1,24 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="3">
         <file>
-            <url>src/cats/TipsPags.java</url>
+            <url>src/ptovta/Cobro.java</url>
             <bookmark id="1">
                 <name/>
-                <line>1477</line>
+                <line>98</line>
+                <key/>
+            </bookmark>
+        </file>
+        <file>
+            <url>src/ptovta/ImgCam.java</url>
+            <bookmark id="2">
+                <name/>
+                <line>102</line>
                 <key/>
             </bookmark>
         </file>
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/augus/Documents/SOSDev/Electricos/src/ptovta/LoadinBD.java</file>
-            <file>file:/C:/Users/augus/Documents/SOSDev/Electricos/src/ptovta/Star.java</file>
-            <file>file:/C:/Users/augus/Documents/SOSDev/Electricos/src/ptovta/correoRegistro.java</file>
-            <file>file:/C:/Users/augus/Documents/SOSDev/Electricos/src/cats/TipsPags.java</file>
-            <file>file:/C:/Users/augus/Documents/SOSDev/Electricos/src/cats/PlanGralCat.java</file>
-            <file>file:/C:/Users/augus/Documents/SOSDev/Electricos/src/ptovta/Login.java</file>
-            <file>file:/C:/Users/augus/Documents/SOSDev/Electricos/src/ptovta/Princip.java</file>
+            <file>file:/C:/Users/Vanessa/Documents/NetBeansProjects/SOSDev/Electricos/src/cats/CatalBancos.java</file>
+            <file>file:/C:/Users/Vanessa/Documents/NetBeansProjects/SOSDev/Electricos/src/ptovta/Cxp.java</file>
+            <file>file:/C:/Users/Vanessa/Documents/NetBeansProjects/SOSDev/Electricos/src/ptovta/DevPVta.java</file>
+            <file>file:/C:/Users/Vanessa/Documents/NetBeansProjects/SOSDev/Electricos/src/ptovta/DevVtaPto.java</file>
+            <file>file:/C:/Users/Vanessa/Documents/NetBeansProjects/SOSDev/Electricos/build/generated-sources/jax-ws/pRuebasEcodexCancelacionTimbre/ObjectFactory.java</file>
+            <file>file:/C:/Users/Vanessa/Documents/NetBeansProjects/SOSDev/Electricos/src/ptovta/Busc.java</file>
+            <file>file:/C:/Users/Vanessa/Documents/NetBeansProjects/SOSDev/Electricos/src/ptovta/Login.java</file>
+            <file>file:/C:/Users/Vanessa/Documents/NetBeansProjects/SOSDev/Electricos/src/report/RepVtas.java</file>
+            <file>file:/C:/Users/Vanessa/Documents/NetBeansProjects/SOSDev/Electricos/src/ptovta/BDConf.java</file>
+            <file>file:/C:/Users/Vanessa/Documents/NetBeansProjects/SOSDev/Electricos/src/ptovta/BDCon.java</file>
+            <file>file:/C:/Users/Vanessa/Documents/NetBeansProjects/SOSDev/Electricos/build/generated-sources/jax-ws/wstimb/ObjectFactory.java</file>
+            <file>file:/C:/Users/Vanessa/Documents/NetBeansProjects/SOSDev/Electricos/src/report/RepVends.java</file>
+            <file>file:/C:/Users/Vanessa/Documents/NetBeansProjects/SOSDev/Electricos/build/generated-sources/jax-ws/wstimb/Timbrado.java</file>
+            <file>file:/C:/Users/Vanessa/Documents/NetBeansProjects/SOSDev/Electricos/src/cats/MarcMod.java</file>
+            <file>file:/C:/Users/Vanessa/Documents/NetBeansProjects/SOSDev/Electricos/src/ptovta/Traspas.java</file>
+            <file>file:/C:/Users/Vanessa/Documents/NetBeansProjects/SOSDev/Electricos/src/ptovta/Vtas.java</file>
+            <file>file:/C:/Users/Vanessa/Documents/NetBeansProjects/SOSDev/Electricos/src/ptovta/IngrCom.java</file>
+            <file>file:/C:/Users/Vanessa/Documents/NetBeansProjects/SOSDev/Electricos/src/ptovta/DevPCom.java</file>
+            <file>file:/C:/Users/Vanessa/Documents/NetBeansProjects/SOSDev/Electricos/src/ptovta/RecibOrd.java</file>
+            <file>file:/C:/Users/Vanessa/Documents/NetBeansProjects/SOSDev/Electricos/src/ptovta/NewVta.java</file>
+            <file>file:/C:/Users/Vanessa/Documents/NetBeansProjects/SOSDev/Electricos/src/ptovta/Compr.java</file>
+            <file>file:/C:/Users/Vanessa/Documents/NetBeansProjects/SOSDev/Electricos/src/ptovta/CanVtas.java</file>
+            <file>file:/C:/Users/Vanessa/Documents/NetBeansProjects/SOSDev/Electricos/src/ptovta/VAbons.java</file>
+            <file>file:/C:/Users/Vanessa/Documents/NetBeansProjects/SOSDev/Electricos/src/ptovta/Cxc.java</file>
+            <file>file:/C:/Users/Vanessa/Documents/NetBeansProjects/SOSDev/Electricos/src/ptovta/LoadinBD.java</file>
+            <file>file:/C:/Users/Vanessa/Documents/NetBeansProjects/SOSDev/Electricos/src/ptovta/NewNotProv.java</file>
+            <file>file:/C:/Users/Vanessa/Documents/NetBeansProjects/SOSDev/Electricos/src/ptovta/ConfigBancos.java</file>
+            <file>file:/C:/Users/Vanessa/Documents/NetBeansProjects/SOSDev/Electricos/src/ptovta/DepGara.java</file>
+            <file>file:/C:/Users/Vanessa/Documents/NetBeansProjects/SOSDev/Electricos/src/cats/CatalogoDependiente.java</file>
+            <file>file:/C:/Users/Vanessa/Documents/NetBeansProjects/SOSDev/Electricos/build/generated-sources/jax-ws/wsseg/ObjectFactory.java</file>
+            <file>file:/C:/Users/Vanessa/Documents/NetBeansProjects/SOSDev/Electricos/src/ptovta/Star.java</file>
+            <file>file:/C:/Users/Vanessa/Documents/NetBeansProjects/SOSDev/Electricos/src/ptovta/InterMac240ThinCli.java</file>
+            <file>file:/C:/Users/Vanessa/Documents/NetBeansProjects/SOSDev/Electricos/src/ptovta/SelectActivos.java</file>
+            <file>file:/C:/Users/Vanessa/Documents/NetBeansProjects/SOSDev/Electricos/src/ptovta/Cobro.java</file>
+            <file>file:/C:/Users/Vanessa/Documents/NetBeansProjects/SOSDev/Electricos/src/ptovta/Princip.java</file>
+            <file>file:/C:/Users/Vanessa/Documents/NetBeansProjects/SOSDev/Electricos/src/cats/Activos.java</file>
+            <file>file:/C:/Users/Vanessa/Documents/NetBeansProjects/SOSDev/Electricos/src/ptovta/correoTerminal.java</file>
+            <file>file:/C:/Users/Vanessa/Documents/NetBeansProjects/SOSDev/Electricos/src/ptovta/NewNot.java</file>
         </group>
     </open-files>
 </project-private>

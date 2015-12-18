@@ -1,5 +1,10 @@
+<<<<<<< HEAD
+2015/12/14 11:54:12
+ptovta.Star 1 (El sistema no puede encontrar el archivo especificado)
+=======
 2015/12/14 16:57:24
 cats.ConceptosPago Column 'cod' not found.
+>>>>>>> origin/master
 StackTrace:
 com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1078)
 com.mysql.jdbc.SQLError.createSQLException(SQLError.java:989)

@@ -737,7 +737,7 @@ public class PlanGralCat extends javax.swing.JFrame
         for(int x = iSel.length - 1; x >= 0; x--)
         {
             /*if para saltar la parte de comprobacion para catgral*/
-            if(sTip.compareTo("grals")!=0)
+            if(sTip.compareTo("grals")!=0&&sTip.compareTo("responsable")!=0&&sTip.compareTo("clasificacion")!=0)
             {
                 /*Comprueba si existen registros asignados*/ 
                 try

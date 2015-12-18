@@ -1155,6 +1155,9 @@ public class NewVta extends javax.swing.JFrame
         jLabel18 = new javax.swing.JLabel();
         jComFormPag = new javax.swing.JComboBox();
         jCFormaPago = new javax.swing.JComboBox();
+        jTReferencia = new javax.swing.JTextField();
+        jBtnReferencia = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         jTAlma2 = new javax.swing.JTextField();
         jTCadu = new javax.swing.JTextField();
         jTId = new javax.swing.JTextField();
@@ -2707,10 +2710,10 @@ public class NewVta extends javax.swing.JFrame
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setText("Fecha:");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 80, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 80, -1));
 
         jLabel22.setText("*Serie:");
-        jPanel1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 100, -1));
+        jPanel1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 100, -1));
 
         jComSer.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
@@ -2727,13 +2730,13 @@ public class NewVta extends javax.swing.JFrame
                 jComSerKeyPressed(evt);
             }
         });
-        jPanel1.add(jComSer, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, 120, 20));
+        jPanel1.add(jComSer, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 40, 120, 20));
 
         jLabel44.setText("Método pago:");
-        jPanel1.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 100, -1));
+        jPanel1.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 100, -1));
 
         jLabel48.setText("Cuenta:");
-        jPanel1.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 100, -1));
+        jPanel1.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 100, -1));
 
         jTCta.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
         jTCta.setNextFocusableComponent(jCGuaPag);
@@ -2750,7 +2753,7 @@ public class NewVta extends javax.swing.JFrame
                 jTCtaKeyPressed(evt);
             }
         });
-        jPanel1.add(jTCta, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, 120, 20));
+        jPanel1.add(jTCta, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 80, 120, 20));
 
         jCGuaPag.setBackground(new java.awt.Color(255, 255, 255));
         jCGuaPag.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
@@ -2767,7 +2770,7 @@ public class NewVta extends javax.swing.JFrame
                 jCGuaPagKeyPressed(evt);
             }
         });
-        jPanel1.add(jCGuaPag, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, 110, 20));
+        jPanel1.add(jCGuaPag, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, 110, 20));
 
         jCMand.setBackground(new java.awt.Color(255, 255, 255));
         jCMand.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
@@ -2779,7 +2782,7 @@ public class NewVta extends javax.swing.JFrame
                 jCMandKeyPressed(evt);
             }
         });
-        jPanel1.add(jCMand, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 130, -1));
+        jPanel1.add(jCMand, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 130, -1));
 
         jCImp.setBackground(new java.awt.Color(255, 255, 255));
         jCImp.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
@@ -2790,7 +2793,7 @@ public class NewVta extends javax.swing.JFrame
                 jCImpKeyPressed(evt);
             }
         });
-        jPanel1.add(jCImp, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 130, 110, -1));
+        jPanel1.add(jCImp, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 140, 110, -1));
 
         jCMostA.setBackground(new java.awt.Color(255, 255, 255));
         jCMostA.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
@@ -2801,7 +2804,7 @@ public class NewVta extends javax.swing.JFrame
                 jCMostAKeyPressed(evt);
             }
         });
-        jPanel1.add(jCMostA, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 110, -1));
+        jPanel1.add(jCMostA, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 110, -1));
 
         jCTim.setBackground(new java.awt.Color(255, 255, 255));
         jCTim.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
@@ -2812,7 +2815,7 @@ public class NewVta extends javax.swing.JFrame
                 jCTimKeyPressed(evt);
             }
         });
-        jPanel1.add(jCTim, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 100, 20));
+        jPanel1.add(jCTim, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 100, 20));
 
         jDFExt.setNextFocusableComponent(jTAObserv);
         jDFExt.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -2820,7 +2823,7 @@ public class NewVta extends javax.swing.JFrame
                 jDFExtKeyPressed(evt);
             }
         });
-        jPanel1.add(jDFExt, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 195, 140, -1));
+        jPanel1.add(jDFExt, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 200, 140, -1));
 
         jCFExt.setBackground(new java.awt.Color(255, 255, 255));
         jCFExt.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
@@ -2836,7 +2839,7 @@ public class NewVta extends javax.swing.JFrame
                 jCFExtKeyPressed(evt);
             }
         });
-        jPanel1.add(jCFExt, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 175, 110, 20));
+        jPanel1.add(jCFExt, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 180, 110, 20));
 
         jLabel40.setText("Observaciones:");
         jPanel1.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 110, -1));
@@ -2880,7 +2883,7 @@ public class NewVta extends javax.swing.JFrame
                 jCRemKeyPressed(evt);
             }
         });
-        jPanel1.add(jCRem, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, 110, -1));
+        jPanel1.add(jCRem, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 120, 110, -1));
 
         jDFech.setNextFocusableComponent(jComSer);
         jDFech.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -2888,7 +2891,7 @@ public class NewVta extends javax.swing.JFrame
                 jDFechKeyPressed(evt);
             }
         });
-        jPanel1.add(jDFech, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 120, -1));
+        jPanel1.add(jDFech, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 20, 120, -1));
 
         jLabel9.setText("Forma pago:");
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 110, -1));
@@ -2909,10 +2912,10 @@ public class NewVta extends javax.swing.JFrame
                 jComMonKeyPressed(evt);
             }
         });
-        jPanel1.add(jComMon, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 195, 90, 20));
+        jPanel1.add(jComMon, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 90, 20));
 
         jLabel18.setText("Moneda:");
-        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 90, -1));
+        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 90, 10));
 
         jComFormPag.setNextFocusableComponent(jCMostA);
         jComFormPag.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -2930,10 +2933,34 @@ public class NewVta extends javax.swing.JFrame
                 jComFormPagKeyPressed(evt);
             }
         });
-        jPanel1.add(jComFormPag, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 70, 120, 20));
+        jPanel1.add(jComFormPag, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 120, 20));
 
         jCFormaPago.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "PAGO EN UNA SOLA EXHIBICIÓN", "PAGO EN PARCIALIDADES" }));
         jPanel1.add(jCFormaPago, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 235, 250, 20));
+
+        jTReferencia.setEditable(false);
+        jTReferencia.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jTReferenciaFocusLost(evt);
+            }
+        });
+        jTReferencia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTReferenciaActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jTReferencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 100, 100, -1));
+
+        jBtnReferencia.setText("jButton1");
+        jBtnReferencia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnReferenciaActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jBtnReferencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 100, 20, 20));
+
+        jLabel1.setText("Activo");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 100, -1));
 
         jP1.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 10, 270, 365));
 
@@ -3619,7 +3646,7 @@ public class NewVta extends javax.swing.JFrame
             jTCli.grabFocus();                        
             return;            
         }
-
+       
         /*Si no a seleccionado una moneda entonces*/
         if(jComMon.getSelectedItem().toString().compareTo("")==0)
         {
@@ -4478,7 +4505,7 @@ public class NewVta extends javax.swing.JFrame
         if(jTTotSald.isVisible())
         {
             //Inserta cxc el abono en la base de datos            
-            if(Star.iInsCXCP(con, "cxc", sConFac, jComSer.getSelectedItem().toString(), jTCli.getText(), jTSer.getText(), jTSubTot.getText(), jTImp.getText(), jTTot.getText(), jTSaldDispo.getText(), "0" , "now()", "'" +sFDoc+ "'", "FAC", "", "0", "", "","")==-1)
+            if(Star.iInsCXCP(con, "cxc", sConFac, jComSer.getSelectedItem().toString(), jTCli.getText(), jTSer.getText(), jTSubTot.getText(), jTImp.getText(), jTTot.getText(), jTSaldDispo.getText(), "0" , "now()", "'" +sFDoc+ "'", "FAC", "", "0", "", "","","")==-1)
                  return;                                       
         }
         
@@ -4489,21 +4516,21 @@ public class NewVta extends javax.swing.JFrame
             sCred   = "'" + sFVenc + "'";
             
             //Inserta cxc en la base de datos            
-            if(Star.iInsCXCP(con, "cxc", sConFac, jComSer.getSelectedItem().toString(), jTCli.getText(), jTSer.getText(), jTSubTot.getText(), jTImp.getText(), jTTot.getText(), jTTot.getText(), "0", "'" + sFVenc + "'","'" + sFDoc+ "'", "FAC", "", "", "", "","")==-1)
+            if(Star.iInsCXCP(con, "cxc", sConFac, jComSer.getSelectedItem().toString(), jTCli.getText(), jTSer.getText(), jTSubTot.getText(), jTImp.getText(), jTTot.getText(), jTTot.getText(), "0", "'" + sFVenc + "'","'" + sFDoc+ "'", "FAC", "", "", "", "","","")==-1)
                 return;                                                   
         }
         //Else va a ser de contado entonces
         else
         {
             //Inserta el CXC de la deuda           
-            if(Star.iInsCXCP(con, "cxc", sConFac, jComSer.getSelectedItem().toString(), jTCli.getText(), jTSer.getText(), jTSubTot.getText(), jTImp.getText(), jTTot.getText(), jTTot.getText(), "0", "now()","'" + sFDoc+ "'", "FAC", "", "0", "", "","")==-1)
+            if(Star.iInsCXCP(con, "cxc", sConFac, jComSer.getSelectedItem().toString(), jTCli.getText(), jTSer.getText(), jTSubTot.getText(), jTImp.getText(), jTTot.getText(), jTTot.getText(), "0", "now()","'" + sFDoc+ "'", "FAC", "", "0", "", "","","")==-1)
                 return;               
             
             //Si va a estar pagada entonces
             if(jRPagad.isSelected())
             {
                 //Inserta el CXC del abono   
-                if(Star.iInsCXCP(con, "cxc", sConFac, jComSer.getSelectedItem().toString(), jTCli.getText(), jTSer.getText(), jTSubTot.getText(), jTImp.getText(), jTTot.getText(), "0", jTTot.getText(), "now()", "now()", "ABON FAC", jComFormPag.getSelectedItem().toString().trim(), "0", "", "","")==-1)
+                if(Star.iInsCXCP(con, "cxc", sConFac, jComSer.getSelectedItem().toString(), jTCli.getText(), jTSer.getText(), jTSubTot.getText(), jTImp.getText(), jTTot.getText(), "0", jTTot.getText(), "now()", "now()", "ABON FAC", jComFormPag.getSelectedItem().toString().trim(), "0", "", "","","")==-1)
                 return;                                       
             }            
         }
@@ -4534,6 +4561,7 @@ public class NewVta extends javax.swing.JFrame
         if(sBackOrder==1)
                 Bo="BO";
         //Inserta en la base de datos la nueva venta
+        Star.referencia=jTReferencia.getText();
         if(Star.iInsVtas(con, jComSer.getSelectedItem().toString().replace("'", "''").trim(), sConFac.replace("'", "''").trim(), jTCli.getText().replace("'", "''").trim(),  "",jTSubTot.getText().replace("$", "").replace(",", ""), jTImp.getText().replace("$", "").replace(",", ""), jTTot.getText().replace("$", "").replace(",", ""), "now()", "'" + sFDoc + "'", sCred, "'CO'", "0", "", sTip, "0", sMetPag.replace("'", "''"), sCta.replace("'", "''"), jTAObserv.getText().replace("'", "''"), "0", jTTotDesc.getText().replace("$", "").replace(",", ""), "0", "1", jTTotCost.getText(), Login.sUsrG, jComMon.getSelectedItem().toString().replace("'", "''"), sTipCam, sFPag, "", "", "", "", "", "", "", "", "", "", "", "", "N", sCodCot, "0", "0", "0", "0",Bo,jTVend.getText())==-1)
             return;
             
@@ -10246,6 +10274,22 @@ public class NewVta extends javax.swing.JFrame
         // TODO add your handling code here:
     }//GEN-LAST:event_jCGuaPagActionPerformed
 
+    private void jBtnReferenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnReferenciaActionPerformed
+        SelectActivos activo=new SelectActivos(jTReferencia);
+        activo.setVisible(true);// TODO add your handling code here:
+    }//GEN-LAST:event_jBtnReferenciaActionPerformed
+
+    private void jTReferenciaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTReferenciaFocusLost
+         if(jTReferencia.getText().compareTo("")!=0)
+            jTReferencia.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204,204,255)));        // TODO add your handling code here:
+    }//GEN-LAST:event_jTReferenciaFocusLost
+
+    private void jTReferenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTReferenciaActionPerformed
+        // TODO add your handling code here:
+         if(jTReferencia.getText().compareTo("")!=0)
+            jTReferencia.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204,204,255))); 
+    }//GEN-LAST:event_jTReferenciaActionPerformed
+
    
    /*Carga las series en el combobox*/
    private void vCargSer()
@@ -10605,6 +10649,7 @@ public class NewVta extends javax.swing.JFrame
     private javax.swing.JButton jBUltPre;
     private javax.swing.JButton jBVeGran;
     private javax.swing.JButton jBVend;
+    private javax.swing.JButton jBtnReferencia;
     private javax.swing.JCheckBox jCBack;
     private javax.swing.JCheckBox jCCo1;
     private javax.swing.JCheckBox jCCo2;
@@ -10636,6 +10681,7 @@ public class NewVta extends javax.swing.JFrame
     private javax.swing.JLabel jLNot;
     private javax.swing.JLabel jLTipVta;
     private javax.swing.JLabel jLTotSald;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -10735,6 +10781,7 @@ public class NewVta extends javax.swing.JFrame
     private javax.swing.JTextField jTPre;
     private javax.swing.JTextField jTProd;
     private javax.swing.JTextField jTRFC;
+    private javax.swing.JTextField jTReferencia;
     private javax.swing.JTextField jTSaldDispo;
     private javax.swing.JTextField jTSer;
     private javax.swing.JTextField jTSerProd;

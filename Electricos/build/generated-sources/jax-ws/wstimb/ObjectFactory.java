@@ -57,20 +57,20 @@ public class ObjectFactory {
     private final static QName _Byte_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "byte");
     private final static QName _Double_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "double");
     private final static QName _QName_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "QName");
+    private final static QName _InformacionQRImagen_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Imagen");
+    private final static QName _FallaSesionDescripcion_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Descripcion");
+    private final static QName _RespuestaTimbraXMLAdvertencias_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Advertencias");
+    private final static QName _RespuestaEstatusTimbradoEstatus_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Estatus");
     private final static QName _SolicitudObtenerTimbradoToken_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Token");
     private final static QName _SolicitudObtenerTimbradoUUID_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "UUID");
     private final static QName _SolicitudObtenerTimbradoRFC_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "RFC");
-    private final static QName _ComprobanteEstatusCodigo_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Codigo");
-    private final static QName _ComprobanteEstatusDescripcion_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Descripcion");
     private final static QName _RespuestaObtenerQRTimbradoQR_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "QR");
-    private final static QName _RespuestaEstatusTimbradoEstatus_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Estatus");
+    private final static QName _AdvertenciaValidacionSugerencia_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Sugerencia");
+    private final static QName _AdvertenciaValidacionAntecedente_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Antecedente");
     private final static QName _ComprobanteXMLDatosXML_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "DatosXML");
-    private final static QName _FallaValidacionSugerencia_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Sugerencia");
-    private final static QName _FallaValidacionAntecedente_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Antecedente");
+    private final static QName _FallaServicioEvento_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Evento");
     private final static QName _FallaValidacionNodo_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Nodo");
-    private final static QName _FallaValidacionEvento_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Evento");
-    private final static QName _InformacionQRImagen_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Imagen");
-    private final static QName _RespuestaTimbraXMLAdvertencias_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Advertencias");
+    private final static QName _ComprobanteEstatusCodigo_QNAME = new QName("http://Ecodex.WS.Model/2011/CFDI", "Codigo");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: wstimb
@@ -485,12 +485,48 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link byte[]}{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Imagen", scope = InformacionQR.class)
+    public JAXBElement<byte[]> createInformacionQRImagen(byte[] value) {
+        return new JAXBElement<byte[]>(_InformacionQRImagen_QNAME, byte[].class, InformacionQR.class, ((byte[]) value));
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Descripcion", scope = FallaSesion.class)
+    public JAXBElement<String> createFallaSesionDescripcion(String value) {
+        return new JAXBElement<String>(_FallaSesionDescripcion_QNAME, String.class, FallaSesion.class, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ComprobanteXML }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "ComprobanteXML", scope = RespuestaObtenerTimbrado.class)
-    public JAXBElement<ComprobanteXML> createRespuestaObtenerTimbradoComprobanteXML(ComprobanteXML value) {
-        return new JAXBElement<ComprobanteXML>(_ComprobanteXML_QNAME, ComprobanteXML.class, RespuestaObtenerTimbrado.class, value);
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "ComprobanteXML", scope = RespuestaTimbraXML.class)
+    public JAXBElement<ComprobanteXML> createRespuestaTimbraXMLComprobanteXML(ComprobanteXML value) {
+        return new JAXBElement<ComprobanteXML>(_ComprobanteXML_QNAME, ComprobanteXML.class, RespuestaTimbraXML.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AdvertenciasValidacion }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Advertencias", scope = RespuestaTimbraXML.class)
+    public JAXBElement<AdvertenciasValidacion> createRespuestaTimbraXMLAdvertencias(AdvertenciasValidacion value) {
+        return new JAXBElement<AdvertenciasValidacion>(_RespuestaTimbraXMLAdvertencias_QNAME, AdvertenciasValidacion.class, RespuestaTimbraXML.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ComprobanteEstatus }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Estatus", scope = RespuestaEstatusTimbrado.class)
+    public JAXBElement<ComprobanteEstatus> createRespuestaEstatusTimbradoEstatus(ComprobanteEstatus value) {
+        return new JAXBElement<ComprobanteEstatus>(_RespuestaEstatusTimbradoEstatus_QNAME, ComprobanteEstatus.class, RespuestaEstatusTimbrado.class, value);
     }
 
     /**
@@ -521,120 +557,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Codigo", scope = ComprobanteEstatus.class)
-    public JAXBElement<String> createComprobanteEstatusCodigo(String value) {
-        return new JAXBElement<String>(_ComprobanteEstatusCodigo_QNAME, String.class, ComprobanteEstatus.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Descripcion", scope = ComprobanteEstatus.class)
-    public JAXBElement<String> createComprobanteEstatusDescripcion(String value) {
-        return new JAXBElement<String>(_ComprobanteEstatusDescripcion_QNAME, String.class, ComprobanteEstatus.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link InformacionQR }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "QR", scope = RespuestaObtenerQRTimbrado.class)
-    public JAXBElement<InformacionQR> createRespuestaObtenerQRTimbradoQR(InformacionQR value) {
-        return new JAXBElement<InformacionQR>(_RespuestaObtenerQRTimbradoQR_QNAME, InformacionQR.class, RespuestaObtenerQRTimbrado.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ComprobanteEstatus }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Estatus", scope = RespuestaEstatusTimbrado.class)
-    public JAXBElement<ComprobanteEstatus> createRespuestaEstatusTimbradoEstatus(ComprobanteEstatus value) {
-        return new JAXBElement<ComprobanteEstatus>(_RespuestaEstatusTimbradoEstatus_QNAME, ComprobanteEstatus.class, RespuestaEstatusTimbrado.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "DatosXML", scope = ComprobanteXML.class)
-    public JAXBElement<String> createComprobanteXMLDatosXML(String value) {
-        return new JAXBElement<String>(_ComprobanteXMLDatosXML_QNAME, String.class, ComprobanteXML.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Sugerencia", scope = FallaValidacion.class)
-    public JAXBElement<String> createFallaValidacionSugerencia(String value) {
-        return new JAXBElement<String>(_FallaValidacionSugerencia_QNAME, String.class, FallaValidacion.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Antecedente", scope = FallaValidacion.class)
-    public JAXBElement<String> createFallaValidacionAntecedente(String value) {
-        return new JAXBElement<String>(_FallaValidacionAntecedente_QNAME, String.class, FallaValidacion.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Nodo", scope = FallaValidacion.class)
-    public JAXBElement<String> createFallaValidacionNodo(String value) {
-        return new JAXBElement<String>(_FallaValidacionNodo_QNAME, String.class, FallaValidacion.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Evento", scope = FallaValidacion.class)
-    public JAXBElement<String> createFallaValidacionEvento(String value) {
-        return new JAXBElement<String>(_FallaValidacionEvento_QNAME, String.class, FallaValidacion.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Descripcion", scope = FallaValidacion.class)
-    public JAXBElement<String> createFallaValidacionDescripcion(String value) {
-        return new JAXBElement<String>(_ComprobanteEstatusDescripcion_QNAME, String.class, FallaValidacion.class, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ComprobanteXML }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "ComprobanteXML", scope = SolicitudTimbraXML.class)
-    public JAXBElement<ComprobanteXML> createSolicitudTimbraXMLComprobanteXML(ComprobanteXML value) {
-        return new JAXBElement<ComprobanteXML>(_ComprobanteXML_QNAME, ComprobanteXML.class, SolicitudTimbraXML.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Token", scope = SolicitudTimbraXML.class)
-    public JAXBElement<String> createSolicitudTimbraXMLToken(String value) {
-        return new JAXBElement<String>(_SolicitudObtenerTimbradoToken_QNAME, String.class, SolicitudTimbraXML.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "RFC", scope = SolicitudTimbraXML.class)
-    public JAXBElement<String> createSolicitudTimbraXMLRFC(String value) {
-        return new JAXBElement<String>(_SolicitudObtenerTimbradoRFC_QNAME, String.class, SolicitudTimbraXML.class, value);
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "ComprobanteXML", scope = RespuestaObtenerTimbrado.class)
+    public JAXBElement<ComprobanteXML> createRespuestaObtenerTimbradoComprobanteXML(ComprobanteXML value) {
+        return new JAXBElement<ComprobanteXML>(_ComprobanteXML_QNAME, ComprobanteXML.class, RespuestaObtenerTimbrado.class, value);
     }
 
     /**
@@ -665,30 +593,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link byte[]}{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link InformacionQR }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Imagen", scope = InformacionQR.class)
-    public JAXBElement<byte[]> createInformacionQRImagen(byte[] value) {
-        return new JAXBElement<byte[]>(_InformacionQRImagen_QNAME, byte[].class, InformacionQR.class, ((byte[]) value));
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ComprobanteXML }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "ComprobanteXML", scope = RespuestaTimbraXML.class)
-    public JAXBElement<ComprobanteXML> createRespuestaTimbraXMLComprobanteXML(ComprobanteXML value) {
-        return new JAXBElement<ComprobanteXML>(_ComprobanteXML_QNAME, ComprobanteXML.class, RespuestaTimbraXML.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AdvertenciasValidacion }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Advertencias", scope = RespuestaTimbraXML.class)
-    public JAXBElement<AdvertenciasValidacion> createRespuestaTimbraXMLAdvertencias(AdvertenciasValidacion value) {
-        return new JAXBElement<AdvertenciasValidacion>(_RespuestaTimbraXMLAdvertencias_QNAME, AdvertenciasValidacion.class, RespuestaTimbraXML.class, value);
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "QR", scope = RespuestaObtenerQRTimbrado.class)
+    public JAXBElement<InformacionQR> createRespuestaObtenerQRTimbradoQR(InformacionQR value) {
+        return new JAXBElement<InformacionQR>(_RespuestaObtenerQRTimbradoQR_QNAME, InformacionQR.class, RespuestaObtenerQRTimbrado.class, value);
     }
 
     /**
@@ -697,7 +607,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Sugerencia", scope = AdvertenciaValidacion.class)
     public JAXBElement<String> createAdvertenciaValidacionSugerencia(String value) {
-        return new JAXBElement<String>(_FallaValidacionSugerencia_QNAME, String.class, AdvertenciaValidacion.class, value);
+        return new JAXBElement<String>(_AdvertenciaValidacionSugerencia_QNAME, String.class, AdvertenciaValidacion.class, value);
     }
 
     /**
@@ -706,43 +616,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Antecedente", scope = AdvertenciaValidacion.class)
     public JAXBElement<String> createAdvertenciaValidacionAntecedente(String value) {
-        return new JAXBElement<String>(_FallaValidacionAntecedente_QNAME, String.class, AdvertenciaValidacion.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Token", scope = SolicitudCancelaTimbrado.class)
-    public JAXBElement<String> createSolicitudCancelaTimbradoToken(String value) {
-        return new JAXBElement<String>(_SolicitudObtenerTimbradoToken_QNAME, String.class, SolicitudCancelaTimbrado.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "UUID", scope = SolicitudCancelaTimbrado.class)
-    public JAXBElement<String> createSolicitudCancelaTimbradoUUID(String value) {
-        return new JAXBElement<String>(_SolicitudObtenerTimbradoUUID_QNAME, String.class, SolicitudCancelaTimbrado.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "RFC", scope = SolicitudCancelaTimbrado.class)
-    public JAXBElement<String> createSolicitudCancelaTimbradoRFC(String value) {
-        return new JAXBElement<String>(_SolicitudObtenerTimbradoRFC_QNAME, String.class, SolicitudCancelaTimbrado.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Descripcion", scope = FallaSesion.class)
-    public JAXBElement<String> createFallaSesionDescripcion(String value) {
-        return new JAXBElement<String>(_ComprobanteEstatusDescripcion_QNAME, String.class, FallaSesion.class, value);
+        return new JAXBElement<String>(_AdvertenciaValidacionAntecedente_QNAME, String.class, AdvertenciaValidacion.class, value);
     }
 
     /**
@@ -776,9 +650,18 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "DatosXML", scope = ComprobanteXML.class)
+    public JAXBElement<String> createComprobanteXMLDatosXML(String value) {
+        return new JAXBElement<String>(_ComprobanteXMLDatosXML_QNAME, String.class, ComprobanteXML.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
     @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Evento", scope = FallaServicio.class)
     public JAXBElement<String> createFallaServicioEvento(String value) {
-        return new JAXBElement<String>(_FallaValidacionEvento_QNAME, String.class, FallaServicio.class, value);
+        return new JAXBElement<String>(_FallaServicioEvento_QNAME, String.class, FallaServicio.class, value);
     }
 
     /**
@@ -787,7 +670,124 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Descripcion", scope = FallaServicio.class)
     public JAXBElement<String> createFallaServicioDescripcion(String value) {
-        return new JAXBElement<String>(_ComprobanteEstatusDescripcion_QNAME, String.class, FallaServicio.class, value);
+        return new JAXBElement<String>(_FallaSesionDescripcion_QNAME, String.class, FallaServicio.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Sugerencia", scope = FallaValidacion.class)
+    public JAXBElement<String> createFallaValidacionSugerencia(String value) {
+        return new JAXBElement<String>(_AdvertenciaValidacionSugerencia_QNAME, String.class, FallaValidacion.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Antecedente", scope = FallaValidacion.class)
+    public JAXBElement<String> createFallaValidacionAntecedente(String value) {
+        return new JAXBElement<String>(_AdvertenciaValidacionAntecedente_QNAME, String.class, FallaValidacion.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Nodo", scope = FallaValidacion.class)
+    public JAXBElement<String> createFallaValidacionNodo(String value) {
+        return new JAXBElement<String>(_FallaValidacionNodo_QNAME, String.class, FallaValidacion.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Evento", scope = FallaValidacion.class)
+    public JAXBElement<String> createFallaValidacionEvento(String value) {
+        return new JAXBElement<String>(_FallaServicioEvento_QNAME, String.class, FallaValidacion.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Descripcion", scope = FallaValidacion.class)
+    public JAXBElement<String> createFallaValidacionDescripcion(String value) {
+        return new JAXBElement<String>(_FallaSesionDescripcion_QNAME, String.class, FallaValidacion.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ComprobanteXML }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "ComprobanteXML", scope = SolicitudTimbraXML.class)
+    public JAXBElement<ComprobanteXML> createSolicitudTimbraXMLComprobanteXML(ComprobanteXML value) {
+        return new JAXBElement<ComprobanteXML>(_ComprobanteXML_QNAME, ComprobanteXML.class, SolicitudTimbraXML.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Token", scope = SolicitudTimbraXML.class)
+    public JAXBElement<String> createSolicitudTimbraXMLToken(String value) {
+        return new JAXBElement<String>(_SolicitudObtenerTimbradoToken_QNAME, String.class, SolicitudTimbraXML.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "RFC", scope = SolicitudTimbraXML.class)
+    public JAXBElement<String> createSolicitudTimbraXMLRFC(String value) {
+        return new JAXBElement<String>(_SolicitudObtenerTimbradoRFC_QNAME, String.class, SolicitudTimbraXML.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Codigo", scope = ComprobanteEstatus.class)
+    public JAXBElement<String> createComprobanteEstatusCodigo(String value) {
+        return new JAXBElement<String>(_ComprobanteEstatusCodigo_QNAME, String.class, ComprobanteEstatus.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Descripcion", scope = ComprobanteEstatus.class)
+    public JAXBElement<String> createComprobanteEstatusDescripcion(String value) {
+        return new JAXBElement<String>(_FallaSesionDescripcion_QNAME, String.class, ComprobanteEstatus.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "Token", scope = SolicitudCancelaTimbrado.class)
+    public JAXBElement<String> createSolicitudCancelaTimbradoToken(String value) {
+        return new JAXBElement<String>(_SolicitudObtenerTimbradoToken_QNAME, String.class, SolicitudCancelaTimbrado.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "UUID", scope = SolicitudCancelaTimbrado.class)
+    public JAXBElement<String> createSolicitudCancelaTimbradoUUID(String value) {
+        return new JAXBElement<String>(_SolicitudObtenerTimbradoUUID_QNAME, String.class, SolicitudCancelaTimbrado.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://Ecodex.WS.Model/2011/CFDI", name = "RFC", scope = SolicitudCancelaTimbrado.class)
+    public JAXBElement<String> createSolicitudCancelaTimbradoRFC(String value) {
+        return new JAXBElement<String>(_SolicitudObtenerTimbradoRFC_QNAME, String.class, SolicitudCancelaTimbrado.class, value);
     }
 
 }

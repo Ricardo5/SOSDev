@@ -29,8 +29,8 @@ public interface Timbrado {
      * @return
      *     returns wstimb.RespuestaTimbraXML
      * @throws TimbradoTimbraXMLFallaServicioFaultFaultMessage
-     * @throws TimbradoTimbraXMLFallaSesionFaultFaultMessage
      * @throws TimbradoTimbraXMLFallaValidacionFaultFaultMessage
+     * @throws TimbradoTimbraXMLFallaSesionFaultFaultMessage
      */
     @WebMethod(operationName = "TimbraXML", action = "http://Ecodex.WS.Model/2011/CFDI/Timbrado/TimbraXML")
     @WebResult(name = "RespuestaTimbraXML", targetNamespace = "http://Ecodex.WS.Model/2011/CFDI", partName = "parameters")
@@ -45,9 +45,9 @@ public interface Timbrado {
      * @param parameters
      * @return
      *     returns wstimb.RespuestaCancelaTimbrado
-     * @throws TimbradoCancelaTimbradoFallaServicioFaultFaultMessage
      * @throws TimbradoCancelaTimbradoFallaValidacionFaultFaultMessage
      * @throws TimbradoCancelaTimbradoFallaSesionFaultFaultMessage
+     * @throws TimbradoCancelaTimbradoFallaServicioFaultFaultMessage
      */
     @WebMethod(operationName = "CancelaTimbrado", action = "http://Ecodex.WS.Model/2011/CFDI/Timbrado/CancelaTimbrado")
     @WebResult(name = "RespuestaCancelaTimbrado", targetNamespace = "http://Ecodex.WS.Model/2011/CFDI", partName = "parameters")
@@ -79,9 +79,9 @@ public interface Timbrado {
      * @param parameters
      * @return
      *     returns wstimb.RespuestaObtenerTimbrado
+     * @throws TimbradoObtenerTimbradoFallaValidacionFaultFaultMessage
      * @throws TimbradoObtenerTimbradoFallaSesionFaultFaultMessage
      * @throws TimbradoObtenerTimbradoFallaServicioFaultFaultMessage
-     * @throws TimbradoObtenerTimbradoFallaValidacionFaultFaultMessage
      */
     @WebMethod(operationName = "ObtenerTimbrado", action = "http://Ecodex.WS.Model/2011/CFDI/Timbrado/ObtenerTimbrado")
     @WebResult(name = "RespuestaObtenerTimbrado", targetNamespace = "http://Ecodex.WS.Model/2011/CFDI", partName = "parameters")
@@ -96,8 +96,8 @@ public interface Timbrado {
      * @param parameters
      * @return
      *     returns wstimb.RespuestaObtenerQRTimbrado
-     * @throws TimbradoObtenerQRTimbradoFallaSesionFaultFaultMessage
      * @throws TimbradoObtenerQRTimbradoFallaValidacionFaultFaultMessage
+     * @throws TimbradoObtenerQRTimbradoFallaSesionFaultFaultMessage
      * @throws TimbradoObtenerQRTimbradoFallaServicioFaultFaultMessage
      */
     @WebMethod(operationName = "ObtenerQRTimbrado", action = "http://Ecodex.WS.Model/2011/CFDI/Timbrado/ObtenerQRTimbrado")

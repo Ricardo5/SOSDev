@@ -1355,7 +1355,7 @@ public class DevPVta extends javax.swing.JFrame
         if(!bPtoVta)
         {
             //Inserta el abono en CXC de la base de datos            
-            if(Star.iInsCXCP(con, "cxc", jTNoDoc.getText().trim(), jTNoSer.getText().trim(), jTCli.getText().trim(), sSerCli, sSubTot, cImpue, cTotal, "0", cTotal, "'" + sFVenc + "'", "'" + sFDoc + "'", "DEVP FAC", "", "0", "", "","")==-1)
+            if(Star.iInsCXCP(con, "cxc", jTNoDoc.getText().trim(), jTNoSer.getText().trim(), jTCli.getText().trim(), sSerCli, sSubTot, cImpue, cTotal, "0", cTotal, "'" + sFVenc + "'", "'" + sFDoc + "'", "DEVP FAC", "", "0", "", "","","")==-1)
                 return;                                   
         }
                 

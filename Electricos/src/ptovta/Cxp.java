@@ -758,6 +758,9 @@ public class Cxp extends javax.swing.JFrame
         jCCa = new javax.swing.JCheckBox();
         jTFolBanc = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jTBanco = new javax.swing.JTextField();
+        jBBancos = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setResizable(false);
@@ -1532,6 +1535,58 @@ public class Cxp extends javax.swing.JFrame
         jLabel12.setText("Folio de banco:");
         jP1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 120, -1));
 
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel5.setText("Banco:");
+        jP1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 60, 50, -1));
+
+        jTBanco.setToolTipText("Concepto del pago del abono");
+        jTBanco.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
+        jTBanco.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jTBancoFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jTBancoFocusLost(evt);
+            }
+        });
+        jTBanco.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTBancoActionPerformed(evt);
+            }
+        });
+        jTBanco.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTBancoKeyPressed(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTBancoKeyTyped(evt);
+            }
+        });
+        jP1.add(jTBanco, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 60, 90, 20));
+
+        jBBancos.setBackground(new java.awt.Color(255, 255, 255));
+        jBBancos.setText("jButton1");
+        jBBancos.setToolTipText("Buscar concepto");
+        jBBancos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jBBancosMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jBBancosMouseExited(evt);
+            }
+        });
+        jBBancos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBBancosActionPerformed(evt);
+            }
+        });
+        jBBancos.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jBBancosKeyPressed(evt);
+            }
+        });
+        jP1.add(jBBancos, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 60, 20, 20));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -1729,7 +1784,7 @@ public class Cxp extends javax.swing.JFrame
         }
         
         //Inserta CXP en la base de datos        
-        if(Star.iInsCXCP(con, "cxp", sNoRefer, sNoSer, sProv, sSer, sSubTot, sImpue, sTot, "0", sAbon, "'" + sFVenc + "'", "'" + sFVenc + "'", "ABON COMP", jTFormPag.getText(), jTFol.getText(), jTComen.getText(), jTConcep.getText(), jTFolBanc.getText().trim())==-1)
+        if(Star.iInsCXCP(con, "cxp", sNoRefer, sNoSer, sProv, sSer, sSubTot, sImpue, sTot, "0", sAbon, "'" + sFVenc + "'", "'" + sFVenc + "'", "ABON COMP", jTFormPag.getText(), jTFol.getText(), jTComen.getText(), jTConcep.getText(), jTFolBanc.getText().trim(),jTBanco.getText().trim())==-1)
             return;        
         
         //Cierra la base de datos
@@ -1935,7 +1990,7 @@ public class Cxp extends javax.swing.JFrame
         }
                 
         //Inserta el CXP en la base de datos        
-        if(Star.iInsCXCP(con, "cxp", "", "", jTProv.getText(), "", "0", "0", "0", "0", sAbon, "now()", "now()", "ABON COMP", jTFormPag.getText(), "0", jTComen.getText(), jTConcep.getText(), jTFolBanc.getText().trim())==-1)
+        if(Star.iInsCXCP(con, "cxp", "", "", jTProv.getText(), "", "0", "0", "0", "0", sAbon, "now()", "now()", "ABON COMP", jTFormPag.getText(), "0", jTComen.getText(), jTConcep.getText(), jTFolBanc.getText().trim(),jTBanco.getText().trim())==-1)
             return;        
         
         //Cierra la base de datos
@@ -3409,6 +3464,44 @@ public class Cxp extends javax.swing.JFrame
         jTFolBanc.setText(sSinEsp);
         
     }//GEN-LAST:event_jTFolBancKeyTyped
+
+    private void jTBancoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTBancoFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTBancoFocusGained
+
+    private void jTBancoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTBancoFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTBancoFocusLost
+
+    private void jTBancoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTBancoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTBancoActionPerformed
+
+    private void jTBancoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTBancoKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTBancoKeyPressed
+
+    private void jTBancoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTBancoKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTBancoKeyTyped
+
+    private void jBBancosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBBancosMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBBancosMouseEntered
+
+    private void jBBancosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBBancosMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBBancosMouseExited
+
+    private void jBBancosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBBancosActionPerformed
+        /*Llama al otro formulario de búsqueda y pasale lo que el usuario escribió*/
+        Busc b = new Busc(this, jTBanco.getText(), 45, jTBanco, null, null, "", null);
+        b.setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jBBancosActionPerformed
+
+    private void jBBancosKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBBancosKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBBancosKeyPressed
     
     
     /*Función escalable para cuando se presiona una tecla en el módulo*/
@@ -3438,6 +3531,7 @@ public class Cxp extends javax.swing.JFrame
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBAbon;
     private javax.swing.JButton jBActua;
+    private javax.swing.JButton jBBancos;
     private javax.swing.JButton jBClas;
     private javax.swing.JButton jBConcep;
     private javax.swing.JButton jBFormPag;
@@ -3461,6 +3555,7 @@ public class Cxp extends javax.swing.JFrame
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -3469,6 +3564,7 @@ public class Cxp extends javax.swing.JFrame
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField jTAbon;
+    private javax.swing.JTextField jTBanco;
     private javax.swing.JTextField jTClas;
     private javax.swing.JTextField jTClasDescrip;
     private javax.swing.JTextField jTComen;

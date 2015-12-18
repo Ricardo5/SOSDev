@@ -2154,18 +2154,18 @@ public class RecibOrd extends javax.swing.JFrame
         if(bSiC && iRes==0 && !jCConta.isSelected())
         {
             //Inserta cxc en la base de datos
-            if(Star.iInsCXCP(con, "cxp", sSerCons, sSer, jTCodProv.getText(), jTSerProv.getText(), sSubTot, sImpu, sTot, sTot, "0",  sFVenc ,"'" + sFDoc+ "'", "COMP", "", "0", "", "","")==-1)
+            if(Star.iInsCXCP(con, "cxp", sSerCons, sSer, jTCodProv.getText(), jTSerProv.getText(), sSubTot, sImpu, sTot, sTot, "0",  sFVenc ,"'" + sFDoc+ "'", "COMP", "", "0", "", "","","")==-1)
                 return;                                
         }
         //Else no es de crédito pero inserta el CXP
         else
         {
             //Inserta el cargo
-            if(Star.iInsCXCP(con, "cxp", sSerCons, sSer, jTCodProv.getText(), jTSerProv.getText(), sSubTot, sImpu, sTot, sTot, "0",  sFVenc ,"'" + sFDoc+ "'", "COMP", "", "0", "", "","")==-1)
+            if(Star.iInsCXCP(con, "cxp", sSerCons, sSer, jTCodProv.getText(), jTSerProv.getText(), sSubTot, sImpu, sTot, sTot, "0",  sFVenc ,"'" + sFDoc+ "'", "COMP", "", "0", "", "","","")==-1)
                 return;        
             
             //Inserta el cargo
-            if(Star.iInsCXCP(con, "cxp", sSerCons, sSer, jTCodProv.getText(), jTSerProv.getText(), sSubTot, sImpu, sTot, "0", sTot,  sFVenc , sFVenc, "ABON COMP", jComFormPag.getSelectedItem().toString(), "0", "", "","")==-1)
+            if(Star.iInsCXCP(con, "cxp", sSerCons, sSer, jTCodProv.getText(), jTSerProv.getText(), sSubTot, sImpu, sTot, "0", sTot,  sFVenc , sFVenc, "ABON COMP", jComFormPag.getSelectedItem().toString(), "0", "", "","","")==-1)
                 return;                                
         }
         

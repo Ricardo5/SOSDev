@@ -936,12 +936,12 @@ public class Login extends javax.swing.JFrame
         /*Si la version es del tipo  estacion de trabajo on-line se requerira internet*/
         /*Si la version es del tipo de estacion de trabajo off-line o servidor no se pedira dicho requerimiento*/
       
-        if((Star.tTipoDeEsta == 0&&Star.bEstacTrab==1)||bActiv)
-        {
+      //  if((Star.tTipoDeEsta == 0&&Star.bEstacTrab==1)||bActiv)
+        //{
             /*Mensajea y regresa*/
-            JOptionPane.showMessageDialog(null, "Se necesita conexion a internet para poder continuar", "Validación", JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource(Star.sRutIconAd)));
-            return;            
-        }
+            //JOptionPane.showMessageDialog(null, "Se necesita conexion a internet para poder continuar", "Validación", JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource(Star.sRutIconAd)));
+          //  return;            
+        //}
         
         /*Obtiene los datos de validación del archivo ya desencriptados*/
         String sKey     = Star.sDecryp(ser.sKey);                

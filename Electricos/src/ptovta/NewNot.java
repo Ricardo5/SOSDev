@@ -2776,7 +2776,7 @@ public class NewNot extends javax.swing.JFrame
         sFDoc   = sFDoc.replace("|", "T");
                 
         //Inserta cxc en la base de datos        
-        if(Star.iInsCXCP(con, "cxc", sConFac, sSerFac, jTCli.getText(), jTSer.getText(), jTSubTot.getText(), jTImpue.getText(), jTTot.getText(), "0", jTTot.getText(), sFVenc, "'" + sFDoc + "'", "NOTC", "", "0", "", "","")==-1)
+        if(Star.iInsCXCP(con, "cxc", sConFac, sSerFac, jTCli.getText(), jTSer.getText(), jTSubTot.getText(), jTImpue.getText(), jTTot.getText(), "0", jTTot.getText(), sFVenc, "'" + sFDoc + "'", "NOTC", "", "0", "", "","","")==-1)
             return;               
                 
         /*Obtiene el tipo de cambio actual*/

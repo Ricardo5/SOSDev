@@ -2658,6 +2658,7 @@ public class Princip extends javax.swing.JFrame
         jMGir = new javax.swing.JMenuItem();
         jMenItMons = new javax.swing.JMenuItem();
         jMeItImps = new javax.swing.JMenuItem();
+        jMenuItem5 = new javax.swing.JMenuItem();
         jMSist = new javax.swing.JMenu();
         jMenIt4 = new javax.swing.JMenuItem();
         jMenItDatsGenEmp = new javax.swing.JMenuItem();
@@ -5619,6 +5620,15 @@ public class Princip extends javax.swing.JFrame
             }
         });
         jMenInvents.add(jMeItImps);
+
+        jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/285catalogobancos.png"))); // NOI18N
+        jMenuItem5.setText("Bancos");
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
+        jMenInvents.add(jMenuItem5);
 
         jMenBar1.add(jMenInvents);
 
@@ -14415,6 +14425,7 @@ public static Comment creaComentario(final String comentario, XSSFWorkbook wb, f
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuMarcMod;
     private javax.swing.JPanel jP1;
     private javax.swing.JPanel jPanel1;

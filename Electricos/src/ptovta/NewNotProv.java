@@ -2262,7 +2262,7 @@ public class NewNotProv extends javax.swing.JFrame
         String sFDoc        = sdf.format(fe);
         
         //Inserta CXP en la base de datos        
-        if(Star.iInsCXCP(con, "cxp", sConsec, sSerComp, jTProv.getText(), jTSer.getText(), jTSubTot.getText(), jTImpue.getText(), jTTot.getText(), "0", jTTot.getText(), sFVenc, "'" + sFDoc + "'", "NOTP", "", "0", "", "","")==-1)
+        if(Star.iInsCXCP(con, "cxp", sConsec, sSerComp, jTProv.getText(), jTSer.getText(), jTSubTot.getText(), jTImpue.getText(), jTTot.getText(), "0", jTTot.getText(), sFVenc, "'" + sFDoc + "'", "NOTP", "", "0", "", "","","")==-1)
             return;        
         
         /*Obtiene el tipo de cambio actual*/

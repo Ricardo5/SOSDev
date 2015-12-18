@@ -103,5 +103,6 @@
         </zip>
 
         <delete file="${store.dir}/temp_final.jar"/>
+
     </target>
 </project>

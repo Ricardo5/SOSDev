@@ -1437,6 +1437,9 @@ public class IngrCom extends javax.swing.JFrame
         jDFech = new com.toedter.calendar.JDateChooser();
         jComMon = new javax.swing.JComboBox();
         jLabel9 = new javax.swing.JLabel();
+        jTReferencia = new javax.swing.JTextField();
+        jBtnReferencia = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         jTAlma2 = new javax.swing.JTextField();
         jTComenSer = new javax.swing.JTextField();
         jLNot = new javax.swing.JLabel();
@@ -2344,7 +2347,7 @@ public class IngrCom extends javax.swing.JFrame
         jLabel14.setText("Importar números de serie:");
         jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 140, 150, 20));
 
-        jP1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 1090, 200));
+        jP1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 1090, 190));
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Datos del Proveedor", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
@@ -2667,7 +2670,7 @@ public class IngrCom extends javax.swing.JFrame
         });
         jPanel4.add(jComFormPag, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 100, 120, 20));
 
-        jP1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 790, 130));
+        jP1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 790, 160));
 
         jTSubTot.setEditable(false);
         jTSubTot.setBackground(new java.awt.Color(204, 255, 204));
@@ -2868,7 +2871,7 @@ public class IngrCom extends javax.swing.JFrame
         jPEnca.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLEnt.setText("Fecha entrega:");
-        jPEnca.add(jLEnt, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 100, -1));
+        jPEnca.add(jLEnt, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 100, -1));
 
         jDFEnt.setNextFocusableComponent(jComSer);
         jDFEnt.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -2876,7 +2879,7 @@ public class IngrCom extends javax.swing.JFrame
                 jDFEntKeyPressed(evt);
             }
         });
-        jPEnca.add(jDFEnt, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 40, 130, -1));
+        jPEnca.add(jDFEnt, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 40, 130, -1));
 
         jCOrd.setBackground(new java.awt.Color(255, 255, 255));
         jCOrd.setText("Orden de compra");
@@ -2891,11 +2894,11 @@ public class IngrCom extends javax.swing.JFrame
                 jCOrdKeyPressed(evt);
             }
         });
-        jPEnca.add(jCOrd, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, -1, 20));
+        jPEnca.add(jCOrd, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, -1, 20));
 
         jLabel31.setForeground(new java.awt.Color(0, 0, 255));
         jLabel31.setText("Altl+O");
-        jPEnca.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, 80, 20));
+        jPEnca.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 100, 80, 20));
 
         jCImp.setBackground(new java.awt.Color(255, 255, 255));
         jCImp.setText("Imprimir");
@@ -2905,14 +2908,14 @@ public class IngrCom extends javax.swing.JFrame
                 jCImpKeyPressed(evt);
             }
         });
-        jPEnca.add(jCImp, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 80, 20));
+        jPEnca.add(jCImp, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 80, 20));
 
         jLabel32.setForeground(new java.awt.Color(0, 0, 255));
         jLabel32.setText("Ctrl+P");
-        jPEnca.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 100, 60, 20));
+        jPEnca.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, 60, 20));
 
         jLabel30.setText("*Serie:");
-        jPEnca.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 100, -1));
+        jPEnca.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 100, -1));
 
         jComSer.setNextFocusableComponent(jCOrd);
         jComSer.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -2930,10 +2933,10 @@ public class IngrCom extends javax.swing.JFrame
                 jComSerKeyPressed(evt);
             }
         });
-        jPEnca.add(jComSer, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 130, 20));
+        jPEnca.add(jComSer, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 80, 130, 20));
 
         jLabel29.setText("Fecha compra:");
-        jPEnca.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 100, -1));
+        jPEnca.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 100, -1));
 
         jDFech.setNextFocusableComponent(jDFEnt);
         jDFech.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -2941,7 +2944,7 @@ public class IngrCom extends javax.swing.JFrame
                 jDFechKeyPressed(evt);
             }
         });
-        jPEnca.add(jDFech, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 20, 130, -1));
+        jPEnca.add(jDFech, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, 130, -1));
 
         jComMon.setName(""); // NOI18N
         jComMon.setNextFocusableComponent(jTProd);
@@ -2960,12 +2963,36 @@ public class IngrCom extends javax.swing.JFrame
                 jComMonKeyPressed(evt);
             }
         });
-        jPEnca.add(jComMon, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 100, 80, 20));
+        jPEnca.add(jComMon, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 80, 20));
 
         jLabel9.setText("Moneda:");
-        jPEnca.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 80, 80, 20));
+        jPEnca.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 100, 80, 20));
 
-        jP1.add(jPEnca, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 20, 290, 130));
+        jTReferencia.setEditable(false);
+        jTReferencia.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jTReferenciaFocusLost(evt);
+            }
+        });
+        jTReferencia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTReferenciaActionPerformed(evt);
+            }
+        });
+        jPEnca.add(jTReferencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 60, 110, -1));
+
+        jBtnReferencia.setText("jButton1");
+        jBtnReferencia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnReferenciaActionPerformed(evt);
+            }
+        });
+        jPEnca.add(jBtnReferencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 60, 20, 20));
+
+        jLabel1.setText("Activo");
+        jPEnca.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 100, -1));
+
+        jP1.add(jPEnca, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 20, 290, 160));
         jP1.add(jTAlma2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 370, 10, -1));
 
         jTComenSer.setEditable(false);
@@ -3218,7 +3245,6 @@ public class IngrCom extends javax.swing.JFrame
             jTProv.grabFocus();
             return;
         }
-
         /*Si el nombre del proveedor es el vacio entonces*/
         if(jTNom.getText().compareTo("")==0)
         {
@@ -3729,18 +3755,18 @@ public class IngrCom extends javax.swing.JFrame
         if(bSi && !jCConta.isSelected())
         {
             //Inserta cxp en la base de datos
-            if(Star.iInsCXCP(con, "cxp", sSer + sConsec, sSer, jTProv.getText(), jTSer.getText(), sSubTot, sImpue, sTot, sTot, "0",  sFVenc ,"'" + sFDoc + "'", "COMP", jComFormPag.getSelectedItem().toString(), "0", "", "","")==-1)
+            if(Star.iInsCXCP(con, "cxp", sSer + sConsec, sSer, jTProv.getText(), jTSer.getText(), sSubTot, sImpue, sTot, sTot, "0",  sFVenc ,"'" + sFDoc + "'", "COMP", jComFormPag.getSelectedItem().toString(), "0", "", "","","")==-1)
                 return;                                        
         }
         //Else no es de crédito y tampoco una órden de compra entonces registra el CXP
         else if(!jCOrd.isSelected())
         {
             //Inserta en CXP el cargo
-            if(Star.iInsCXCP(con, "cxp", sSer + sConsec, sSer, jTProv.getText(), jTSer.getText(), sSubTot, sImpue, sTot, sTot, "0", sFVenc , "'" + sFDoc + "'", "COMP", "", "0", "", "","")==-1)
+            if(Star.iInsCXCP(con, "cxp", sSer + sConsec, sSer, jTProv.getText(), jTSer.getText(), sSubTot, sImpue, sTot, sTot, "0", sFVenc , "'" + sFDoc + "'", "COMP", "", "0", "", "","","")==-1)
                 return;        
             
             //Inserta en CXP el abono que es el pago
-            if(Star.iInsCXCP(con, "cxp", sSer + sConsec, sSer, jTProv.getText(), jTSer.getText(), sSubTot, sImpue, sTot, "0", sTot,  sFVenc , sFVenc, "ABON COMP", jComFormPag.getSelectedItem().toString(), "0", "", "","")==-1)
+            if(Star.iInsCXCP(con, "cxp", sSer + sConsec, sSer, jTProv.getText(), jTSer.getText(), sSubTot, sImpue, sTot, "0", sTot,  sFVenc , sFVenc, "ABON COMP", jComFormPag.getSelectedItem().toString(), "0", "", "","","")==-1)
                 return;                                
         }
 
@@ -3761,7 +3787,8 @@ public class IngrCom extends javax.swing.JFrame
             Star.iErrProc(this.getClass().getName() + " " + expnSQL.getMessage(), Star.sErrSQL, expnSQL.getStackTrace(), con);                                                       
             return;                                                                
         }
-        //Inserta en la base de datos la compra u órden        
+        //Inserta en la base de datos la compra u órden
+        Star.referencia=jTReferencia.getText();
         if(Star.iInsComprs(con, sSer.replace("'", "''") + sConsec.replace("'", "''"), sSer.replace("'", "''"), jTSer.getText().replace("'", "''") + jTProv.getText().replace(jTSer.getText(), ""), jTSer.getText().replace("'", "''").trim(), sNoDoc.replace("'", "''"), "'" + sFDoc + "'", sSubTot, sImpue, sTot, "'" + sEst + "'", "now()", "", jTNom.getText().replace("'", "''").trim(), sFVenc, sTip.replace("'", "''"), "'" + sFEnt + "'", jTMetPag.getText().trim(), jTCta.getText().trim(), jComMon.getSelectedItem().toString().trim(), sTipCam, "", "0", "0")==-1)
             return;
             
@@ -8423,6 +8450,22 @@ public class IngrCom extends javax.swing.JFrame
         // TODO add your handling code here:
     }//GEN-LAST:event_jTGaranActionPerformed
 
+    private void jTReferenciaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTReferenciaFocusLost
+        if(jTReferencia.getText().compareTo("")!=0)
+        jTReferencia.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204,204,255)));        // TODO add your handling code here:
+    }//GEN-LAST:event_jTReferenciaFocusLost
+
+    private void jTReferenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTReferenciaActionPerformed
+        // TODO add your handling code here:
+        if(jTReferencia.getText().compareTo("")!=0)
+        jTReferencia.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204,204,255)));
+    }//GEN-LAST:event_jTReferenciaActionPerformed
+
+    private void jBtnReferenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnReferenciaActionPerformed
+        SelectActivos activo=new SelectActivos(jTReferencia);
+        activo.setVisible(true);// TODO add your handling code here:
+    }//GEN-LAST:event_jBtnReferenciaActionPerformed
+
              
    
     /*Válida si será una órden de compra o compra*/
@@ -8544,6 +8587,7 @@ public class IngrCom extends javax.swing.JFrame
     private javax.swing.JButton jBUltCostT;
     private javax.swing.JButton jBUltPre;
     private javax.swing.JButton jBVeGran;
+    private javax.swing.JButton jBtnReferencia;
     private javax.swing.JCheckBox jCCo1;
     private javax.swing.JCheckBox jCCo2;
     private javax.swing.JCheckBox jCCo3;
@@ -8571,6 +8615,7 @@ public class IngrCom extends javax.swing.JFrame
     private javax.swing.JLabel jLNot;
     private javax.swing.JLabel jLTipVta;
     private javax.swing.JLabel jLTotSald;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -8645,6 +8690,7 @@ public class IngrCom extends javax.swing.JFrame
     private javax.swing.JTextField jTPedimen;
     private javax.swing.JTextField jTProd;
     private javax.swing.JTextField jTProv;
+    private javax.swing.JTextField jTReferencia;
     private javax.swing.JTextField jTSer;
     private javax.swing.JTextField jTSerProd;
     private javax.swing.JTextField jTSubTot;

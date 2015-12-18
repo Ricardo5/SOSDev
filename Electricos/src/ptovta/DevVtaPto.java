@@ -1022,7 +1022,7 @@ public class DevVtaPto extends javax.swing.JFrame
             if(sTipDoc.compareTo("FAC")==0 && sCli.compareTo(Star.sCliMostG)!=0)
             {
                 //Agrega una partida en cxc para agregarle saldo al cliente de la cancelación                            
-                if(Star.iInsCXCP(con, "cxc", sFol, sFol, sCli, sSer, sSubTot, sImpue, sTot, "0", sTot, "'" + sFVenc + "'", "'" + sFDoc + "'", "DEV FAC", "", "0", "", "","")==-1)
+                if(Star.iInsCXCP(con, "cxc", sFol, sFol, sCli, sSer, sSubTot, sImpue, sTot, "0", sTot, "'" + sFVenc + "'", "'" + sFDoc + "'", "DEV FAC", "", "0", "", "","","")==-1)
                     return;                                           
             }
             
