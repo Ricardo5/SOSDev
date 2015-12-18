@@ -2471,6 +2471,7 @@ public class Princip extends javax.swing.JFrame
         jBCots = new javax.swing.JButton();
         jLAyu = new javax.swing.JLabel();
         jBPrevComp = new javax.swing.JButton();
+        jBPtoVta1 = new javax.swing.JButton();
         jLayeredPane1 = new javax.swing.JLayeredPane();
         jCheckBox1 = new javax.swing.JCheckBox();
         jMenBar1 = new javax.swing.JMenuBar();
@@ -2968,31 +2969,60 @@ public class Princip extends javax.swing.JFrame
             }
         });
 
+        jBPtoVta1.setBackground(new java.awt.Color(255, 255, 255));
+        jBPtoVta1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jBPtoVta1.setForeground(new java.awt.Color(0, 102, 0));
+        jBPtoVta1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/ci.png"))); // NOI18N
+        jBPtoVta1.setText("Interfaz");
+        jBPtoVta1.setToolTipText("Punto de venta (U)");
+        jBPtoVta1.setBorder(null);
+        jBPtoVta1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jBPtoVta1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jBPtoVta1MouseExited(evt);
+            }
+        });
+        jBPtoVta1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBPtoVta1ActionPerformed(evt);
+            }
+        });
+        jBPtoVta1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jBPtoVta1KeyPressed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jP1Layout = new javax.swing.GroupLayout(jP1);
         jP1.setLayout(jP1Layout);
         jP1Layout.setHorizontalGroup(
             jP1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jP1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jBPtoVta, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jBVtas, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jBComps, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jBEmps, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jBProvs)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jBProds, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jBCots, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jBPrevComp)
-                .addContainerGap(80, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jP1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLAyu, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jP1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jP1Layout.createSequentialGroup()
+                        .addComponent(jBPtoVta1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLAyu, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jP1Layout.createSequentialGroup()
+                        .addComponent(jBPtoVta, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jBVtas, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jBComps, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jBEmps, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jBProvs)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jBProds, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jBCots, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jBPrevComp)
+                        .addContainerGap(80, Short.MAX_VALUE))))
         );
         jP1Layout.setVerticalGroup(
             jP1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3007,8 +3037,12 @@ public class Princip extends javax.swing.JFrame
                     .addComponent(jBProds, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jBCots, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jBPrevComp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(43, 43, 43)
-                .addComponent(jLAyu))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jP1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLAyu)
+                    .addGroup(jP1Layout.createSequentialGroup()
+                        .addComponent(jBPtoVta1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
         );
 
         jPanel1.add(jP1, java.awt.BorderLayout.PAGE_START);
@@ -13317,9 +13351,8 @@ public class Princip extends javax.swing.JFrame
     //Cuando se presiona el menú de conceptos de pagos
     private void jMConcepPagsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMConcepPagsActionPerformed
         
-        //Muestra la forma para ver los conceptos de pagos
-        cats.PlanGralCat l = new cats.PlanGralCat("conceppag","cxc","concep","concepto de pagos","concpag","concep");
-	l.setVisible(true);
+        cats.ConceptosPago c = new cats.ConceptosPago();
+        c.setVisible(true);
         
     }//GEN-LAST:event_jMConcepPagsActionPerformed
 
@@ -13499,6 +13532,32 @@ public class Princip extends javax.swing.JFrame
           cats.Activos l = new cats.Activos();
         l.setVisible(true);  
     }//GEN-LAST:event_jMActivoActionPerformed
+
+    private void jBPtoVta1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBPtoVta1MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBPtoVta1MouseEntered
+
+    private void jBPtoVta1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBPtoVta1MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBPtoVta1MouseExited
+
+    private void jBPtoVta1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBPtoVta1ActionPerformed
+        try {
+            String instancia = Star.sInstancia;
+            String usuario = Star.sUsuario;
+            String password = Star.sContrasenia;
+            String puerto = Star.sPort;
+            String database = Star.sBD;
+            
+            Process joindata = new ProcessBuilder("joindata.exe",instancia,usuario,password,database,puerto).start();
+        } catch (IOException ex) {
+            Logger.getLogger(Princip.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jBPtoVta1ActionPerformed
+
+    private void jBPtoVta1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBPtoVta1KeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBPtoVta1KeyPressed
     
         /*Cuando se presiona el botón de intérfaz de contapaqi*/
     private void jMContpaqActionPerformed(java.awt.event.ActionEvent evt) {                                          
@@ -14142,6 +14201,7 @@ public static Comment creaComentario(final String comentario, XSSFWorkbook wb, f
     private javax.swing.JButton jBProds;
     private javax.swing.JButton jBProvs;
     private javax.swing.JButton jBPtoVta;
+    private javax.swing.JButton jBPtoVta1;
     private javax.swing.JButton jBVtas;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLAyu;
